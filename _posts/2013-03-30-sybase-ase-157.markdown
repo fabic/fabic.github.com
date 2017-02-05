@@ -1,0 +1,25 @@
+---
+layout: post
+title: "Sybase ASE 15.7"
+description: ""
+category: diary
+tags: [Sybase, install]
+---
+
+
+	$ mkdir ase157 &&
+	  cd    ase157/
+
+	$ tar -xf ../ase157_linuxx86-64.tgz
+
+	$ ./setup.bin [-console]
+
+	# Installed it under /opt/sybase-15.7/
+	ln -snv sybase-15.7/ /opt/sybase
+
+	FAILLED : /
+
+
+	$ mysqladmin -u root password NEWPASSWORD
+
+
