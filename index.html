@@ -3,6 +3,17 @@ layout: default
 title: Home
 ---
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      {{ post.date | date_to_string }}
+      &ndash;
+      <a href="{{ post.url }}">{{ post.date | date_to_string }} &ndash;{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if false %}
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -35,4 +46,4 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
-
+{% endif %}
