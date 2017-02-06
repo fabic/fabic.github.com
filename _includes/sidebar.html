@@ -35,11 +35,26 @@
   </nav>
 
   <div class="sidebar-item">
+    <ul class="sidebar-social-links">
+      <li>
+        <a href="https://github.com/{{ site.github_username }}/"
+           title="Github user {{ site.github_username }}"
+           class="fa fa-github"><!--{{ site.github_username }}--></a>
+      </li>
+      <li>
+        <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/"
+           title="Flickr photostream of {{ site.flickr_username }}"
+           class="fa fa-flickr"><!--{{ site.flickr_username }}--></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sidebar-item sidebar-last-item">
     <p>
       &copy; {{ site.time | date: '%Y' }}
     </p>
     <p>
-    <p>Warm thanks to Jekyll theme <a href="http://lanyon.getpoole.com/">Laynon Poole</a>
+    <p>Warm thanks to Jekyll theme <a href="http://lanyon.getpoole.com/">&copy;&nbsp;Laynon Poole</a>
     </p>
   </div>
 </div>

@@ -14,13 +14,38 @@
   font-size: 1.5em;
 }
 
+/*
+   See default.html & _config.yml
+ */
 .github-edit-link {
   position: fixed;
   right: 1em;
   top: 2px;
-  font-size: .5em;
+  font-size: .75em;
   margin: .2em;
   z-index: 10;
+}
+
+.sidebar-last-item {
+  position: absolute;
+  bottom: 0;
+}
+
+ul.sidebar-social-links {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+ul.sidebar-social-links > li {
+  display: inline;
+  margin: 0 .5em;
+}
+.sidebar-social-links a {
+  font-size: 2em;
+  text-decoration: none;
+}
+.sidebar-social-links a:hover {
+  color: #268bd2;
 }
 
 .cv-when-where {

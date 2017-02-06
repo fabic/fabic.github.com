@@ -1,14 +1,17 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
+permalink: pretty
 
 gems:
   - jekyll-paginate
   - jekyll-sitemap
+  # Font Awesome GEM // UNUSED // see _includes/head.html
+  #- font-awesome-sass
 
 # Setup
 title: Maty
+
 tagline: |
     Senior Compositing Artist,
     Technical Director
@@ -25,6 +28,11 @@ paginate:            5
 # Comments are powered by disqus
 comments: false
 
+# Google analytics
+#   ( https://analytics.google.com/
+#     see _includes/analytics.html
+#     which is included by _layouts/default.html )
+#
 tracking_id: UA-69243698-7 # GA Tracking ID
 
 # About/contact
@@ -40,4 +48,7 @@ twitter_username: maty974
 
 github_repo: maty974.github.com
 github_username: maty974
+github_show_edit_link: true
+
+flickr_username: maty974
 #facebook_id: yourusername
