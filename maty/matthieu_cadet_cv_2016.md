@@ -58,11 +58,9 @@ Connaissances Techniques
 ### Senior Compositing Artist TD & Pipeline Developer
 <span class="cv-when-where">2015 &ndash; 2016 | *nWave Digital*</span>
 
-<div class="float-this">
-
-![sonofbigfoot](http://www.nwavedigital.com/cms/pictures/library/films/posters/Poster_portrait_SOB_HomeMade_180x268.jpg)
-
-</div>
+<img title="The Son of Bigfoot"
+     class="float-this film-thumb"
+     src="http://www.nwavedigital.com/cms/pictures/library/films/posters/Poster_portrait_SOB_HomeMade_180x268.jpg">
 
 *The Son of Bigfoot* / long metrage d'animation 3D
 
@@ -77,7 +75,10 @@ Connaissances Techniques
 <span class="cv-when-where">October 2013 &ndash; October 2015 (2 years 1 month) | *nWave Digital*</span>
 
 *Robinson Crusoe* / long metrage d'animation 3D
-![robinsoncrusoe](http://fr.web.img4.acsta.net/pictures/16/03/24/09/11/213315.jpg)
+
+<img title="robinsoncrusoe"
+     class="float-this film-thumb"
+     src="http://fr.web.img4.acsta.net/pictures/16/03/24/09/11/213315.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -88,8 +89,9 @@ Connaissances Techniques
 ### Senior Compositing Artist TD & Pipeline Developer
 <span class="cv-when-where">May 2012 &ndash; October 2013 (1 year 6 months) | *nWave Digital*</span>
 
-*The House of Magic ( Le Manoir Enchantee )* / long metrage d'animation 3D
-![thehouseofmagic](http://image-store.slidesharecdn.com/8453b652-25e2-11e3-a88a-22000aa5108a-large.jpg)
+<img title="The House of Magic"
+     class="float-this film-thumb"
+     src="http://image-store.slidesharecdn.com/8453b652-25e2-11e3-a88a-22000aa5108a-large.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -101,7 +103,10 @@ Connaissances Techniques
 <span class="cv-when-where">October 2010 &ndash; May 2012 (1 year 8 months) | *nWave Digital*</span>
 
 *A Turtle's Tale 2 ( Sammy 2 )* / long metrage d'animation 3D
-![sammy2](http://image-store.slidesharecdn.com/fba33394-25e3-11e3-805b-22000aa5129e-large.jpg)
+
+<img title="Sammy 2 “3D”"
+     class="float-this film-thumb"
+     src="http://image-store.slidesharecdn.com/fba33394-25e3-11e3-805b-22000aa5129e-large.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -113,7 +118,10 @@ Connaissances Techniques
 <span class="cv-when-where">March 2010 &ndash; September 2010 (7 months) | *nWave Digital*</span>
 
 *The little prince ( Le Petit Prince )* / Attraction 3D Stereoscopique
-![thelittleprince](http://image-store.slidesharecdn.com/5e853ad0-25e3-11e3-beb4-12313b087694-large.jpg)
+
+<img title="The Little Prince"
+     class="float-this film-thumb"
+     src="http://image-store.slidesharecdn.com/5e853ad0-25e3-11e3-beb4-12313b087694-large.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -125,7 +133,10 @@ Connaissances Techniques
 <span class="cv-when-where">November 2009 &ndash; March 2010 (5 months) | *nWave Digital*</span>
 
 *Pirates Stroy 4D ( Le Petit Prince )* / Attraction 3D Stereoscopique
-![piratestory](http://image-store.slidesharecdn.com/688dca2e-25e3-11e3-a0e4-22000aa5129e-large.jpg)
+
+<img title="Pirates Story"
+     class="float-this film-thumb"
+     src="http://image-store.slidesharecdn.com/688dca2e-25e3-11e3-a0e4-22000aa5129e-large.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -137,7 +148,10 @@ Connaissances Techniques
 <span class="cv-when-where">January 2008 &ndash; November 2009 (1 year 11 months) | *nWave Digital*</span>
 
 *A Turtle's Tale ( Le voyage extraordinaire de Samy )* / long metrage d'animation 3D
-![turtlestale](https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNjAwMjU4Nl5BMl5BanBnXkFtZTcwNTcwMDU1Mw@@._V1_UY268_CR3,0,182,268_AL_.jpg)
+
+<img title="A turtle's tale"
+     class="float-this film-thumb"
+     src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjEzNjAwMjU4Nl5BMl5BanBnXkFtZTcwNTcwMDU1Mw@@._V1_UY268_CR3,0,182,268_AL_.jpg">
 
 - Compositing 3D & Stereo
 - Developement d'outils interne
@@ -149,7 +163,11 @@ Connaissances Techniques
 <span class="cv-when-where">May 2006 &ndash; August 2007 (1 year 4 months) | *nWave Digital*</span>
 
 *Fly me to the moon* / long metrage d'animation 3D
-![flymetothemoon](https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NTA5MTA2Ml5BMl5BanBnXkFtZTcwMjU5ODQ3MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg)
+
+<img title="Fly me to the moon"
+     class="float-this film-thumb"
+     src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2NTA5MTA2Ml5BMl5BanBnXkFtZTcwMjU5ODQ3MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg">
+
 
 - Compositing 3D & Stereo
 - Developement d'outils interne

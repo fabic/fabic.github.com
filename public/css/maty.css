@@ -31,3 +31,7 @@
 .float-this {
   float: right;
 }
+
+.film-thumb {
+    max-width: 100px;
+}
