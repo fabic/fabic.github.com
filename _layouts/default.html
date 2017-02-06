@@ -13,7 +13,9 @@
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+            <!-- <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a> -->
+            <a href="{{ site.baseurl }}/" title="Home">
+                {{ site.title }}<span class="run-974">974</span></a>
             <small>{{ site.tagline }}</small>
           </h3>
         </div>
@@ -43,5 +45,12 @@
         }, false);
       })(document);
     </script>
+
+    {% include disqus.html %}
+
+    {% if site.tracking_id %}
+        {% include analytics.html %}
+    {% endif %}
+
   </body>
 </html>

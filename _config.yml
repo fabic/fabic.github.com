@@ -8,7 +8,7 @@ gems:
   - jekyll-sitemap
 
 # Setup
-title:               Maty<span class="run-974">974</span>
+title: Maty
 tagline: |
     Senior Compositing Artist,
     Technical Director
@@ -22,6 +22,11 @@ url:                 http://maty974.github.io
 baseurl:             ''
 paginate:            5
 
+# Comments are powered by disqus
+comments: true
+
+tracking_id: UA-69243698-7 # GA Tracking ID
+
 # About/contact
 author:
   name:              Matthieu Cadet
@@ -30,3 +35,7 @@ author:
 
 # Custom vars
 version:             1.0.0
+
+twitter_username: FabienKd
+github_username: fabic
+#facebook_id: yourusername
