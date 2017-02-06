@@ -8,19 +8,25 @@ gems:
   - jekyll-sitemap
 
 # Setup
-title:               fabic
-tagline:             'Random (binary) wanderings in the philament empire'
-#description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-description:         'Just killing time, coding...'
-url:                 http://fabic.net
+title:               Maty<span class="run-974">974</span>
+tagline: |
+    Senior Compositing Artist,
+    Technical Director
+    & Pipeline Developer
+
+description: |
+    Senior Compositing Artist, Technical Director & Pipeline Developer
+    at <a href="http://nWave.com" target="_blank">nWave Digital</a> (Brussels, Belgium).
+
+url:                 http://maty974.github.io
 baseurl:             ''
 paginate:            5
 
 # About/contact
 author:
-  name:              Fabien Cadet
-  url:               https://twitter.com/FabienKd
-  email:             cadet.fabien@gmail.com
+  name:              Matthieu Cadet
+  url:               http://maty974.github.io
+  email:             matthieu.cadet@gmail.com
 
 # Custom vars
 version:             1.0.0
