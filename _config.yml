@@ -23,7 +23,7 @@ baseurl:             ''
 paginate:            5
 
 # Comments are powered by disqus
-comments: true
+comments: false
 
 tracking_id: UA-69243698-7 # GA Tracking ID
 
@@ -36,8 +36,8 @@ author:
 # Custom vars
 version:             1.0.0
 
-twitter_username: FabienKd
+twitter_username: maty974
 
-github_repo: fabic.github.com
-github_username: fabic
+github_repo: maty974.github.com
+github_username: maty974
 #facebook_id: yourusername
