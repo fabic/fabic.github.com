@@ -11,7 +11,7 @@ _Senior Compositing Artist & Technical Director &mdash; 10 ans d'expérience._
 
 En poste à <a href="http://nWave.com" target="_blank">nWave Digital</a>
 (2006 &ndash; {{ site.time | date: '%Y' }}), au département “Compositing”
-où ont lieues une variété de post-traitements sur les jeux d'images issues
+où ont lieu une variété de post-traitements sur les jeux d'images issues
 du “Lighting”. Rôle clé dans la mise en oeuvre des processus de traitement par
 la réalisation d'outils (en Python principalement) .....
 

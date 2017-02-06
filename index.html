@@ -8,7 +8,7 @@ title: Home
     <li>
       {{ post.date | date_to_string }}
       &ndash;
-      <a href="{{ post.url }}">{{ post.date | date_to_string }} &ndash;{{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
