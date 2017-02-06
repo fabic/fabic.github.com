@@ -2,6 +2,7 @@
 layout: page
 title: "Gentoo installation notes (home)"
 description: "Some notes about /me re-re-installing my Gentoo boxes from scratch."
+published: false
 ---
 
 

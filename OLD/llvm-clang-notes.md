@@ -2,6 +2,7 @@
 layout: page
 title: "NOTES: LLVM Clang internals wanderings"
 description: "Scattered side-notes as I'm wandering through Clang internals."
+published: false
 ---
 
 _**2014-09-23:**_ /me investigating _how things happen_ so as to obtain an AST.

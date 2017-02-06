@@ -68,16 +68,13 @@ _patience..._
 	mkdir build &&
 	cd build/
 
-	cmake .. \
+	$ cmake .. \
 		-DCMAKE_INSTALL_PREFIX=$(cd ../../local && pwd) \
 		-DLLVM_PATH=../../llvm \
 		-DLIBCXXABI_LIBCXX_PATH=../../libcxx \
 		-DLIBCXXABI_LIBCXX_INCLUDES=../../libcxx/include
 
-		...
-		...
-		...
-
+		... ... ...
 		-- Configuring done
 		-- Generating done
 		-- Build files have been written to: /media/g/home/fabi/dev/llvm/libcxxabi/build
@@ -87,26 +84,14 @@ _patience..._
 		Scanning dependencies of target cxxabi_objects
 		[  5%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/abort_message.cpp.o
 		[ 10%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_aux_runtime.cpp.o
-		[ 15%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_default_handlers.cpp.o
-		[ 20%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_demangle.cpp.o
-		[ 25%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_exception.cpp.o
-		[ 30%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_exception_storage.cpp.o
-		[ 35%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_guard.cpp.o
-		[ 40%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_handlers.cpp.o
-		[ 45%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_new_delete.cpp.o
-		[ 50%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_personality.cpp.o
-		[ 55%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_unexpected.cpp.o
-		[ 60%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_vector.cpp.o
-		[ 65%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_virtual.cpp.o
-		[ 70%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/exception.cpp.o
-		[ 75%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/private_typeinfo.cpp.o
-		[ 80%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/stdexcept.cpp.o
-		[ 85%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/typeinfo.cpp.o
+		...
 		[ 90%] Building CXX object src/CMakeFiles/cxxabi_objects.dir/cxa_thread_atexit.cpp.o
 		[ 90%] Built target cxxabi_objects
+
 		Scanning dependencies of target cxxabi_shared
 		[ 95%] Linking CXX shared library ../lib/libc++abi.so
 		[ 95%] Built target cxxabi_shared
+
 		Scanning dependencies of target cxxabi_static
 		[100%] Linking CXX static library ../lib/libc++abi.a
 		[100%] Built target cxxabi_static
@@ -179,159 +164,19 @@ __NOTE:__ Headers aren't installed here, but will be upon install of `libcxx`.
 
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/cxxabi.h
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/__cxxabi_config.h
-
-	-- Up-to-date: /media/g/home/fabi/dev/llvm/local/include/c++/v1/.
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__functional_03
+	...
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ostream
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__std_stream
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./type_traits
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstring
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./stdlib.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./deque
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./scoped_allocator
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./string
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__hash_table
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__tuple
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./complex.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ctgmath
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./limits
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./math.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./functional
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./memory
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./new
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./istream
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./locale
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./initializer_list
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cfloat
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./future
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./shared_mutex
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./chrono
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ctype.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cinttypes
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./valarray
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./queue
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__refstring
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./streambuf
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstdio
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./stdio.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./typeindex
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./exception
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./algorithm
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ext
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ext/hash_set
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ext/__hash
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ext/hash_map
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./typeinfo
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ctime
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./unordered_map
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__mutex_base
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./wchar.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__sso_allocator
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cmath
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./map
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./tgmath.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./mutex
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./condition_variable
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./wctype.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./numeric
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./thread
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./complex
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./unordered_set
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./system_error
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstdbool
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./fstream
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./tuple
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./float.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./array
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./set
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cfenv
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__functional_base_03
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ios
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__undef___deallocate
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./csignal
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cassert
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./regex
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./bitset
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cerrno
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__config
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__tree
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__nullptr
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./iomanip
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__debug
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./stdexcept
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/type_traits
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/functional
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/string_view
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/chrono
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/algorithm
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/any
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/optional
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/system_error
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/tuple
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/dynarray
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/__config
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/utility
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./experimental/ratio
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__locale
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__undef_min_max
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./stddef.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./csetjmp
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cwchar
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./utility
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__functional_base
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./strstream
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__split_buffer
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./errno.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstdarg
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./sstream
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./iterator
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./random
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ratio
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./setjmp.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstddef
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ciso646
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./module.modulemap
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./ccomplex
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./codecvt
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./atomic
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./__bit_reference
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./stack
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./climits
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cctype
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cwctype
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/xlocale
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/xlocale/xlocale.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/musl
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/musl/xlocale.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/ibm
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/ibm/xlocale.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/ibm/limits.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/ibm/support.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/win32
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/win32/math_win32.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/win32/locale_win32.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/win32/support.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/win32/limits_win32.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/android
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/android/locale_bionic.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/newlib
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/newlib/xlocale.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/solaris
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/solaris/floatingpoint.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/solaris/xlocale.h
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./support/solaris/wchar.h
+	...
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstdlib
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./clocale
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./iosfwd
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./iostream
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./vector
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./list
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./cstdint
 	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./forward_list
-	-- Installing: /media/g/home/fabi/dev/llvm/local/include/c++/v1/./inttypes.h
-
+	...
 	-- Installing: /media/g/home/fabi/dev/llvm/local/lib/libc++.so.1.0
 	-- Installing: /media/g/home/fabi/dev/llvm/local/lib/libc++.so.1
 	-- Installing: /media/g/home/fabi/dev/llvm/local/lib/libc++.so

@@ -5,6 +5,7 @@ permalink:           pretty
 
 gems:
   - jekyll-paginate
+  - jekyll-sitemap
 
 # Setup
 title:               fabic

@@ -2,6 +2,7 @@
 layout: page
 title: "Sybase ASE (Adaptative Server Enterprise)"
 description: "Scattered notes about Sybase ASE RDBMS"
+published: false
 ---
 
 # isql : From a shell prompt

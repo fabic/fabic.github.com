@@ -2,6 +2,7 @@
 layout: page
 title: todo, ideas, ...
 tagline: Random brain dumps
+published: false
 ---
 
 Here lies some things I ought to write about, or not, ideas, thoughts, etc...

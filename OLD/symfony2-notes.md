@@ -2,6 +2,7 @@
 layout: page
 title: "Symfony2 notes"
 description: "Miscellaneous Symfony2 notes"
+published: false
 ---
 
 _Just some notes & links laid down while discovering Symfony2._

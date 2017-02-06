@@ -2,6 +2,7 @@
 layout: page
 title: "C++ notes for self"
 description: "Scattered notes about C/C++ stuff."
+published: false
 ---
 
 
