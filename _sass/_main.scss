@@ -13,6 +13,7 @@ tt.fixme { color: lightyellow; }
 
 .masthead {
   background-color: white;
+  //background: url("/assets/orange_sky_trees_slice_1359x73.png");
 }
 
 /* Author */
@@ -85,4 +86,10 @@ img.diigo-icon {
   padding: 2px 5px;
   border-radius: 3px;
   font-size: x-small;
+}
+
+// fixme: ain't good.
+@media (max-width: 30em) {
+  .site-version { display: none; }
+  .warm-thanks-bbox { display: none; }
 }
