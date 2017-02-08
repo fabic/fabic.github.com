@@ -41,13 +41,17 @@ tt.fixme { color: lightyellow; }
 }
 
 /* Social links */
-ul.sidebar-social-links {
+.sidebar-social-links {
+  padding-left: 0;
+  padding-right: 0;
+}
+.sidebar-social-links > ul {
   list-style: none;
   padding: 0;
   text-align: right;
   font-family: monospace;
 }
-ul.sidebar-social-links > li {
+.sidebar-social-links > ul > li {
   //display: inline;
   margin: 0 .5em;
 }
