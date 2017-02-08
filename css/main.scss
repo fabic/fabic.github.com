@@ -1,4 +1,5 @@
 ---
+# This is important for having Jekyll to process this file.
 ---
 
 /* http://fontawesome.io/get-started/
@@ -6,3 +7,8 @@
 
 @import "font-awesome";
 */
+
+/*
+   See /_sass/_main.scss  (everything happens there).
+ */
+@import "main";
