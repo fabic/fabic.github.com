@@ -17,7 +17,18 @@ tagline: |
     in the philament empires&hellip;
 
 description: |
-    just killing time, from a shell&hellip;
+    if (fail); then
+      try:
+        // ...
+      catch( again ):
+        // fixme: this ain't the proper way
+        // fixme: of handling this error
+        // fixme: condition; we can do better.
+        throw again;
+
+
+
+#just killing time, from a shell&hellip;
 
 url:                 http://blog.fabic.net
 baseurl:             ""
@@ -40,7 +51,7 @@ author:
   email:             cadet.fabien@gmail.com
 
 # Custom vars
-version:             1.0.1
+version:             v1.0.1
 
 twitter_username: FabienKd
 

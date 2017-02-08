@@ -4,10 +4,17 @@
 
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
-  <div class="sidebar-item">
-    <strong class="author">{{ site.author.name }}</strong>
-    <p>{{ site.description }}</p>
+  <div class="sidebar-item author">
+    <div>
+      <strong class="name">{{ site.author.name }}</strong>
+      <p class="description">{{ site.description }}</p>
+    </div>
+    <!--  <img src="/assets/fabien_cadet_jet_lagged_bw.png"
+             title="Fabien Cadet jet-lagged profile picture B&W."
+             class="profile-picture-me">  -->
   </div>
+
+  <div style="clear: both;"></div>
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">home</a>
@@ -52,6 +59,9 @@
   <div class="sidebar-item sidebar-last-item">
     <p>
       &copy; {{ site.time | date: '%Y' }}
+      {% if site.version %}
+        &mdash; <span class="site-version">{{ site.version }}</span>
+      {% endif %}
     </p>
     <div class="warm-thanks-bbox">
       <p>

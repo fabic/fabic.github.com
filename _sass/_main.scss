@@ -11,6 +11,32 @@ body {
   background-color: white;
 }
 
+/* Author */
+#sidebar .author .name {
+  margin: .2 0;
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#sidebar .author > div:first-child {
+  //float: right;
+}
+
+#sidebar .author .description {
+  font-family: monospace;
+  font-size: .5em;
+  background-color: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  line-height: normal;
+}
+
+#sidebar .profile-picture-me {
+  width: 25%;
+  float: left;
+}
+
+/* Social links */
 ul.sidebar-social-links {
   list-style: none;
   padding: 0;
@@ -33,6 +59,10 @@ ul.sidebar-social-links > li {
   position: absolute;
   bottom: 0;
   font-size: small;
+}
+
+.site-version {
+  font-family: monospace;
 }
 
 .warm-thanks-bbox {
