@@ -17,14 +17,14 @@ tagline: |
     in the philament empires&hellip;
 
 description: |
-    if (fail); then
-      try:
+    <tt class='keyw'>if</tt> (fail); <tt class='keyw'>then</tt>
+      <tt class='keyw'>try:</tt>
         // ...
-      catch( again ):
-        // fixme: this ain't the proper way
-        // fixme: of handling this error
-        // fixme: condition; we can do better.
-        throw again;
+      <tt class='keyw'>catch</tt>( again ):
+        // <tt class='fixme'>fixme:</tt> please increment this [ 3 ]
+        // <tt class='fixme'>fixme:</tt> if you think we're not doing
+        // <tt class='fixme'>fixme:</tt> proper error handling here.
+        <tt class='keyw'>throw</tt> again;
 
 
 
