@@ -56,6 +56,10 @@
 
     {% include disqus.html %}
 
+    {% if site.hopwork_username %}
+        {% include hopwork.html %}
+    {% endif %}
+
     {% if site.tracking_id %}
         {% include analytics.html %}
     {% endif %}
