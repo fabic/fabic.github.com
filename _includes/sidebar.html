@@ -41,21 +41,28 @@
     <!--<span class="sidebar-nav-item">Version {{ site.version }}</span>-->
   </nav>
 
+  <!-- SOCIAL LINKS -->
   <div class="sidebar-item">
     <ul class="sidebar-social-links">
       <li>
         <a href="https://github.com/{{ site.github_username }}/"
-           title="Github user {{ site.github_username }}"
-           class="fa fa-github">github.com/{{ site.github_username }}</a>
+           title="Github user {{ site.github_username }}">
+          github.com/{{ site.github_username }}&nbsp;<span class="fa fa-github"></span></a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"
+           title="LinkedIn {{ site.linkedin_username }}">
+          linkedin.com/in/{{ site.linkedin_username }}&nbsp;<span class="fa fa-linkedin-square"></span></a>
       </li>
       <li>
         <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/"
-           title="Flickr photostream of {{ site.flickr_username }}"
-           class="fa fa-flickr">flickr.com/photos/{{ site.flickr_username }}</a>
+           title="Flickr photostream of {{ site.flickr_username }}">
+          flickr.com/photos/{{ site.flickr_username }}&nbsp;<span class="fa fa-flickr"></span></a>
       </li>
     </ul>
   </div>
 
+  <!-- COPRIGHT & THANKS -->
   <div class="sidebar-item sidebar-last-item">
     <p>
       &copy; {{ site.time | date: '%Y' }}
