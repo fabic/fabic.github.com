@@ -42,7 +42,8 @@ comments: false
 #     see _includes/analytics.html
 #     which is included by _layouts/default.html )
 #
-tracking_id: UA-69243698-7 # GA Tracking ID
+#tracking_id: UA-69243698-7  #< can't tell where I got this one !?
+tracking_id: UA-37213083-1 # GA Tracking ID
 
 # About/contact
 author:
