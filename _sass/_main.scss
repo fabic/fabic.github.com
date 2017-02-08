@@ -10,3 +10,34 @@ body {
 .masthead {
   background-color: white;
 }
+
+ul.sidebar-social-links {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  font-family: monospace;
+}
+ul.sidebar-social-links > li {
+  display: inline;
+  margin: 0 .5em;
+}
+.sidebar-social-links a {
+  font-size: .75em;
+  text-decoration: none;
+}
+.sidebar-social-links a:hover {
+  color: #268bd2;
+}
+
+.sidebar-last-item {
+  position: absolute;
+  bottom: 0;
+  font-size: small;
+}
+
+.warm-thanks-bbox {
+  border: 1px dashed #7a7a7a;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: x-small;
+}

@@ -10,7 +10,7 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">home</a>
 
     {% comment %}
       The code below dynamically generates a sidebar nav of pages with
@@ -39,12 +39,12 @@
       <li>
         <a href="https://github.com/{{ site.github_username }}/"
            title="Github user {{ site.github_username }}"
-           class="fa fa-github"><!--{{ site.github_username }}--></a>
+           class="fa fa-github">github.com/{{ site.github_username }}</a>
       </li>
       <li>
         <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/"
            title="Flickr photostream of {{ site.flickr_username }}"
-           class="fa fa-flickr"><!--{{ site.flickr_username }}--></a>
+           class="fa fa-flickr">flickr.com/photos/{{ site.flickr_username }}</a>
       </li>
     </ul>
   </div>
@@ -53,8 +53,12 @@
     <p>
       &copy; {{ site.time | date: '%Y' }}
     </p>
-    <p>
-    <p>Warm thanks to Jekyll theme <a href="http://lanyon.getpoole.com/">&copy;&nbsp;Laynon Poole</a>
-    </p>
+    <div class="warm-thanks-bbox">
+      <p>
+        Powered by Jekyll &amp; Github Pages ;<br>
+        Jekyll theme <a href="http://lanyon.getpoole.com/">&copy;&nbsp;Laynon Poole</a><br>
+        (warm thanks btw.)
+      </p>
+    </div>
   </div>
 </div>

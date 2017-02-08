@@ -10,19 +10,17 @@ gems:
   #- font-awesome-sass
 
 # Setup
-title: Maty
+title: fabic
 
 tagline: |
-    Senior Compositing Artist,
-    Technical Director
-    & Pipeline Developer
+    random (binary) wanderings
+    in the philament empires&hellip;
 
 description: |
-    Senior Compositing Artist, Technical Director & Pipeline Developer
-    at <a href="http://nWave.com" target="_blank">nWave Digital</a> (Brussels, Belgium).
+    just killing time, from a shell&hellip;
 
-url:                 http://maty974.github.io
-baseurl:             ''
+url:                 http://blog.fabic.net
+baseurl:             ""
 paginate:            5
 
 # Comments are powered by disqus
@@ -37,18 +35,18 @@ tracking_id: UA-69243698-7 # GA Tracking ID
 
 # About/contact
 author:
-  name:              Matthieu Cadet
-  url:               http://maty974.github.io
-  email:             matthieu.cadet@gmail.com
+  name:              Fabien Cadet
+  url:               http://fabic.net
+  email:             cadet.fabien@gmail.com
 
 # Custom vars
-version:             1.0.0
+version:             1.0.1
 
-twitter_username: maty974
+twitter_username: FabienKd
 
-github_repo: maty974.github.com
-github_username: maty974
+github_repo: fabic.github.com
+github_username: fabic
 github_show_edit_link: true
 
-flickr_username: maty974
+flickr_username: fabicxx
 #facebook_id: yourusername

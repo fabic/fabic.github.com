@@ -26,28 +26,6 @@
   z-index: 10;
 }
 
-.sidebar-last-item {
-  position: absolute;
-  bottom: 0;
-}
-
-ul.sidebar-social-links {
-  list-style: none;
-  padding: 0;
-  text-align: center;
-}
-ul.sidebar-social-links > li {
-  display: inline;
-  margin: 0 .5em;
-}
-.sidebar-social-links a {
-  font-size: 2em;
-  text-decoration: none;
-}
-.sidebar-social-links a:hover {
-  color: #268bd2;
-}
-
 .cv-when-where {
   color: #555;
 }

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Resume draft
-published: true
+title: Resume draft (maty)
+published: false
 ---
 
 # Experience
