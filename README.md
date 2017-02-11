@@ -16,6 +16,9 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 
     $ bundle exec jekyll s --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port 3939
 
+### Run with the `jekyll-serve.sh` script
+
+    $ ./jekyll-serve.sh
 
 ## Contents
 
