@@ -24,7 +24,7 @@ tags : [draft]
 
 Symlink `.vim/` and `.vimrc` :
 
-    $ ( cd ~ && ln -si ${OLDPWD#$HOME/}/vim/ .vim && ls -lad .vim )
+    $ ( cd ~ && ln -sni ${OLDPWD#$HOME/}/vim/ .vim && ls -lad .vim )
     lrwxrwxrwx 1 fabi fabi 21 Feb 13 13:44 .vim -> dev/dude.vim/vim/
 
     (13:48:26) [fabi@winterfell] 0 ~/dev/dude.vim $ touch vimrc
@@ -33,7 +33,7 @@ Symlink `.vim/` and `.vimrc` :
 
 Head to <https://github.com/VundleVim/Vundle.vim> :
 
-    git clone https://github.com/VundleVim/Vundle.vim.git dot_vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git vim/bundle/Vundle.vim
 
 ### vimrc
 
