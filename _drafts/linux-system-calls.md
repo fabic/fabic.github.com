@@ -43,7 +43,8 @@ Yeah...
   ([official web site](http://www.hoard.org/about/), [emeryberger.github.io/Hoard/](http://emeryberger.github.io/Hoard/)).
 * [OpenSIPS has 2/3 (maybe 4 ?) custom implementation for fast memory allocation](https://github.com/OpenSIPS/opensips/tree/master/mem)
 
-__Note:__ Mac OS X do not support `brk()` since it is based on FreeBSD.
+__Note:__ Mac OS X do not support `brk()` since it is based on FreeBSD ;
+instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/Libc/Libc-763.12/emulated/brk.c) .
 
 
 __EOF__

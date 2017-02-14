@@ -2,10 +2,13 @@
 layout: page
 title: "Git SCM : Scattered notes..."
 description: ""
-published: false
 ---
 
 _Git, shake dreams from your hair my pretty tool..._
+
+## ...
+
+* [Github desktop app.](https://desktop.github.com/)
 
 ## Initial setup
 
