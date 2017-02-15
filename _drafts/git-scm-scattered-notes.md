@@ -6,6 +6,26 @@ description: ""
 
 _Git, shake dreams from your hair my pretty tool..._
 
+List files from a given branch/commit :
+
+    git ls-files --with-tree=pg
+
+    git ls-files --with-tree=pg~10
+
+    git ls-files --with-tree=origin/develop
+
+List tags sorted by version :
+
+    git tag | sort -V
+
+Git merge branches that have unrelated histories :
+
+    git pull --allow-unrelated-histories <remote> <branch>
+
+## Git split tree
+
+    $ git subtree split -b pg --prefix=playground/
+
 ## ...
 
 * [Github desktop app.](https://desktop.github.com/)
