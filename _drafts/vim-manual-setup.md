@@ -16,6 +16,14 @@ tags : [draft]
 
 ### ...
 
+* `ZZ` `ZQ`
+* Ctrl-R "
+
+* [How to paste yanked text into Vim command line? (Stackoverflow)](http://stackoverflow.com/a/3997110/643087)
+* [About Vim Ex mode](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes#Ex-mode)
+
+### ...
+
     $ mkdir -p dude.vim/dot_vim/bundle/
 
     $ cd dude.vim/
