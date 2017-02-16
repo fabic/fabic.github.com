@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Draft - template"
+title: "Draft - CMake, Ah! CMake -_-"
 tagline: "Supporting tagline"
 category : notes
 tags : [draft]
