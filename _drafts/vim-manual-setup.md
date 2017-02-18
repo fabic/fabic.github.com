@@ -8,19 +8,35 @@ tags : [draft]
 
 ## TL;DR
 
-<https://github.com/fabic/dude.vim>
+* <https://github.com/fabic/dude.vim>
 
-<http://marcgg.com/blog/2016/03/01/vimrc-example/>
-<https://statico.github.io/vim.html>
-<https://statico.github.io/vim2.html>
+* <http://marcgg.com/blog/2016/03/01/vimrc-example/>
+* <https://statico.github.io/vim.html>
+* <https://statico.github.io/vim2.html>
 
-### ...
+### Vim tips
 
-* `ZZ` `ZQ`
-* Ctrl-R "
 
-* [How to paste yanked text into Vim command line? (Stackoverflow)](http://stackoverflow.com/a/3997110/643087)
+#### Normal mode
+
+* `ZZ`
+* `ZQ`
+* `gv` will re-select your last visual selection.
+
+
+#### Command mode
+
+* `<C-R> "`
+    * See [How to paste yanked text into Vim command line? (Stackoverflow)](http://stackoverflow.com/a/3997110/643087)
+
+* You can use `<C-R><C-W>` on the ':' command line to paste the word under cursor
+  ([wikia](http://vim.wikia.com/wiki/Word_under_cursor_for_command)).
+
+
+#### Ex mode
+
 * [About Vim Ex mode](https://en.wikibooks.org/wiki/Learning_the_vi_Editor/Vim/Modes#Ex-mode)
+
 
 ### ...
 

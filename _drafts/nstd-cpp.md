@@ -16,6 +16,21 @@ tags : [draft]
     * [Gotcha #62:  Replacing Global New and Delete (2002, Stephen C. Dewhurst)](http://www.informit.com/articles/article.aspx?p=30642&seqNum=3)
     * <http://blog.aaronballman.com/2011/08/the-placement-new-operator/>
 
+## Requirements, constraints
+
+* [LP64](http://en.cppreference.com/w/cpp/language/types)
+  __4/8/8__ (`int` is 32-bit, `long` and pointer are 64-bit).
+* `char` is 8-bits “As of C++14, char must represent 256 distinct values, bijectively convertible to the values 0..255 of unsigned char [...]”.
+* __C++14/17__ only, so that we do not have to resort to `#define-s` for backward
+  compatible declarations.
+* Try best no to use `#define-s`, at least for logic/code implementations.
+
+### Coding style
+
+* _work in progress_
+* Let's _not_ prefix anything with `_` (underscores), and specifically let's not
+  follow the __std::__ naming convention which does cripples code readability.
+
 ## Pointers
 
 * The [Itanium C++ ABI](https://mentorembedded.github.io/cxx-abi/abi.html).
