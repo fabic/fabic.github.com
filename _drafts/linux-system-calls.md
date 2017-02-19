@@ -19,7 +19,8 @@ Yeah...
 * <http://www.digilife.be/quickreferences/qrc/linux%20system%20call%20quick%20reference.pdf> (Jialong He)
 * <https://blog.packagecloud.io/eng/2016/04/05/the-definitive-guide-to-linux-system-calls/> (2016, article)
 * <http://cs.lmu.edu/~ray/notes/linuxsyscalls/>
-
+* <http://pubs.opengroup.org/onlinepubs/9699919799/idx/headers.html>
+OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)
 
 ## Memory allocation
 
