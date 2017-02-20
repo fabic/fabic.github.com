@@ -58,6 +58,10 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 * [Course slides : Inner Workings of Malloc and Free &ndash; Prof. David August &ndash; COS 217](https://www.cs.princeton.edu/courses/archive/fall07/cos217/lectures/14Memory-2x2.pdf)
 
 
+### Linux kernel
+
+* [0xax.gitbooks.io/linux-insides/](https://0xax.gitbooks.io/linux-insides/content/index.html)
+
 ### TODO :
 
 * Have an online viewer for the Linux man pages _versus_ the BSD man pages,

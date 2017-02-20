@@ -33,7 +33,14 @@ tags : [draft]
 
 ## Pointers
 
+* [SGI's STL](http://www.sgi.com/tech/stl/download.html)
+* [STLport](https://sourceforge.net/projects/stlport/) (last updated ~2008).
 * The [Itanium C++ ABI](https://mentorembedded.github.io/cxx-abi/abi.html).
 * [JTC1/SC22/WG21 - The C++ Standards Committee - ISOCPP](http://www.open-std.org/JTC1/SC22/WG21/)
+
+### libc
+
+* <http://codingrelic.geekhold.com/2008/11/six-million-dollar-libc.html>
+  about Google's [Bionic libc](https://github.com/android/platform_bionic) impl.
 
 __EOF__

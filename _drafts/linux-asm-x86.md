@@ -18,4 +18,6 @@ _Personal notes about low-level x86 assembly language programming._
     - its [__asmlib__ subroutine library](http://www.agner.org/optimize/#asmlib)),
     - as well as its [optimization manuals](http://www.agner.org/optimize/#manuals)
 
+* <https://github.com/path64/debugger>
+
 __EOF__
