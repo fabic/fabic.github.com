@@ -51,5 +51,6 @@ Git leaves us on a detached HEAD, checkout a branch :
 * <http://wiki.osdev.org/Libgcc>
 * <http://www.linuxfromscratch.org/lfs/view/development/chapter06/gcc.html>
 * <https://gcc.gnu.org/releases.html>
+* <https://gcc.gnu.org/install/>
 
 __EOF__

@@ -6,6 +6,6 @@ category : notes
 tags : [draft]
 ---
 
-* <https://docs.python.org/3/contents.html> huge official documentation
+* <https://docs.python.org/3/contents.html> huge official • documentation
 
 __EOF__
