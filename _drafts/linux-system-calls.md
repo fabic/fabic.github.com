@@ -26,13 +26,21 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
 
 * <https://en.wikipedia.org/wiki/Memory_management>
 * <https://en.wikipedia.org/wiki/C_dynamic_memory_allocation>
+  (and specifically the [References](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#References)
+  section).
+* [Process memory concepts, chap. 3.1](https://www.gnu.org/software/libc/manual/html_node/Memory-Concepts.html)
+  from the [GNU C library](https://www.gnu.org/software/libc/manual/html_node/index.html#SEC_Contents)
+  documentation.
 * [Buddy memory allocation](https://en.wikipedia.org/wiki/Buddy_memory_allocation)
 * [Slab allocation](https://en.wikipedia.org/wiki/Slab_allocation)
 * [SLOB _Simple List Of Blocks_](https://en.wikipedia.org/wiki/SLOB)
 * <https://en.wikipedia.org/wiki/Sbrk>
 * <https://en.wikipedia.org/wiki/Mmap>
 * <http://stackoverflow.com/a/3479496/643087> & <http://stackoverflow.com/a/3479570/643087>
-
+* <http://www.flounder.com/inside_storage_allocation.htm>
+* <http://www.memorymanagement.org/> and specifically their huge
+  [bibliography](http://www.memorymanagement.org/bib.html#bibliography).
+* [CSc 553 — Principles of Compilation – Christian Collberg – 2011 (cs.arizona.edu)](https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/)
 
 ### Implementations
 
@@ -55,8 +63,17 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
 __Note:__ Mac OS X do not support `brk()` since it is based on FreeBSD ;
 instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/Libc/Libc-763.12/emulated/brk.c) .
 
-* [Course slides : Inner Workings of Malloc and Free &ndash; Prof. David August &ndash; COS 217](https://www.cs.princeton.edu/courses/archive/fall07/cos217/lectures/14Memory-2x2.pdf)
+* [Course slides : Inner Workings of Malloc and Free &ndash; Prof. David August &ndash; COS 217](https://www.cs.princeton.edu/courses/archive/fall07/cos217/lectures/14Memory-2x2.pdf), and specifically the slides about
+[Malloc Algorithms](https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/Handouts/Handout-6.pdf).
 
+#### Other impl.
+
+* [memory-mgr.sourceforge.net](http://memory-mgr.sourceforge.net/),
+  old thing ~2012, sort of custom memory manager for C++.
+
+### Binaries
+
+* <https://en.wikipedia.org/wiki/Executable_and_Linkable_Format>
 
 ### Linux kernel
 

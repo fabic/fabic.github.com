@@ -26,7 +26,7 @@ tags : [draft]
 
 #### Command mode
 
-* `<C-R> "`
+* `<C-R> "` paste yanked text.
     * See [How to paste yanked text into Vim command line? (Stackoverflow)](http://stackoverflow.com/a/3997110/643087)
 
 * You can use `<C-R><C-W>` on the ':' command line to paste the word under cursor
