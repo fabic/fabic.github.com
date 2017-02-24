@@ -8,4 +8,8 @@ tags : [draft]
 
 * [iTerm2](http://www.iterm2.com/)
 
+## Brew
+
+* `$ brew services restart mongodb`
+
 __EOF__

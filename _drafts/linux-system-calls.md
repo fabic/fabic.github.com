@@ -79,6 +79,20 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 
 * [0xax.gitbooks.io/linux-insides/](https://0xax.gitbooks.io/linux-insides/content/index.html)
 
+### Graphics
+
+#### DRM & KMS
+
+* [Linux DRM Mode-Setting API | Sept. 2012, by David Herrmann](https://dvdhrm.wordpress.com/2012/09/13/linux-drm-mode-setting-api/)
+  (see also the comments; found when reading about [(the now defunct) KMSCon / 2012](https://dvdhrm.wordpress.com/2012/12/10/kmscon-introduction/); note that there was also a subsequent [(now defunct `libsystemd-terminal` and `systemd-consoled`)](https://github.com/systemd/systemd/pull/747)).
+* [David Herrmann's KMS howto nicely documented `modeset.c`](https://github.com/dvdhrm/docs/blob/master/drm-howto/modeset.c)
+  – see also [a couple of other .c – `/master/drm-howto/`](https://github.com/dvdhrm/docs/tree/master/drm-howto)
+* __Man pages :__
+  - [drm](https://www.commandlinux.com/man-page/man7/drm.7.html)
+  - [drm-memory, drm-mm, drm-gem, drm-ttm](https://www.commandlinux.com/man-page/man7/drm-gem.7.html)
+  - [drm-kms – Kernel Mode-Setting](https://www.commandlinux.com/man-page/man7/drm-kms.7.html)
+* [__libdrm__ Git repository](https://cgit.freedesktop.org/mesa/drm/)
+
 ### TODO :
 
 * Have an online viewer for the Linux man pages _versus_ the BSD man pages,

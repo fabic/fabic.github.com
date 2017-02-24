@@ -26,4 +26,9 @@ tags : [draft]
   stores PDFs of various e-books.
 * [github.com/waydecs/books](https://github.com/waydecs/books) _likewise_.
 
+## Misc.
+
+* [msgpack (for C/C++)](https://github.com/msgpack/msgpack-c) – binary serialization library.
+* [OpenDHT](https://github.com/savoirfairelinux/opendht) – A C++11 Distributed Hash Table implementation.
+
 __EOF__
