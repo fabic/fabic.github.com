@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Draft - Linux x86 assembly"
-tagline: "Supporting tagline"
+layout: page
+title: "Linux x86 assembly notes"
+tagline: ""
 category : notes
 tags : [draft]
 ---

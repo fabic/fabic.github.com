@@ -5,8 +5,9 @@ description: "Scattered notes about C/C++ stuff."
 published: false
 ---
 
+## Articles out there
 
-**fabic.2014-09-12**
+* [2012: Why should I have written ZeroMQ in C, not C++ (part I) – Martin Sústrik](http://250bpm.com/blog:4)
 
 
 ## FYI
@@ -25,12 +26,14 @@ published: false
   Includes a nice "member function table" for quick look-up of available methods
   per container -- as well as C++11 additions.
 
+
 ## e/Books
 
 * [Optimizing C++ (Wikibooks.org)](https://en.wikibooks.org/wiki/Optimizing_C%2B%2B)
 
 ### Misc.
 
+* <https://conan.io/> sort of a C/C++ package manager, free for open source.
 #### Parsing C++
 
 Is not a trivial task at all, many have tried.

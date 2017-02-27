@@ -1,9 +1,9 @@
 ---
-layout: post
-title: "Draft - Concurrency, memory management"
-#tagline: "Supporting tagline"
+layout: page
+title: "Concurrency, memory management"
+tagline: ""
 category : notes
-tags : [memory allocation, concurrency]
+tags : [drafts, memory allocation, concurrency]
 ---
 
 

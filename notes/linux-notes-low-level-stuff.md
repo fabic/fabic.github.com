@@ -1,7 +1,7 @@
 ---
-layout: post
-title: "Draft - Linux syscalls"
-tagline: "Supporting tagline"
+layout: page
+title: "Linux – notes – low-level stuff"
+tagline: "Personal notes and pointers while crawling in the deepest."
 category : notes
 tags : [draft, Linux, syscalls]
 ---
@@ -22,6 +22,7 @@ Yeah...
 * <http://pubs.opengroup.org/onlinepubs/9699919799/idx/headers.html>
 OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)
 
+
 ## Memory allocation
 
 * <https://en.wikipedia.org/wiki/Memory_management>
@@ -31,7 +32,9 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
 * [Process memory concepts, chap. 3.1](https://www.gnu.org/software/libc/manual/html_node/Memory-Concepts.html)
   from the [GNU C library](https://www.gnu.org/software/libc/manual/html_node/index.html#SEC_Contents)
   documentation.
-* [Buddy memory allocation](https://en.wikipedia.org/wiki/Buddy_memory_allocation)
+* [Memory Management for System Programmers – 2005](http://www.enderunix.org/docs/memory.pdf)
+  by [Baris Simsek](http://www.enderunix.org/simsek/)
+(* [Buddy memory allocation](https://en.wikipedia.org/wiki/Buddy_memory_allocation)
 * [Slab allocation](https://en.wikipedia.org/wiki/Slab_allocation)
 * [SLOB _Simple List Of Blocks_](https://en.wikipedia.org/wiki/SLOB)
 * <https://en.wikipedia.org/wiki/Sbrk>
@@ -71,17 +74,22 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 * [memory-mgr.sourceforge.net](http://memory-mgr.sourceforge.net/),
   old thing ~2012, sort of custom memory manager for C++.
 
-### Binaries
+## Signals
+
+* [§24. Signal Handling – GNU libc library doc.](https://www.gnu.org/software/libc/manual/html_node/Signal-Handling.html)
+* <http://www.enderunix.org/simsek/articles/signals.pdf>
+
+## Binaries
 
 * <https://en.wikipedia.org/wiki/Executable_and_Linkable_Format>
 
-### Linux kernel
+## Linux kernel
 
 * [0xax.gitbooks.io/linux-insides/](https://0xax.gitbooks.io/linux-insides/content/index.html)
 
-### Graphics
+## Graphics
 
-#### DRM & KMS
+### DRM & KMS
 
 * [Linux DRM Mode-Setting API | Sept. 2012, by David Herrmann](https://dvdhrm.wordpress.com/2012/09/13/linux-drm-mode-setting-api/)
   (see also the comments; found when reading about [(the now defunct) KMSCon / 2012](https://dvdhrm.wordpress.com/2012/12/10/kmscon-introduction/); note that there was also a subsequent [(now defunct `libsystemd-terminal` and `systemd-consoled`)](https://github.com/systemd/systemd/pull/747)).
@@ -93,7 +101,14 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
   - [drm-kms – Kernel Mode-Setting](https://www.commandlinux.com/man-page/man7/drm-kms.7.html)
 * [__libdrm__ Git repository](https://cgit.freedesktop.org/mesa/drm/)
 
-### TODO :
+## Other scaffholdings
+
+* [Detailed description of C & C++ program startup – “Executable and Linkable Format (ELF)” [archive.org copy of ~charngda @ www.acsu.buffalo.edu – dated somewhere back 2010]](http://www.cs.stevens.edu/~jschauma/810/elf.html)
+  ([copy](http://www.cs.stevens.edu/~jschauma/810/elf.html))
+* [Old paper (1999) about the ELF file format: ELF.txt – “Portable Formats Specification, version 1.1 – Tool Interface Standard (TIS)”](http://www.muppetlabs.com/~breadbox/software/ELF.txt)
+* [The Cerberus ELF Interface (by mayhem@devhell.org) – phrack.org – Volume 0x0b, Issue 0x3d, Phile #0x08 of 0x0f](http://phrack.org/issues/61/8.html)
+
+## TODO :
 
 * Have an online viewer for the Linux man pages _versus_ the BSD man pages,
   and eventually the related POSIX specifications (+wikipedia etc).

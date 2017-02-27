@@ -1,17 +1,24 @@
 ---
-layout: post
-title: "Draft - Notes about algorithms"
-tagline: "Supporting tagline"
+layout: page
+title: "Algorithms – notes"
+tagline: "Random personal notes about algorithms."
 category : notes
-tags : [draft]
+tags : [draft, algorithms]
 ---
 
 ## ...
+
 
 ### Lists
 
 * One-way linear list “is a sequence of cells each of which (except the last)
   points to its successor.”
+
+
+## Disk-based data structures
+
+* [Disk-based data structures (Lecture #16, by Dr. Naveen Garg, ~2009) – NPTEL.ac.in](http://nptel.ac.in/courses/106102064/16) (vidéo course)
+
 
 ## Books
 
@@ -20,7 +27,7 @@ tags : [draft]
 * [Elementary Algorithms (online free e-book, by github.com/liuxinyu95)](https://github.com/liuxinyu95/AlgoXY)
   ([PDF v0.618033](https://github.com/liuxinyu95/AlgoXY/releases/download/v0.618033/elementary-algorithms.pdf)).
 
-## Other
+### Other
 
 * [github.com/haseebr/competitive-programming/](https://github.com/haseebr/competitive-programming/tree/master/Materials)
   stores PDFs of various e-books.
