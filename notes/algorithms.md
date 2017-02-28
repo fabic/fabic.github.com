@@ -14,10 +14,23 @@ tags : [draft, algorithms]
 * One-way linear list “is a sequence of cells each of which (except the last)
   points to its successor.”
 
+### Trees
+
+* [Van Emde Boas tree / priority queue](https://en.wikipedia.org/wiki/Van_Emde_Boas_tree)
+  – “also known as a vEB tree, is a tree data structure which implements an
+  associative array with m-bit integer keys. It performs all operations in
+  O(log m) time, or equivalently in O(log log M) time, where M = 2m is the
+  maximum number of elements that can be stored in the tree. [...]”.
+* [Fractal tree index](https://en.wikipedia.org/wiki/Fractal_tree_index)
+* [B-trees, Shadowing, and Clones – Ohad Rodeh – 2007](http://liw.fi/larch/ohad-btrees-shadowing-clones.pdf)
+  – publication, file-systems related, found through
+  [larch: Python B-tree library](http://liw.fi/larch/).
+
 
 ## Disk-based data structures
 
-* [Disk-based data structures (Lecture #16, by Dr. Naveen Garg, ~2009) – NPTEL.ac.in](http://nptel.ac.in/courses/106102064/16) (vidéo course)
+* __Blog post:__ [Datastructures for external memory – 2016 by Max Bolingbroke](http://blog.omega-prime.co.uk/?p=197)
+* __Online course:__ [Disk-based data structures (Lecture #16, by Dr. Naveen Garg, ~2009) – NPTEL.ac.in](http://nptel.ac.in/courses/106102064/16) (vidéo course)
 
 
 ## Books
@@ -35,7 +48,9 @@ tags : [draft, algorithms]
 
 ## Misc.
 
-* [msgpack (for C/C++)](https://github.com/msgpack/msgpack-c) – binary serialization library.
-* [OpenDHT](https://github.com/savoirfairelinux/opendht) – A C++11 Distributed Hash Table implementation.
+* [msgpack (for C/C++)](https://github.com/msgpack/msgpack-c)
+  – binary serialization library.
+* [OpenDHT](https://github.com/savoirfairelinux/opendht)
+  – A C++11 Distributed Hash Table implementation.
 
 __EOF__

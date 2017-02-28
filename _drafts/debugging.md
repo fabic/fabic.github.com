@@ -9,6 +9,10 @@ tags : [draft]
 * [Capstone – The Ultimate Disassembler](http://www.capstone-engine.org/) [github.com/aquynh/capstone](https://github.com/aquynh/capstone)
 * [Voltron](https://github.com/snare/voltron) – written in Python, uses Capstone.
 
+## GDB
+
+* <http://www.yolinux.com/TUTORIALS/GDB-Commands.html>
+
 ## LLDB
 
 * <https://lldb.llvm.org/tutorial.html>

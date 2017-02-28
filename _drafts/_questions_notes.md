@@ -27,4 +27,8 @@ tags : [draft]
 
 * https://billyquith.github.io/cheatsheet/> – nice Github-pages Bootstrap-css Markdown only cheatsheet template.
 
+## (re-)Learn
+
+* [A Cambridge Computer Science degree summarised in 58 crib sheets (2016)](http://blog.omega-prime.co.uk/?p=204)
+
 __EOF__

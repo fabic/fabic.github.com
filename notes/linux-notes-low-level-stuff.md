@@ -10,7 +10,6 @@ tags : [draft, Linux, syscalls]
 
 Yeah...
 
-
 ## Links
 
 * <https://filippo.io/linux-syscall-table/>
@@ -87,6 +86,7 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 
 * [0xax.gitbooks.io/linux-insides/](https://0xax.gitbooks.io/linux-insides/content/index.html)
 
+
 ## Graphics
 
 ### DRM & KMS
@@ -101,12 +101,16 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
   - [drm-kms – Kernel Mode-Setting](https://www.commandlinux.com/man-page/man7/drm-kms.7.html)
 * [__libdrm__ Git repository](https://cgit.freedesktop.org/mesa/drm/)
 
+
 ## Other scaffholdings
 
 * [Detailed description of C & C++ program startup – “Executable and Linkable Format (ELF)” [archive.org copy of ~charngda @ www.acsu.buffalo.edu – dated somewhere back 2010]](http://www.cs.stevens.edu/~jschauma/810/elf.html)
   ([copy](http://www.cs.stevens.edu/~jschauma/810/elf.html))
+* [Mini FAQ about the misc libc/gcc crt files – crt.txt by ~vapier @ dev.gentoo.org](http://dev.gentoo.org/~vapier/crt.txt)
+* [How initialization functions are handled – §17.20](https://gcc.gnu.org/onlinedocs/gccint/Initialization.html) from [Target description macros and functions – §17](https://gcc.gnu.org/onlinedocs/gccint/Target-Macros.html) of [the GNU compilers internals manual](https://gcc.gnu.org/onlinedocs/gccint/index.html).
 * [Old paper (1999) about the ELF file format: ELF.txt – “Portable Formats Specification, version 1.1 – Tool Interface Standard (TIS)”](http://www.muppetlabs.com/~breadbox/software/ELF.txt)
 * [The Cerberus ELF Interface (by mayhem@devhell.org) – phrack.org – Volume 0x0b, Issue 0x3d, Phile #0x08 of 0x0f](http://phrack.org/issues/61/8.html)
+
 
 ## TODO :
 
