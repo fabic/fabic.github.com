@@ -26,6 +26,14 @@ tags : [draft, algorithms]
   – publication, file-systems related, found through
   [larch: Python B-tree library](http://liw.fi/larch/).
 
+## Hash/map
+
+* [New Concurrent Hash Maps for C++ | 2016, Jeff Preshing](http://preshing.com/20160201/new-concurrent-hash-maps-for-cpp/)
+  (as well as [Using Quiescent States to Reclaim Memory | 2016, Jeff Preshing](http://preshing.com/20160726/using-quiescent-states-to-reclaim-memory/)).
+
+## Other concepts
+
+* [What is RCU, Fundamentally ? | 2007, lwn.net](https://lwn.net/Articles/262464/)
 
 ## Disk-based data structures
 

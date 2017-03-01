@@ -15,4 +15,8 @@ tags : [draft, Linux]
 
 * This [__jez__](https://github.com/jez/dotfiles) dude has loads of configuration files.
 
+## Misc.
+
+* [Why autoconf, automake and libtool fail (at ohse.de/uwe/)](https://ohse.de/uwe/articles/aal.html)
+
 __EOF__

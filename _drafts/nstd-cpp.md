@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: page
 title: "Draft - NSTD ~ non-standard STD -_-"
-tagline: "Supporting tagline"
+tagline: "NSTD is not std::"
 category : notes
 tags : [draft]
 ---
