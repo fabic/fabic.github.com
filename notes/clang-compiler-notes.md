@@ -5,7 +5,9 @@ description: "Scattered side-notes as I'm wandering through Clang internals."
 published: true
 ---
 
-<https://github.com/fabic/llvm-clang>
+* <https://github.com/fabic/llvm-clang>
+* [https://include-what-you-use.org/](https://include-what-you-use.org/)
+  [source](https://github.com/include-what-you-use/include-what-you-use)
 
 * 2017-02-11 ...
 

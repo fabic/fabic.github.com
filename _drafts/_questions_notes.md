@@ -23,9 +23,18 @@ tags : [draft]
 * “Framework” (or virtual file-system) for treating a bunch of files as one
   contiguous stream of characters.
 
+* Code-compile-run trial'n'error – have a tool based on that `hack_cxa_throw_exception.cpp`
+  thing you wrote :
+    -
+
 ## Other
 
 * https://billyquith.github.io/cheatsheet/> – nice Github-pages Bootstrap-css Markdown only cheatsheet template.
+
+## Continuous Integration (CI)
+
+* [buildbot.net](http://buildbot.net/)
+* travis-ci
 
 ## (re-)Learn
 

@@ -18,6 +18,9 @@ published: false
   – <http://stackoverflow.com/a/13841791/643087>
   – <http://en.cppreference.com/w/cpp/language/except_spec>
 
+## Concepts thing
+
+* [CopyConstructible](http://www.boost.org/doc/libs/1_63_0/doc/html/CopyConstructible.html)
 
 ## References
 
@@ -39,5 +42,18 @@ published: false
 Is not a trivial task at all, many have tried.
 
 * [Parsing C++ (March 2001, Andrew Birkett)](http://www.nobugs.org/developer/parsingcpp/)
+
+## Personal notes, thougths, remarks
+
+* The main problem that impairs programming is probably that I have to deal with
+  types :
+    - First I have to know that a type exists ⇒ so I have to search for it.
+    - Then I have to know the usage semantics :
+        * and specifically the _storage abilities_
+          (ex. `enable_shared_from_this<>` sub-types shall be heap-allocated).
+        * whether it is _embeddable_ without troubles ;
+        * or if it may be handled by _containers_ (read copy/move semantics).
+    - And the either the data structure members (for `struct`-s), or simply the public
+  interface
 
 __EOF__

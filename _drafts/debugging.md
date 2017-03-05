@@ -6,6 +6,13 @@ category : notes
 tags : [draft]
 ---
 
+
+## Assertions
+
+    assert(SomePtr != nullptr && "SomePtr should NOT be NULL !");
+
+## Debuggers
+
 * [Capstone – The Ultimate Disassembler](http://www.capstone-engine.org/) [github.com/aquynh/capstone](https://github.com/aquynh/capstone)
 * [Voltron](https://github.com/snare/voltron) – written in Python, uses Capstone.
 

@@ -6,7 +6,6 @@ category : notes
 tags : [draft]
 ---
 
-## TL;DR
 
 
 __EOF__
