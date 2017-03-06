@@ -49,7 +49,11 @@ and up to possibly ~5 GB with their Git history and all the rest of it.
 ### Server thing
 
 * The Gentoo Portage tree has roughly 27 000 packages.
-
+* Something similar _already exists_ :
+    - <https://github.com/woboq/woboq_codebrowser/> – for C++, uses Clang, advertises
+      only a couple of libs – open-source.
+    - <https://sourcegraph.com/pricing> – paid service, free for open-source, only
+      supports a few "web" languages at the moment.
 
 ## Thinking...
 

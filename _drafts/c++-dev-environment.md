@@ -10,7 +10,8 @@ _There you are, trying to get back to some C++ coding after many years..._
 
 * JetBrains CLion
 * Vim + Syntastic + CScope + Ctags
-* YouCompleteMe ? Rtags ?
+* [YouCompleteMe](http://vimawesome.com/plugin/youcompleteme) ?
+* [Rtags](https://github.com/Andersbakken/rtags) ?
 * CMake + example template + doc. pointers.
 * GCC & Clang tips : dumping headers' include hierarchies.
 

@@ -12,6 +12,8 @@ tags : [draft]
 * <https://github.com/cginternals/cmake-init>
   – “Template for reliable, cross-platform C++ project setup using cmake.”
 
+* `cmake --build .`
+
 ## CMake “modules”
 
     mkdir -p cmake/modules
