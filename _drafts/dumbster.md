@@ -54,6 +54,12 @@ and up to possibly ~5 GB with their Git history and all the rest of it.
       only a couple of libs – open-source.
     - <https://sourcegraph.com/pricing> – paid service, free for open-source, only
       supports a few "web" languages at the moment.
+    - <http://lxr.linux.no/> – hasn't been updated since 2013 ? – targets at the
+      Linux kernel.
+    - <http://lxr.free-electrons.com/> – Linux Cross-Reference thing – kernel only.
+    - <http://rprichard.github.io/sourceweb/>
+    - <https://github.com/mozilla/dxr>
+* See [Funtoo Containers hosting](http://www.funtoo.org/Funtoo_Containers)
 
 ## Thinking...
 

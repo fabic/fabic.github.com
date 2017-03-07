@@ -28,8 +28,22 @@ tags : [draft, algorithms]
 
 ## Hash/map
 
-* [New Concurrent Hash Maps for C++ | 2016, Jeff Preshing](http://preshing.com/20160201/new-concurrent-hash-maps-for-cpp/)
-  (as well as [Using Quiescent States to Reclaim Memory | 2016, Jeff Preshing](http://preshing.com/20160726/using-quiescent-states-to-reclaim-memory/)).
+* [New Concurrent Hash Maps for C++ – 2016, Jeff Preshing](http://preshing.com/20160201/new-concurrent-hash-maps-for-cpp/)
+  (as well as [Using Quiescent States to Reclaim Memory – 2016, Jeff Preshing](http://preshing.com/20160726/using-quiescent-states-to-reclaim-memory/)).
+
+* `libdrm/xf86drmHash.c` – mentions :
+
+        [Hanson97] David R. Hanson.  C Interfaces and Implementations:
+        Techniques for Creating Reusable Software.  Reading, Massachusetts:
+        Addison-Wesley, 1997.
+
+        [Knuth73] Donald E. Knuth. The Art of Computer Programming.  Volume 3:
+        Sorting and Searching.  Reading, Massachusetts: Addison-Wesley, 1973.
+
+        [Larson88] Per-Ake Larson. "Dynamic Hash Tables".  CACM 31(4), April
+        1988, pp. 446-457.
+
+
 
 ## Other concepts
 
