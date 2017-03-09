@@ -60,6 +60,10 @@ and up to possibly ~5 GB with their Git history and all the rest of it.
     - <http://rprichard.github.io/sourceweb/>
     - <https://github.com/mozilla/dxr>
 * See [Funtoo Containers hosting](http://www.funtoo.org/Funtoo_Containers)
+* Well, they did it @ [CodeSynthesis](http://www.codesynthesis.com/) :
+    - The build tool [build2.org](https://build2.org/)
+    - The online repository [cppget.org](https://cppget.org/)
+      [Git repo.](https://git.build2.org/cgit/)
 
 ## Thinking...
 

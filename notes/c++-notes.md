@@ -37,6 +37,8 @@ published: false
 ### Misc.
 
 * <https://conan.io/> sort of a C/C++ package manager, free for open source.
+* [C! – cbang](https://github.com/CauldronDevelopmentLLC/cbang) utility lib.
+
 #### Parsing C++
 
 Is not a trivial task at all, many have tried.

@@ -25,7 +25,10 @@ tags : [draft]
 
 * Code-compile-run trial'n'error – have a tool based on that `hack_cxa_throw_exception.cpp`
   thing you wrote :
-    -
+    - ...
+
+* How to use C++... as Bash or Python for "writting scripts" ? — in a similar way
+  that Symfony's Process component works, so to speak.
 
 ## Other
 
