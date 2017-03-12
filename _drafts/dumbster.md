@@ -85,6 +85,8 @@ and up to possibly ~5 GB with their Git history and all the rest of it.
 ## Have to...
 
 * Locate all source files from a given directory.
+* Find out the dependencies between files, specifically header inclusion.
+* Topological sort.
 * For each file :
     - Read the whole file into memory (or `mmap()`) ;
     - Parse the code ⇒ have an abstract syntax tree (AST) ;

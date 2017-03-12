@@ -85,6 +85,9 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 ## Linux kernel
 
 * [0xax.gitbooks.io/linux-insides/](https://0xax.gitbooks.io/linux-insides/content/index.html)
+* [FOSDEM '16 – How to design a Linux kernel API – Michael Kerrisk (Jan. 2016, Brussels)](https://archive.fosdem.org/2016/schedule/event/design_linux_kernel_api/)
+* <https://abi-laboratory.pro/tracker/timeline/linux/> – Linux Kernel ABI changes tracker.
+* [Linux kernel interfaces (Wikipedia)](https://en.wikipedia.org/wiki/Linux_kernel_interfaces)
 
 
 ## Graphics
