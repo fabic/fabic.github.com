@@ -18,7 +18,7 @@ _Personal notes about low-level x86 assembly language programming._
 * <http://www.agner.org/optimize/> Agner's “Software Optimization Resources”
     - its [__asmlib__ subroutine library](http://www.agner.org/optimize/#asmlib)),
     - as well as its [optimization manuals](http://www.agner.org/optimize/#manuals)
-
 * <https://github.com/path64/debugger>
+* <http://www.logix.cz/michal/devel/gas-cfi/>
 
 __EOF__

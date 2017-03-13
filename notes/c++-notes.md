@@ -29,6 +29,14 @@ published: false
   Includes a nice "member function table" for quick look-up of available methods
   per container -- as well as C++11 additions.
 
+### Exception handling
+
+* <https://mentorembedded.github.io/cxx-abi/abi-eh.html>
+* <http://llvm.org/docs/ExceptionHandling.html>
+* <http://refspecs.linuxfoundation.org/LSB_3.0.0/LSB-Core-generic/LSB-Core-generic/ehframechpt.html>
+* <http://mentorembedded.github.io/cxx-abi/exceptions.pdf>
+* <https://monoinfinito.wordpress.com/series/exception-handling-in-c/>
+* <http://stackoverflow.com/questions/490773/how-is-the-c-exception-handling-runtime-implemented>
 
 ## e/Books
 
