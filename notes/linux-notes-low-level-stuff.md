@@ -20,6 +20,7 @@ Yeah...
 * <http://cs.lmu.edu/~ray/notes/linuxsyscalls/>
 * <http://pubs.opengroup.org/onlinepubs/9699919799/idx/headers.html>
 OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)
+* [2014: Making a universal list of syscalls? – LKML.org – Andy Lutomirski](https://lkml.org/lkml/2014/2/27/571)
 
 
 ## Memory allocation
@@ -89,6 +90,9 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 * <https://abi-laboratory.pro/tracker/timeline/linux/> – Linux Kernel ABI changes tracker.
 * [Linux kernel interfaces (Wikipedia)](https://en.wikipedia.org/wiki/Linux_kernel_interfaces)
 
+### Articles
+
+* [2005: Driving Me Nuts - Things You Never Should Do in the Kernel – Greg Kroah-Hartman](http://www.linuxjournal.com/article/8110?page=0,0)
 
 ## Graphics
 
@@ -103,7 +107,10 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
   - [drm-memory, drm-mm, drm-gem, drm-ttm](https://www.commandlinux.com/man-page/man7/drm-gem.7.html)
   - [drm-kms – Kernel Mode-Setting](https://www.commandlinux.com/man-page/man7/drm-kms.7.html)
 * [__libdrm__ Git repository](https://cgit.freedesktop.org/mesa/drm/)
-
+* [klibc](https://en.wikipedia.org/wiki/Klibc)
+  ([klibc Git repo. at kernel.org](https://git.kernel.org/pub/scm/libs/klibc/klibc.git))
+* [Hybris (libhybris)](https://en.wikipedia.org/wiki/Hybris_(software))
+  Android/Linux compatibility layer thing.
 
 ## Other scaffholdings
 

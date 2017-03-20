@@ -118,6 +118,9 @@ Head to <https://github.com/VundleVim/Vundle.vim> :
             || break;
       done
 
+## Other
 
+* <https://github.com/nicolasbrailo/Nico.rc/tree/master/vim/plugins>
+  – `impl_switcher.vim` & `find_grep.vim`
 
 __EOF__
