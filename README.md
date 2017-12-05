@@ -1,24 +1,53 @@
-# Lanyon
+# fabic.net personal weblog
 
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+Dude, this is your Github Pages / Jekyll-based weblog for <http://fabic.net>.
 
-![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
-![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
+Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
 
+## Installation
 
-## FABIC
+### Install Ruby through RVM (optional)
 
-    $ gem install bundler
+This will install RVM under `~/.rvm/`. the `--ruby` switch wil have Ruby installed too.
+Note that it would have messed up with various shell startup scripts (like `.bashrc`, `.bash_profile`, `.profile`, etc),
+if not for `--ignore-dotfiles`. Note that it _may_ fallback to compiling Ruby
+from source if it can't find binaries for your Linux distribution :-/
+
+    $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+    $ curl -sSL https://get.rvm.io | bash -s stable --ruby --ignore-dotfiles
+
+Setup your `$PATH` with `~/.rvm/bin`, and source `~/.rvm/scripts/rvm`.
+
+* See [rvm.io](http://rvm.io/)
+* See [ruby-lang.org/en/documentation/installation/](https://www.ruby-lang.org/en/documentation/installation/)
+
+_**todo:** write further RVM related instructions._
+
+### Install Jekyll and dependencies
+
+    $ gem install --user-install bundler
 
     $ bundler
+
+### Run a local instance of Jekyll
 
     $ bundle exec jekyll clean
 
     $ bundle exec jekyll s --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port 3939
 
-### Run with the `jekyll-serve.sh` script
+#### Run with the `jekyll-serve.sh` script
 
     $ ./jekyll-serve.sh
+
+<hr/>
+
+## Lanyon
+
+    Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+
+    ![Lanyon](https://f.cloud.github.com/assets/98681/1825266/be03f014-71b0-11e3-9539-876e61530e24.png)
+    ![Lanyon with open sidebar](https://f.cloud.github.com/assets/98681/1825267/be04a914-71b0-11e3-966f-8afe9894c729.png)
 
 ## Contents
 
