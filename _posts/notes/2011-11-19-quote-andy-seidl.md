@@ -9,4 +9,4 @@ tags : [note]
 
 > "It takes a long time to make something complicated simple, but if you do,
 > it will work without problems for a long time."
-> __F. Andy Seidl__
+> <br>__F. Andy Seidl__

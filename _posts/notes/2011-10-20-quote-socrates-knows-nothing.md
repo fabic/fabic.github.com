@@ -8,6 +8,6 @@ tags : [note]
 ---
 
 > “All I know is that I know nothing.”
-__Socrates__
+> <br>__Socrates__
 
 (Whereas Jon Snow knows nothing, but doesn't know it -\_-).

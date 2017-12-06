@@ -9,4 +9,4 @@ tags : [note]
 
 > « Les souvenirs sont plus fidèles que les amis et les amants :
 > ils reviennent nous voir lorsque notre âme grelotte toute seule. »
-> __Ferenc Mora__
+> <br>__Ferenc Mora__

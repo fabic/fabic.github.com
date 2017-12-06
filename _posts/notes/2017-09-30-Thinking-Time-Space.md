@@ -10,4 +10,4 @@ tags : [note]
 > “Just as we cannot think of spatial objects at all apart from space, or
 > temporal objects apart from time, so we cannot think of any object apart from
 > the possibility of its connection with other things.”
-> __Ludwig Wittgenstein__
+> <br>__Ludwig Wittgenstein__

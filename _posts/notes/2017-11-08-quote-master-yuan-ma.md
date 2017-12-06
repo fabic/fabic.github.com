@@ -11,4 +11,5 @@ tags : [note]
 > ‘Two-hundred thousand lines,’ said Tzu-li, ‘not counting comments!’ Tzu-ssu
 > responded, ‘Pssh, mine is almost a million lines already.’ Master Yuan-Ma said,
 > ‘My best program has five hundred lines.’ Hearing this, Tzu-li and Tzu-ssu were
-> enlightened.” __Master Yuan-Ma, The Book of Programming__
+> enlightened.”
+> <br>__Master Yuan-Ma, The Book of Programming__

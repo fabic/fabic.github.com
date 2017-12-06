@@ -8,6 +8,11 @@ Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
 
 * <http://www.davidverhasselt.com/about/> inspiration
 
+## Jekyll - Liquid
+
+* [Liquid for Designers (Github)](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
+* [Jekyll & Liquid cheat sheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/)
+
 ## Installation
 
 ### Install Ruby through RVM (optional)

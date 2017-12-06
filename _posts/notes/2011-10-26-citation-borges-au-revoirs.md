@@ -10,4 +10,4 @@ tags : [note]
 > « Les hommes inventèrent l’aurevoir, parce qu’ils se savent
 > en quelque manière immortels, tout en s’estimant contingents
 > et éphémères. »
-> __Borges__
+> <br>__Borges__

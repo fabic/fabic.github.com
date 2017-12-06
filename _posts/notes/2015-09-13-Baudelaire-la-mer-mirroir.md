@@ -8,4 +8,4 @@ tags : [note]
 ---
 
 > « La mer est un miroir, tu contemples ton âme dans le déroulement infini de sa lame. »
-> __Beaudelaire__
+> <br>__Beaudelaire__
