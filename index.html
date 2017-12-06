@@ -10,7 +10,9 @@ title: Home
 
 <section class="posts">
   {% for post in site.posts %}
-    {% if post.tags contains 'note' %}
+    {% if post.published == false %}
+    {% elsif post.tags contains 'old' %}
+    {% elsif post.tags contains 'note' %}
       <article class="note">
         {{ post.content | markdownify }}
         <small class="note-meta">
@@ -19,8 +21,6 @@ title: Home
           <a href="{{ post.url }}">{{ post.title }}</a>
         </small>
       </article>
-    {% elsif post.tags contains 'old' %}
-    {% elsif post.published == false %}
     {% else %}
       <article class="post-link">
         {{ post.date | date_to_string }}

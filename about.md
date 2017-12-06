@@ -4,28 +4,23 @@ title: about
 published: true
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+__EDIT / 2017 :__ Salut, je suis actuellement disponible à l'embauche (!) &ndash;
+uniquement sur l'Île de la Réunion &ndash; ok pour du télé-travail et/ou du
+_freelancing_ &ndash; ok pour des contrats courts quoique sous conditions, en
+  particulier de faisabilité “sans compromis”.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+<hr/>
 
-There are currently two themes built on Poole:
+Hi, I'm Fabien, sort of a computer nerd who lives in Reunion Island
+(Indian Ocean, French territory).
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+I have about 7+ years of experience in developing web applications in PHP,
+including the maintenance of legacy codes, and porting stuff to Symfony 2.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+__2017:__ Currently learning [Node.js](https://nodejs.org/en/) & “full JavaScript”
+web development
+&ndash; been doing some C++ hacking on Clang, dropped it out of boredom
+&ndash; investigating the [Rust](https://www.rust-lang.org/) as a replacement for
+my C & C++ in my errands in low-level “systems” programming language.
 
-## Setup
-
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+__EOF__
