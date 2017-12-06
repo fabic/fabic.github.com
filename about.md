@@ -42,9 +42,12 @@ _Some irrelevant details of a geeky nature..._
 
 __He :__
 
-* is French, indeed;
+* is 36 years old;
+* French, indeed;
 * may speak English, though preferably with computers or androids;
-* might speak some long-forgotten Spanish;
+* might (and would like to) speak some long-forgotten Spanish;
+* lived for 8 years in Montpellier, south of France;
+* now lives in Reunion Island, Indian ocean, near Mauritius.
 * Types on a [TypeMatrix](http://typematrix.com/) keyboard.
 * Uses a QWERTY layout, and also Colemak (much less these days).
 * Writes shell scripts, e.g. [my ~/bin/ dir.](https://github.com/fabic/bash-it/tree/master/fabic/bin)
