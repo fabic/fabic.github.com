@@ -3,7 +3,7 @@ layout: post
 title: "LLVM Clang: Building it from scratch - take 3 (libunwind vs libgcc_s)"
 description: "Compiling LLVM Clang from sources, 2nd attempt."
 category: diary
-tags: [C++, LLVM, Clang, build, compile]
+tags: [C++, LLVM, Clang, build, compile, old]
 ---
 
 _Investigating the possibility of replacing usage of `libgcc_s` with `libunwind`. **Edit/sept. 19th:** even though this "worked", this is not that much a correct way of doing things._

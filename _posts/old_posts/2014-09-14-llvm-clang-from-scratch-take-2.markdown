@@ -3,7 +3,7 @@ layout: post
 title: "LLVM Clang: Building it from scratch - take 2 (ok)"
 description: "Compiling LLVM Clang from sources, 2nd attempt."
 category: diary
-tags: [C++, LLVM, Clang, build, compile]
+tags: [C++, LLVM, Clang, build, compile, old]
 ---
 
 Trying to proceed the CMake-based build that [failed yesterday](/diary/2014/09/13/llvm-clang-from-scratch) -- Huh! 2 GB of resident memory while linking `clang` target, and with only 4 GB of total RAM, my laptop ends up using all the 4 GB swap -- killing some processes -- possibly too late: link failled with the same "undefined symbols" reason.
@@ -128,7 +128,7 @@ Ok too as per <http://libcxx.llvm.org/> :
         -nodefaultlibs -lc++ -lc++abi -lm -lc -lgcc_s -lgcc \
         test.cpp
 
-    [fabi@wall] ~/dev/llvm (master ✗)  ldd ./a.out 
+    [fabi@wall] ~/dev/llvm (master ✗)  ldd ./a.out
         linux-vdso.so.1 (0x00007fffcdd69000)
         libc++.so.1 => not found
         libc++abi.so.1 => not found

@@ -2,8 +2,8 @@
 layout: post
 title: "GH:antialize/wkhtmltopdf"
 description: "On building antialize/wkhtmltopdf, a really nice command line tool for producing PDFs from web pages :-)"
-category: 
-tags: [PDF, make]
+category:
+tags: [PDF, make, old]
 ---
 
 _On building [wkhtmltopdf](http://code.google.com/p/wkhtmltopdf/), a great command line tool for rendering PDFs from webpages, with abilities for concatenation and generation of table of contents._
@@ -184,7 +184,7 @@ See <http://code.google.com/p/wkhtmltopdf/wiki/compilation>.
     $ git checkout -b live tags/0.11.0_rc2
 
     $ ../wkqt/bin/qmake
-    
+
     $ make
 
     $ ls bin/
@@ -193,7 +193,7 @@ See <http://code.google.com/p/wkhtmltopdf/wiki/compilation>.
     wkhtmltopdf
 
 
-    $ bin/wkhtmltopdf 
+    $ bin/wkhtmltopdf
     You need to specify atleast one input file, and exactly one output file
     Use - for stdin or stdout
 
@@ -215,7 +215,7 @@ See <http://code.google.com/p/wkhtmltopdf/wiki/compilation>.
 
       (page)? <input url/file name> [PAGE OPTION]...
       Options for the page object can be placed in the global options and the page
-      options areas. The applicable options can be found in the Page Options and 
+      options areas. The applicable options can be found in the Page Options and
       Headers And Footer Options sections.
 
       A cover objects puts the content of a singe webpage into the output document,
@@ -266,12 +266,7 @@ See <http://code.google.com/p/wkhtmltopdf/wiki/compilation>.
       -V, --version                       Output version information an exit
 
     Contact:
-      If you experience bugs or want to request new features please visit 
+      If you experience bugs or want to request new features please visit
       <http://code.google.com/p/wkhtmltopdf/issues/list>, if you have any problems
-      or comments please feel free to contact me: see 
+      or comments please feel free to contact me: see
       <http://www.madalgo.au.dk/~jakobt/#about>
-
-
-
-
-

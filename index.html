@@ -19,6 +19,8 @@ title: Home
           <a href="{{ post.url }}">{{ post.title }}</a>
         </small>
       </article>
+    {% elsif post.tags contains 'old' %}
+    {% elsif post.published == false %}
     {% else %}
       <article class="post-link">
         {{ post.date | date_to_string }}
@@ -29,16 +31,21 @@ title: Home
   {% endfor %}
 </section>
 
-{% if false %}
-<ul>
-  {% for post in site.posts %}
-    <li>
-      {{ post.date | date_to_string }}
-      &ndash;
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+{% if true %}
+<section class="posts old-posts">
+  <h3>Some old posts...</h3>
+  <ul>
+    {% for post in site.posts %}
+      {% if post.tags contains 'old' %}
+        <li>
+          {{ post.date | date_to_string }}
+          &ndash;
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
 {% endif %}
 
 {% if false %}

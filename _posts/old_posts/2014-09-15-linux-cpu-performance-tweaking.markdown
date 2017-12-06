@@ -3,7 +3,7 @@ layout: post
 title: "Linux CPU frequency troobleshooting"
 description: "Sequel of yesterday's post, CPU was in powersave mode."
 category: diary
-tags: [Linux, CPU, troobleshooting]
+tags: [Linux, CPU, troobleshooting, old]
 ---
 
 _Sequel of yesterday's post about compiling LLVM Clang: it hadn't completed this morning due to my laptop's CPU "governor" thing being "powersave"._

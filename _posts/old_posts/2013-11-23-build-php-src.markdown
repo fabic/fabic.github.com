@@ -3,7 +3,7 @@ layout: post
 title: "Building PHP (from its Git repository)"
 description: ""
 category: diary
-tags: [PHP, make]
+tags: [PHP, make, old]
 ---
 
 _Saturday, windy and cold day, went out to get some coffee on a café's terrace... and went back chilled and chilled out_

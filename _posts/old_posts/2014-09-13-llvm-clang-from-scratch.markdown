@@ -3,7 +3,7 @@ layout: post
 title: "LLVM Clang: Building it from scratch - take 1"
 description: ""
 category: diary
-tags: [C++, LLVM, Clang, build, compile]
+tags: [C++, LLVM, Clang, build, compile, old]
 ---
 
 _Been a while since my last C++ line of code -- spent a few days during my vacations reading about the recently released C++14 specs -- went through the C++11 language features -- wandering around the web about all this -- got no project at hand, so I'm just goin' to kill some time today building Clang from its sources, with some vague purposes..._

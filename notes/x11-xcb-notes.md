@@ -4,6 +4,7 @@ title: " X11 / XCB – notes"
 tagline: "Personal notes about my unfortunate encounters with X11 and whatever..."
 category : notes
 tags : [draft, X11, XCB]
+published: false
 ---
 
 * [xcb.freedesktop.org](https://xcb.freedesktop.org/)

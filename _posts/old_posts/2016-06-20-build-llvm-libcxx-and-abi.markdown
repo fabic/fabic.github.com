@@ -3,7 +3,7 @@ layout: post
 title: "LLVM Clang: Building `libcxx` & `libcxxabi`"
 description: "How to build `libcxx` and `libcxxabi` under Linux"
 category: diary
-tags: [C++, LLVM, Clang, build, compile, libcxx, libcxxabi, libc++]
+tags: [C++, LLVM, Clang, build, compile, libcxx, libcxxabi, libc++, old]
 ---
 
 * <http://libcxx.llvm.org/docs/BuildingLibcxx.html>

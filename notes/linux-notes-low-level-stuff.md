@@ -4,6 +4,7 @@ title: "Linux – notes – low-level stuff"
 tagline: "Personal notes and pointers while crawling in the deepest."
 category : notes
 tags : [draft, Linux, syscalls]
+published: false
 ---
 
 ## TL;DR
