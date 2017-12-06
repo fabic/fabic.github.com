@@ -2,7 +2,7 @@
 layout: page
 title: "LLVM/Clang playground"
 description: "Scattered side-notes as I'm wandering through Clang internals."
-published: true
+published: false
 ---
 
 <https://github.com/fabic/llvm-clang>
@@ -57,10 +57,3 @@ Lookup.h
 * [clang::driver::Driver][http://clang.llvm.org/doxygen/classclang_1_1driver_1_1Driver.html]
   - `Compilation *BuildCompilation(ArrayRef<const char *> Args);`
     * `^ clang::driver::Compilation` is built with a new `clang::driver::ToolChain`
-
-
-
-
-
-
-

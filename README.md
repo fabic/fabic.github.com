@@ -4,6 +4,10 @@ Dude, this is your Github Pages / Jekyll-based weblog for <http://fabic.net>.
 
 Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
 
+## TODO
+
+* <http://www.davidverhasselt.com/about/> inspiration
+
 ## Installation
 
 ### Install Ruby through RVM (optional)
