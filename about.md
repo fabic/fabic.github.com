@@ -8,7 +8,7 @@ __EDIT / 2017 :__ Salut, je suis actuellement disponible à l'embauche (!)
 &ndash; uniquement sur l'Île de la Réunion
 &ndash; ok pour du télé-travail et/ou du _freelancing_
 &ndash; ok pour des contrats courts quoique sous conditions, en particulier de
-faisabilité “sans compromis”.
+faisabilité “sans compromis” &ndash; => [curriculum vitae (pdf)](/assets/Mr_Cadet_Fabien_-_Curriculum_Vitae_-_Light_Ver._1_-_Octobre_2017_-_Reunion.pdf)
 
 <hr/>
 
