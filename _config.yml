@@ -35,7 +35,7 @@ baseurl:             ""
 paginate:            5
 
 # Comments are powered by disqus
-comments: false
+comments: true
 
 # Google analytics
 #   ( https://analytics.google.com/

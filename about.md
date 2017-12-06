@@ -4,11 +4,18 @@ title: "À propos"
 published: true
 ---
 
-__EDIT / 2017 :__ Salut, je suis actuellement disponible à l'embauche (!)
-&ndash; uniquement sur l'Île de la Réunion
-&ndash; ok pour du télé-travail et/ou du _freelancing_
-&ndash; ok pour des contrats courts quoique sous conditions, en particulier de
-faisabilité “sans compromis” &ndash; => [curriculum vitae (pdf)](/assets/Mr_Cadet_Fabien_-_Curriculum_Vitae_-_Light_Ver._1_-_Octobre_2017_-_Reunion.pdf)
+<div class="available-for-hire-notice">
+  <strong>EDIT / 2017 :</strong> Salut, je suis actuellement disponible à l'embauche (!)
+  &ndash; uniquement sur l'<b>Île de la Réunion</b>
+  &ndash; ok pour du télé-travail et/ou du <em>freelancing</em>
+  &ndash; ok pour des contrats courts ou moyen termes quoique sous conditions, en particulier de
+  faisabilité “sans compromis”.
+  <br>
+  <center>
+    <a href="/assets/Mr_Cadet_Fabien_-_Curriculum_Vitae_-_Light_Ver._1_-_Octobre_2017_-_Reunion.pdf">
+      curriculum vitae (pdf)</a>
+  </center>
+</div>
 
 <hr/>
 
