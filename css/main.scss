@@ -12,3 +12,26 @@
    See /_sass/_main.scss  (everything happens there).
  */
 @import "main";
+
+.frontpage-disclaimer {
+  // font-size: .8em;
+  background-color: white;
+  border: 1px solid #eee;
+  padding: .5em 1em;
+  margin: .75em 0;
+}
+
+.posts .note {
+  position: relative;
+  font-size: .75em;
+  background-color: white;
+  border: 1px solid #eee;
+  padding: .5em 1em;
+  margin: .75em 0;
+}
+
+.posts .note .note-meta {
+  position: absolute;
+  right: .125em;
+  bottom: .0625em;
+}
