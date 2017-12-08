@@ -8,11 +8,13 @@ layout: default
 
   {% if page.previous != nil %}
       <a href="{{ page.previous.url }}"
-         class="widget previous-post">&lt;</a>
+         class="widget previous-post"
+         title="{{ page.previous.title | escape }}">&lt;</a>
   {% endif %}
 
   {% if page.next != nil %}
       <a href="{{ page.next.url }}"
-         class="widget next-post">&gt;</a>
+         class="widget next-post"
+         title="{{ page.next.title | escape }}">&gt;</a>
   {% endif %}
 </div>
