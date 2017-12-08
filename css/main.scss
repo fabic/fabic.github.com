@@ -15,6 +15,22 @@
 
 body {
   margin-bottom: 2em;
+  // background-color: #202020;
+}
+
+.wrap {
+  background-color: #202020;
+}
+
+.masthead-title small {
+  color: #b0b0b0;
+}
+
+.container.content {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  background-color: #303030;
+  border-radius: 7px;
 }
 
 /* Sidebar: align my contact info. rendered as images. */
@@ -30,7 +46,7 @@ body {
   background-color: white;
   border: 1px solid #eee;
   padding: .5em 1em;
-  margin: .75em 0;
+  margin: 0 0 .75em 0;
 }
 
 .available-for-hire-notice {
@@ -40,6 +56,10 @@ body {
   padding: .5em;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.page, .post {
+  margin: 0;
 }
 
 .posts .note, .posts .post-link {

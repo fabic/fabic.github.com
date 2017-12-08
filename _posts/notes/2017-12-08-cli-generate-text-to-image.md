@@ -21,8 +21,12 @@ Likewise for my mobile phone number :
         label:"+33 (0) 123 11 22 33" \
         cadet_fabien_mobile_phone_number.black.png
 
+List available fonts :
+
+    $ convert -list font | grep Font:
+
 There seems to exist a possibly “better” alternative to ImageMagick,
-probably a fork of it :
+probably a fork of it : __GraphicsMagick__.  But it behaves slightly differently.
 
     $ sudo apt-get install graphicsmagick
 
