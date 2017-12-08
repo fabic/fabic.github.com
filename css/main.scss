@@ -79,6 +79,7 @@ body {
 
 .page, .post {
   margin: 0;
+  position: relative;
 }
 
 .page.dark, .post.dark {
@@ -141,6 +142,46 @@ body {
   background-color: white;
   border: 1px solid #eee;
   padding: .5em 1em;
+}
+
+.page a.widget.previous-post {
+  position: absolute;
+  z-index: 10;
+  left: -30px;
+  bottom: .25em;
+  width: 30px;
+  height: 60px;
+  border-top-left-radius:    8px;
+  border-bottom-left-radius: 8px;
+  background-color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  /*color: #56bbf2;*/
+}
+
+.page a.widget.next-post {
+  position: absolute;
+  z-index: 10;
+  right: -30px;
+  bottom: .25em;
+  width: 30px;
+  height: 60px;
+  border-top-right-radius:    8px;
+  border-bottom-right-radius: 8px;
+  background-color: white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  /*color: #56bbf2;*/
+}
+
+.page .widget.previous-post a {
+  content: "X";
 }
 
 /*
