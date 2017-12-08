@@ -81,6 +81,17 @@ body {
   margin: 0;
 }
 
+.page.dark, .post.dark {
+  margin: 0;
+  background: inherit;
+  color: #e0e0e0;
+  border: 0;
+}
+
+.page.dark .page-title, .post.dark .post-title {
+  color: #e0e0e0;
+}
+
 .posts article.note,
 .posts article.post-link {
   position: relative;
@@ -134,6 +145,8 @@ body {
 
 /*
     Embeded videos
+
+    FIXME: incomplete.
  */
 
 /* iPhone 5/5S */

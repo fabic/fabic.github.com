@@ -2,7 +2,9 @@
 layout: default
 ---
 
-<div class="page">
+<div class="page {% if page.tags contains 'dark' %}dark{% endif %}">
   <h1 class="page-title">{{ page.title }}</h1>
   {{ content }}
+
+  {% if page.tags contains 'dark' %}HEY{% endif %}
 </div>
