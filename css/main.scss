@@ -17,6 +17,12 @@ body {
   margin-bottom: 2em;
 }
 
+/* Sidebar: align my contact info. rendered as images. */
+img.my-email-address, img.my-telephone-number {
+  float: right;
+  margin: 0;
+}
+
 .frontpage-disclaimer {
   font-size: .9em;
   color: #555;

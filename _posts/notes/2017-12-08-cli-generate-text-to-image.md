@@ -9,10 +9,24 @@ tags : [note, cli, graphics]
 
 Generate an image with my email address, from the command line :
 
-    $ convert -background 'rgba(0,0,0,0)' -font Source-Code-Pro-for-Powerline -pointsize 12 \
-        label:"cadet.fabien@gmail.com" cadet.fabien@gmail.com.png
+    $ convert -background 'rgba(0,0,0,0)' -fill black \
+        -font Source-Code-Pro-for-Powerline -pointsize 12 \
+        label:"noreply@examble.com" \
+        cadet.fabien_at_gmail.black.png
 
 Likewise for my mobile phone number :
 
-    $ convert -background 'rgba(0,0,0,0)' -font Source-Code-Pro-for-Powerline -pointsize 12 \
-        label:"+33 (0) 651 07 26 05" cadet_fabien_mobile_phone_number.png
+    $ convert -background 'rgba(0,0,0,0)' -fill black \
+        font Source-Code-Pro-for-Powerline -pointsize 12 \
+        label:"+33 (0) 123 11 22 33" \
+        cadet_fabien_mobile_phone_number.black.png
+
+There seems to exist a possibly “better” alternative to ImageMagick,
+probably a fork of it :
+
+    $ sudo apt-get install graphicsmagick
+
+    $ gm convert -background 'rgba(0,0,0,0)' -fill white \
+        -font Source-Code-Pro-for-Powerline -pointsize 12 \
+        label:"+33 (0) 123 11 22 33" \
+        cadet_fabien_mobile_phone_number.white.png
