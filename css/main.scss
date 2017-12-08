@@ -18,7 +18,8 @@ body {
 }
 
 /* Sidebar: align my contact info. rendered as images. */
-img.my-email-address, img.my-telephone-number {
+.sidebar-social-links img.my-email-address,
+.sidebar-social-links img.my-telephone-number {
   float: right;
   margin: 0;
 }

@@ -19,6 +19,22 @@ published: true
 
 <hr/>
 
+<center>
+  <img src="/assets/cadet.fabien_at_gmail.com.black.png"
+       alt="email address as image."
+       class="my-email-address" />
+
+  <img src="/assets/cadet_fabien_mobile_phone_number.black.png"
+       alt="Mobile phone number as image."
+       class="my-telephone-number" />
+
+  <img src="/assets/cadet_fabien_home_phone_number.black.png"
+       alt="Home phone number as image."
+       class="my-telephone-number" />
+</center>
+
+<hr/>
+
 Hi, I'm Fabien, sort of a computer nerd who lives in __Reunion Island__
 (Indian Ocean, France territory).
 
