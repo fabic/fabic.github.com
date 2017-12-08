@@ -131,3 +131,43 @@ body {
   border: 1px solid #eee;
   padding: .5em 1em;
 }
+
+/*
+    Embeded videos
+ */
+
+/* iPhone 5/5S */
+@media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 568px)
+{
+    div.video-embed > iframe {
+      width: 230px;
+      height: 140px;
+    }
+
+    @media (orientation : landscape) {
+      div.video-embed > iframe {
+        width: 356px;
+        height: 204px;
+      }
+    }
+}
+
+/* iPhone 6 */
+@media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+{
+    div.video-embed > iframe {
+      width: 290px;
+      height: 162px;
+    }
+
+    @media (orientation : landscape) {
+      div.video-embed > iframe {
+        width: 500px;
+        height: 282px;
+      }
+    }
+}
