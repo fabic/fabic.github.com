@@ -36,8 +36,10 @@ body {
 /* Sidebar: align my contact info. rendered as images. */
 .sidebar-social-links img.my-email-address,
 .sidebar-social-links img.my-telephone-number {
-  float: right;
   margin: 0;
+  display: inline;
+  // position: absolute;
+  right: 0;
 }
 
 .frontpage-disclaimer {

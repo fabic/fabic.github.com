@@ -55,6 +55,7 @@ tt.fixme { color: lightyellow; }
 .sidebar-social-links > ul > li {
   //display: inline;
   margin: 0 .5em;
+  position: relative; /* for inner elt. abs. positioning */
 }
 .sidebar-social-links a {
   font-size: .75em;
