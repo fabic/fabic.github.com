@@ -21,7 +21,7 @@ title: Home
     {% if post.published == false %}
     {% elsif post.tags contains 'old' %}
     {% elsif post.tags contains 'note' %}
-      <article class="note">
+      <article class="note {% if post.tags contains 'dark' %}dark{% endif %}">
         {{ post.content | markdownify }}
         <small class="note-meta">
           {{ post.date | date_to_string }}

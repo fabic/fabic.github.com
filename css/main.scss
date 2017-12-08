@@ -101,6 +101,12 @@ body {
     width: 0;
 }
 
+.posts article.note.dark {
+  background-color: #404040;
+  color: #f0f0f0;
+  border-radius: 8px;
+}
+
 .posts .note .note-meta {
   position: absolute;
   right:  0px;
@@ -109,6 +115,15 @@ body {
   border-top-left-radius: 5px;
   padding: 0 .33em;
   background-color: #fafafa;
+}
+
+.posts article.note.dark .note-meta {
+  background-color: #303030;
+  border: 0;
+}
+
+.posts article.note.dark .note-meta a {
+  color: #56bbf2;
 }
 
 .page, .post, .related-posts, .posts.old-posts {
