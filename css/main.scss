@@ -44,12 +44,14 @@ body {
   font-size: .9em;
   color: #555;
   background-color: white;
-  border: 1px solid #eee;
+  // border: 1px solid #eee;
   padding: .5em 1em;
   margin: 0 0 .75em 0;
+  position: relative;
 }
 
 .available-for-hire-notice {
+  color: black;
   background-color: #deebff;
   border: 1px solid #cddaee;
   border-radius: 5px;
@@ -58,23 +60,45 @@ body {
   margin-bottom: 1em;
 }
 
+/* https://stackoverflow.com/a/7324826 */
+.available-for-hire-notice:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    border-top:  20px solid #303030;
+    border-left: 20px solid #bcc9dd;
+    width: 0;
+}
+
+
 .page, .post {
   margin: 0;
 }
 
-.posts .note, .posts .post-link {
+.posts article.note,
+.posts article.post-link {
   position: relative;
   font-size: .85em;
   background-color: white;
-  border: 1px solid #eee;
+  // border: 1px solid #eee;
   padding: .5em 0 .5em 1em;
   margin: .75em 0;
 }
 
+/* https://stackoverflow.com/a/7324826 */
+.posts article.note:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    border-top:  20px solid #303030;
+    border-left: 20px solid #505050;
+    width: 0;
+}
+
 .posts .note .note-meta {
   position: absolute;
-  right: -1px;
-  bottom: -1px;
+  right:  0px;
+  bottom: 0px;
   border: 1px solid #eee;
   border-top-left-radius: 5px;
   padding: 0 .33em;
