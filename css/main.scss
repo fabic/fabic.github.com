@@ -33,6 +33,10 @@ body {
   border-radius: 7px;
 }
 
+#sidebar {
+  border-right: 1px solid white;
+}
+
 /* Sidebar: align my contact info. rendered as images. */
 .sidebar-social-links img.my-email-address,
 .sidebar-social-links img.my-telephone-number {
