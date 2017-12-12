@@ -64,7 +64,11 @@ title: Home
        title="youtube.com/c/FabienCadet">
       Youtube</a>
   </h3>
-  <div id="youtube-tv-cntr"></div>
+  <div id="youtube-tv-cntr">
+    <a href='#youtube-tv-wrapper'
+       id="youtube-tv-load-button"
+       title="Load Youtube playlist">Load</a>
+  </div>
 </section>
 {% endif %}
 
@@ -124,10 +128,14 @@ title: Home
   <script> <!-- 'https://github.com/Giorgio003/Youtube-TV' -->
     (function(document) {
       document.addEventListener("DOMContentLoaded", function(event) {
-        var controller = new YTV('youtube-tv-cntr', {
-          // user: 'FabienCadet'
-          playlist: 'PLBECEC757373FEC2B'
-        });
+        var anchor = document.getElementById('youtube-tv-load-button');
+        anchor.addEventListener('click', function(evt) {
+          evt.preventDefault();
+          var controller = new YTV('youtube-tv-cntr', {
+            // user: 'FabienCadet'
+            playlist: 'PLBECEC757373FEC2B'
+          });
+        }, /* options */ {capture: true, once: true });
       });
     })(document);
   </script>

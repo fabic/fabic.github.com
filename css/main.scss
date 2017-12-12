@@ -245,7 +245,20 @@ a.widget.next-post {
 }
 
 #youtube-tv-cntr {
-  height: 280px; /* Must set height or nothing will appear. */
+  height: 283px; /* Must set height or nothing will appear. */
+  position: relative;
+}
+
+#youtube-tv-load-button {
+  position: absolute;
+  display: block;
+  top: 42%; /* fixme: not clean indeed (approx. centering) */;
+  left: 48%;
+  background-color: #404040;
+  padding: .125em .25em;
+  border: 1px solid #555;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 #diigo-tags-wrapper {
