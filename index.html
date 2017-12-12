@@ -57,9 +57,14 @@ title: Home
 {% endif %}
 
 {% if true %}
-<section class="youtube-tv" style="height: 280px;">
-  <h3>Youtube&hellip;</h3>
-  <div id="youtube-tv-frontpage"></div>
+<!-- Youtube-TV: See init. script at bottom of page. -->
+<section id="youtube-tv-wrapper">
+  <h3>
+    <a href="https://www.youtube.com/c/FabienCadet"
+       title="youtube.com/c/FabienCadet">
+      Youtube</a>
+  </h3>
+  <div id="youtube-tv-cntr"></div>
 </section>
 {% endif %}
 
@@ -99,10 +104,10 @@ title: Home
 {% endif %}
 
 {% if true %}
-  <script>
+  <script> <!-- 'https://github.com/Giorgio003/Youtube-TV' -->
     (function(document) {
       document.addEventListener("DOMContentLoaded", function(event) {
-        var controller = new YTV('youtube-tv-frontpage', {
+        var controller = new YTV('youtube-tv-cntr', {
           // user: 'FabienCadet'
           playlist: 'PLBECEC757373FEC2B'
         });

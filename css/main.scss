@@ -231,3 +231,19 @@ a.widget.next-post {
       }
     }
 }
+
+/* Youtube-TV player thing */
+#youtube-tv-wrapper > h3:first-child {
+  background-color: #fafafa;
+  color: #333;
+  text-align: center;
+}
+
+#youtube-tv-wrapper > h3:first-child a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#youtube-tv-cntr {
+  height: 280px; /* Must set height or nothing will appear. */
+}
