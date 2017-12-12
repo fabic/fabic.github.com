@@ -234,8 +234,8 @@ a.widget.next-post {
 
 /* Youtube-TV player thing */
 #youtube-tv-wrapper > h3:first-child {
-  background-color: #fafafa;
-  color: #333;
+  background-color: #505050;
+  color: #fafafa;
   text-align: center;
 }
 
@@ -246,4 +246,16 @@ a.widget.next-post {
 
 #youtube-tv-cntr {
   height: 280px; /* Must set height or nothing will appear. */
+}
+
+#diigo-tags-wrapper {
+  background-color: white;
+  border: 1px solid #eee;
+  padding: .5em 1em;
+  margin-top: 1.5em;
+}
+
+#diigo-tags-wrapper .diigo-banner {
+  background-color: #f0faff;
+  padding: .25em;
 }
