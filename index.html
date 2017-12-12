@@ -56,6 +56,13 @@ title: Home
 </section>
 {% endif %}
 
+{% if true %}
+<section class="youtube-tv">
+  <h3>Youtube&hellip;</h3>
+  <div id="youtube-tv-frontpage"></div>
+</section>
+{% endif %}
+
 {% if false %}
 <div class="posts">
   {% for post in paginator.posts %}
@@ -89,4 +96,17 @@ title: Home
     <span class="pagination-item newer">Newer</span>
   {% endif %}
 </div>
+{% endif %}
+
+{% if true %}
+  <script>
+    (function(document) {
+      document.addEventListener("DOMContentLoaded", function(event) {
+        var controller = new YTV('youtube-tv-frontpage', {
+          // user: 'FabienCadet'
+          playlist: 'PLBECEC757373FEC2B'
+        });
+      });
+    })(document);
+  </script>
 {% endif %}
