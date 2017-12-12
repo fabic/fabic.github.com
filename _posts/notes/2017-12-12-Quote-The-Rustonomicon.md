@@ -14,6 +14,6 @@ tags : [note, quote]
 > as London is of Old London and Paris of Old Paris, but that it is in fact quite
 > unsafe, its sprawling body imperfectly embalmed and infested with queer animate
 > things which have nothing to do with it as it was in compilation. ”
-> __The Rustonomicon__ ( [doc.rust-lang.org/nomicon/](https://doc.rust-lang.org/nomicon/) )
+> <br>__The Rustonomicon__ ( [doc.rust-lang.org/nomicon/](https://doc.rust-lang.org/nomicon/) )
 
 lol
