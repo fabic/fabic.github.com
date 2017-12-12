@@ -22,9 +22,11 @@ Note that it would have messed up with various shell startup scripts (like `.bas
 if not for `--ignore-dotfiles`. Note that it _may_ fallback to compiling Ruby
 from source if it can't find binaries for your Linux distribution :-/
 
-    $ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+    $ gpg --keyserver hkp://keys.gnupg.net \
+          --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 
-    $ curl -sSL https://get.rvm.io | bash -s stable --ruby --ignore-dotfiles
+    $ curl -sSL https://get.rvm.io | \
+        bash -s stable --ignore-dotfiles --version latest --ruby --with-gems=""
 
 Setup your `$PATH` with `~/.rvm/bin`, and source `~/.rvm/scripts/rvm`.
 
@@ -35,7 +37,11 @@ _**todo:** write further RVM related instructions._
 
 ### Install Jekyll and dependencies
 
+This will have `bundler` installed under `~/.gem/ruby/2.X.Y/bin/` :
+
     $ gem install --user-install bundler
+
+This will fetch and install this "project's" dependencies :
 
     $ bundler
 
@@ -43,7 +49,7 @@ _**todo:** write further RVM related instructions._
 
     $ bundle exec jekyll clean
 
-    $ bundle exec jekyll s --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port 3939
+    $ bundle exec jekyll serve --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port 3939
 
 #### Run with the `jekyll-serve.sh` script
 
