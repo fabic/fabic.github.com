@@ -66,5 +66,46 @@
 
     <script src="/vendor/ytv/ytv.js" type="text/javascript"></script>
 
+    <script>
+      function Utils() {
+        if ( ! (this instanceof Utils) ) {
+          return new Finder();
+        }
+      }
+
+      /**
+       * _Static_.
+       *
+       * https://stackoverflow.com/a/21627295/643087
+       *
+       * @since 2017-12-16 For a timely Disqus comments loading.
+       *
+       * @param  {[type]}  el   [description]
+       * @param  {[type]}  docu [description]
+       * @return {Boolean}      [description]
+       */
+      Utils.isElementVisible = function _utils_is_element_visible(el, docu) {
+        el = el instanceof HTMLElement ? el : docu.getElementById( el );
+        docu = docu || document;
+
+        var rect   = el.getBoundingClientRect(),
+            top    = rect.top,
+            height = rect.height,
+            el     = el.parentNode;
+
+        do {
+          rect = el.getBoundingClientRect();
+          if (top <= rect.bottom === false)
+            return false;
+          // Check if the element is out of view due to a container scrolling
+          if ((top + height) <= rect.top)
+            return false
+          el = el.parentNode;
+        } while (el != docu.body);
+
+        // Check its within the document viewport
+        return top <= docu.documentElement.clientHeight;
+      };
+    </script>
   </body>
 </html>

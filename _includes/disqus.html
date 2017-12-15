@@ -50,11 +50,26 @@
                         });
                     }
                     // 2017-12: Have Disqus do its stuff when DOM is ready.
-                    else {
+                    else if (false) {
                       document.addEventListener("DOMContentLoaded", function(event) {
                         _fabic_disqus_setup( document );
                       });
                     }
+
+                    // TODO: window.requestAnimationFrame ?
+                    // ^ see MDN Events.scroll doc. advice.
+                    // AUTO. setup disqus upon scroll into view.
+                    var _disqus_setup_done = false;
+                    document.addEventListener("scroll", function(event) {
+                      var docu = event.target;
+                      if (_disqus_setup_done)
+                        return;
+                      if (Utils.isElementVisible('disqus_thread', docu)) {
+                        _fabic_disqus_setup(docu);
+                        _disqus_setup_done = true;
+                        console.log("Yeah man ;-");
+                      }
+                    });
                 })(document);
             </script>
             <noscript>
