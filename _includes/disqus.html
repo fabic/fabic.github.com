@@ -11,17 +11,22 @@
                 As an Example see below.
                 Start here
             -->
-            <div id="disqus_thread"></div>
+            <div id="disqus_thread">Hey!</div>
             <script>
-                var disqus_config = function () {
-                    this.page.url = "{{ page.url | absolute_url }}"; // Replace PAGE_URL with your page's canonical URL variable
-                    this.page.identifier = "{{ page.url }}";
-                };
+                (function(document) {
+                  document.addEventListener("DOMContentLoaded", function(event) {
+                    console.log("Dude, now setting up Disqus.");
+                    var disqus_config = function () {
+                        this.page.url = "{{ page.url | absolute_url }}"; // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = "{{ page.url }}";
+                    };
 
-                (function() { // DON'T EDIT BELOW THIS LINE
-                    var d = document, s = d.createElement('script');
-                    s.src = '//fabic.disqus.com/embed.js'; // TODO: EDIT THIS
-                    s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '//fabic.disqus.com/embed.js'; // TODO: EDIT THIS
+                        s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();
+                      });
+                })(document);
             </script>
             <noscript>
                 Please enable JavaScript to view the
