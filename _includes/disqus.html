@@ -5,27 +5,56 @@
             <h3 class="alignable pull-right">
                 <i class="icon-disqus"></i>
             </h3>
-            <!--
-                Copy the universal code from Disqus. In particular, the div
-                with id #disqus_thread and the following Javascript
-                As an Example see below.
-                Start here
-            -->
-            <div id="disqus_thread">Hey!</div>
+
+            <div id="disqus_thread">
+                <a id="disqus-load-button"
+                   class="center" href="#"title="Load Disqus comments.">
+                  Click to load comments (Disqus)</a>
+            </div>
+
             <script>
+                /**
+                 * FABIC: This will load Disqus upon button click.
+                 */
                 (function(document) {
-                  document.addEventListener("DOMContentLoaded", function(event) {
-                    console.log("Dude, now setting up Disqus.");
                     var disqus_config = function () {
                         this.page.url = "{{ page.url | absolute_url }}"; // Replace PAGE_URL with your page's canonical URL variable
                         this.page.identifier = "{{ page.url }}";
                     };
 
+                    /* Original Disqus code :
                     (function() { // DON'T EDIT BELOW THIS LINE
                         var d = document, s = d.createElement('script');
                         s.src = '//fabic.disqus.com/embed.js'; // TODO: EDIT THIS
-                        s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })(); */
+
+                    /**
+                     * Actual Discus setup refactored here.
+                     */
+                    function _fabic_disqus_setup(doc) {
+                        console.log("Dude, we're now setting up Disqus !");
+                        var s = doc.createElement('script');
+                        s.src = '//fabic.disqus.com/embed.js'; // TODO: EDIT THIS
+                        s.setAttribute('data-timestamp', +new Date());
+                        doc.body.appendChild( s );
+                    }
+
+                    // 2017-12: Have a "Load comments" button.
+                    if (true) {
+                        var loadBtn = document.getElementById('disqus-load-button');
+                        loadBtn.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            _fabic_disqus_setup( document );
+                        });
+                    }
+                    // 2017-12: Have Disqus do its stuff when DOM is ready.
+                    else {
+                      document.addEventListener("DOMContentLoaded", function(event) {
+                        _fabic_disqus_setup( document );
                       });
+                    }
                 })(document);
             </script>
             <noscript>
