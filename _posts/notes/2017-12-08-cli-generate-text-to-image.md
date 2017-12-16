@@ -17,7 +17,7 @@ Generate an image with my email address, from the command line :
 Likewise for my mobile phone number :
 
     $ convert -background 'rgba(0,0,0,0)' -fill black \
-        font Source-Code-Pro-for-Powerline -pointsize 12 \
+        -font Source-Code-Pro-for-Powerline -pointsize 12 \
         label:"+33 (0) 123 11 22 33" \
         cadet_fabien_mobile_phone_number.black.png
 

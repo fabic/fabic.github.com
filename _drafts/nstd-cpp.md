@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Draft - NSTD ~ non-standard STD -_-"
+title: "Draft - NSTD ~ non-standard STD -\_-"
 tagline: "NSTD is not std::"
 category : notes
 tags : [draft]
