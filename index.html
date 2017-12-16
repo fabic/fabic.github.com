@@ -72,7 +72,7 @@ title: Home
 </section>
 {% endif %}
 
-{% if true %}
+{% if false %}
 <section id="diigo-tags-wrapper">
   <div class="diigo-tags" style="width:97%;">
     <div class="diigo-banner sidebar-title center"
@@ -83,8 +83,14 @@ title: Home
              width="16" height="16"
              alt="Diigo icon"/>&nbsp;Diigo Bookmark tags</a>
     </div>
-    <script type="text/javascript"
-            src="https://www.diigo.com/tools/tagrolls_script/fabicxx?sort=freq;icon;count=128;size=11-23;color=56bbff-167bc2;title=Diigo%20Bookmark%20tags;name;showadd;v=3"></script>
+    <!-- 2017-12-16: Attempt at refactoring for a delayed Diigo tags loading
+                     didn't succeed for it happens that this Diigo script
+                     issues `document.write(...)`, which is not allowed by browsers
+                     for external scripts that are added to the Document in an
+                     asynchronous manner -_-
+                     See script at end-of-page here. -->
+    <!-- <script type="text/javascript"
+            src="https://www.diigo.com/tools/tagrolls_script/fabicxx?sort=freq;icon;count=128;size=11-23;color=56bbff-167bc2;title=Diigo%20Bookmark%20tags;name;showadd;v=3"></script> -->
   </div>
 </section>
 {% endif %}
@@ -138,5 +144,30 @@ title: Home
         }, /* options */ {capture: true, once: true });
       });
     })(document);
+  </script>
+{% endif %}
+
+{% if false %}
+  <script>
+    (function(document) {
+      document.addEventListener("DOMContentLoaded", function(event) {
+        document.addEventListener("scroll",
+          function _fabic_diigo_scroll_event_handler(event) {
+            if (Utils.isElementVisible('diigo-tags-wrapper', document)) {
+              console.log("Diigo tags cloud : initialization (!)");
+              var window = document.defaultView;
+              window.requestAnimationFrame(function() {
+                var s = document.createElement('script');
+                s.src = "//www.diigo.com/tools/tagrolls_script/fabicxx?sort=freq;icon;count=128;size=11-23;color=56bbff-167bc2;title=Diigo%20Bookmark%20tags;name;showadd;v=3";
+                s.setAttribute('data-fabic-hello', +new Date()); // Useless indeed.
+                var cntr = document.getElementById('diigo-tags-wrapper');
+                cntr.appendChild( s );
+                //document.body.appendChild( s );
+              });
+            }
+          });
+      });
+    })( document );
+
   </script>
 {% endif %}
