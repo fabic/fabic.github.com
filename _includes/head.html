@@ -31,6 +31,7 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
+{% if true %}
   <!-- http://fontawesome.io/get-started/
 
        “ Tried using the Ruby GEM + SASS, see _config.yml and /css/main.scss ;
@@ -39,7 +40,15 @@
        See icons at http://fontawesome.io/icons/
        Use ex. <a href="..." class="fa fa-github">...</a>
          -->
-  <script src="https://use.fontawesome.com/28ea7e92e3.js"></script>
+  <script src="https://use.fontawesome.com/cbf8ab852d.js"></script>
+{% else %}
+  <!-- Font Awesome 5... is quite heavy, and resort to SVG. -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/brands.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/solid.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/regular.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.1/js/fontawesome.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/v4-shims.js"></script>
+{% endif %}
 
   <!-- Youtube-TV fork: https://github.com/Giorgio003/Youtube-TV -->
   <link href="/vendor/ytv/ytv.css" type="text/css" rel="stylesheet" />
