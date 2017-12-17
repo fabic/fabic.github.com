@@ -1,6 +1,6 @@
 ---
 layout: note
-title: "Linux limit process max memory"
+title: "Linux limit [sub]process(s) maximum memory"
 tagline: ""
 published: true
 category : notes
@@ -37,6 +37,6 @@ Quick test :
 * Note that sub-processes will inherit this same max. virtual memory limit, so
 we cannot restrict the maximum amount of memory of a whole process tree in this
 way.
-* Story: while doing some Jekyll dev. I ran into `{{ site | jsonify }}` freeze
+* Story: while doing some Jekyll dev. I ran into `{ site | jsonify }}` freeze
 my whole system by consuming memory infinitely, certainly due to the fact that
 `jsonify` does not handle cycles.
