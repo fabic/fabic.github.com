@@ -37,6 +37,6 @@ Quick test :
 * Note that sub-processes will inherit this same max. virtual memory limit, so
 we cannot restrict the maximum amount of memory of a whole process tree in this
 way.
-* Story: while doing some Jekyll dev. I ran into `{ site | jsonify }}` freeze
-my whole system by consuming memory infinitely, certainly due to the fact that
-`jsonify` does not handle cycles.
+* Story: while doing some Jekyll dev. I ran into __{&#123; site | jsonify &#125;}__
+freeze my whole system by consuming memory infinitely, certainly due to the fact
+that `jsonify` does not handle cycles. _And I did it again when writing this line -\_-_.
