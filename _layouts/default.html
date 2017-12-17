@@ -8,6 +8,8 @@
     {% include sidebar.html %}
 
     {% if site.github_show_edit_link %}
+    <!-- A small EDIT icon at the top-right of the screen, for me
+         to edit my stuff online through Github. -->
     <div class="github-edit-link">
       <a href="https://github.com/{{ site.github_username }}/{{ site.github_repo }}/edit/master/{{page.path}}"
          class="fa fa-github"
@@ -56,6 +58,12 @@
 
     {% include disqus.html %}
 
+    {% include footer.html %}
+
+    <!--
+         Body bottom JAVASCRIPTS below
+                                       -->
+
     {% if site.hopwork_username %}
         {% include hopwork.html %}
     {% endif %}
@@ -67,22 +75,29 @@
     <script src="/vendor/ytv/ytv.js" type="text/javascript"></script>
 
     <script>
+      /**
+       * Utility class, essentially a repository for static methods.
+       *
+       * @author fabic.net
+       */
       function Utils() {
         if ( ! (this instanceof Utils) ) {
           return new Finder();
         }
       }
 
-      /**
-       * _Static_.
+      /** __[Static method]__
+       * Test whether the HTML element `el` is currently into the viewport,
+       * or not.
        *
-       * https://stackoverflow.com/a/21627295/643087
+       * Got this code from Stackoverflow, see link.
        *
+       * @link https://stackoverflow.com/a/21627295/643087
        * @since 2017-12-16 For a timely Disqus comments loading.
        *
-       * @param  {[type]}  el   [description]
-       * @param  {[type]}  docu [description]
-       * @return {Boolean}      [description]
+       * @param  {HTMLElement|string}  el   Some HTML element, or an #id.
+       * @param  {Document|null}       docu Defaults to the global `document`.
+       * @return {Boolean}
        */
       Utils.isElementVisible = function _utils_is_element_visible(el, docu) {
         el = el instanceof HTMLElement ? el : docu.getElementById( el );

@@ -8,13 +8,19 @@
 # (note that we bind to all IPs, not just localhost)
 listen_port=${1:-3838}
 
+# Restrict the amount of virtual memory, so as to prevent infinite recursion
+# when I'm fiddling with Jekyll "coding". ulimit accepts kilobytes here.
+ulimit -v $((512*1024))
+
+#ulimit -a ; exit
+
 echo "### Jekyll clean ###"
 if ! bundle exec jekyll clean ; then
     echo "# ERROR: jekyll clean exited with non-zero status code $?"
     exit 127
 fi
 
-jekyll_serve_cmd=( bundle exec jekyll serve --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port "${listen_port}" )
+jekyll_serve_cmd=( nice bundle exec jekyll serve --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port "${listen_port}" )
 
 echo
 echo "### Jekyll serve ###"

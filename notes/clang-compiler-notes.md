@@ -5,7 +5,8 @@ description: "Scattered side-notes as I'm wandering through Clang internals."
 published: false
 ---
 
-<https://github.com/fabic/llvm-clang>
+* <https://github.com/fabic/llvm-clang>
+* <https://railsware.com/blog/2014/02/28/creation-and-using-clang-plugin-with-xcode/>
 
 * 2017-02-11 ...
 
@@ -16,18 +17,18 @@ _**2014-09-23:**_ /me investigating _how things happen_ so as to obtain an AST.
 
 ### clang/include/clang/Sema/Sema.h
 
-1546
-2251 AddFunctionCandidates
-2453 Name lookup
+    1546
+    2251 AddFunctionCandidates
+    2453 Name lookup
 
 ### ParseDecl.cpp
 
-1401 bool Parser::MightBeDeclarator(unsigned Context) {
+    1401 bool Parser::MightBeDeclarator(unsigned Context) {
 
-2036 bool Parser::ParseImplicitInt(DeclSpec &DS, CXXScopeSpec *SS,
-                              const ParsedTemplateInfo &TemplateInfo,
-                              AccessSpecifier AS, DeclSpecContext DSC,
-                              ParsedAttributesWithRange &Attrs) {
+    2036 bool Parser::ParseImplicitInt(DeclSpec &DS, CXXScopeSpec *SS,
+                                  const ParsedTemplateInfo &TemplateInfo,
+                                  AccessSpecifier AS, DeclSpecContext DSC,
+                                  ParsedAttributesWithRange &Attrs) {
 
 ### clang/include/clang/Sema/Lookup.h : class LookupResult
 

@@ -14,7 +14,7 @@
 @import "main";
 
 body {
-  margin-bottom: 2em;
+  // margin-bottom: 2em;
   // background-color: #202020;
 }
 
@@ -44,6 +44,31 @@ body {
   display: inline;
   // position: absolute;
   right: 0;
+}
+
+footer#site-footer {
+  position: relative;
+  font-size: .9em;
+  min-height: 10em;
+  background-color: #202020;
+  color: #ccc;
+  padding: .25em .25em 1em .25em;
+}
+
+#site-footer-copyright {
+  font-size: .8em;
+}
+
+.warm-thanks-bbox {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  width: fit-content;
+  border: 1px dashed #7a7a7a;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: small;
+  background-color: #282828;
 }
 
 .frontpage-disclaimer {

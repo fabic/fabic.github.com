@@ -57,6 +57,18 @@ This will fetch and install this "project's" dependencies :
 
 <hr/>
 
+### Update dependencies
+
+Once in a while run :
+
+    $ bundle update
+
+### Writing plugins
+
+The `_plugins/` directory may contain plugins.
+
+__Note__ that Github won't process these though.
+
 ## Lanyon
 
     Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
