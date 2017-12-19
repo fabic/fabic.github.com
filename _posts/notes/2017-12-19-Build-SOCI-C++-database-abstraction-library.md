@@ -11,7 +11,7 @@ Build [SOCI](http://soci.sourceforge.net/)
 ([github.com/SOCI/soci](https://github.com/SOCI/soci)).
 
     $ git clone git@github.com:SOCI/soci.git vendor/soci &&
-        cd vendor/soci/ &&
+        cd vendor/soci/src/ &&
           ( [ -d build ] && rm -r build ) &&
           mkcd build &&
           cmake -G Ninja \
@@ -23,3 +23,5 @@ Build [SOCI](http://soci.sourceforge.net/)
           ninja -j2 ;
           echo "RETV=$? " ;
           pwd
+
+__EDIT:__ -\_- dropped it, caused some seg. fault that I couldn't solve.

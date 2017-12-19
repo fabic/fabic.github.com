@@ -7,8 +7,7 @@ category : notes
 tags : [Linux, crash, boot]
 ---
 
-__TL;DR:__ Couln't get the `netconsole` kernel module to effectivelly send logs to
-my other computer -\_-
+__TL;DR:__ Couln't get the `netconsole` kernel module to effectivelly send logs to my other computer -\_- &ndash; __EDIT:__ Turns out it was my graphics card (!) o\_O\` which btw. was also causing some strange failed SATA commands sent to one of my hard-disk &ndash; no more system hangs, and the good thing is I didn't loose a costly hard-disk ;-.
 
 __Story:__ -\_- Some strange crash problem occured today where my screen would
 go blank early on during boot &ndash; did reboot in recovery mode and investigated
