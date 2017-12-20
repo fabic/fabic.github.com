@@ -71,6 +71,66 @@ LLVM/Clang has a nice example of compile-time polymorphism whereby no dynamic di
       ...
     };
 
+#### do { ... } while(false)
+
+Seen that a few times: a `do { ... } while( false );` that wraps some code. What is it usefull for ?
+
+* it does some sort of lexical scoping.
+* names shadowing (e.g. defined variables at the parent lexical scope): one may redefine a variable with the same name (and any different type).
+* automatic destruction of stuff ?
+
+This one example is from LLVM/Clang's `RecursiveASTVisitor< Derived >` :
+
+    // A helper macro to implement short-circuiting when recursing.  It
+    // invokes CALL_EXPR, which must be a method call, on the derived
+    // object (s.t. a user of RecursiveASTVisitor can override the method
+    // in CALL_EXPR).
+    #define TRY_TO(CALL_EXPR)       \
+    do {                            \
+      if (!getDerived().CALL_EXPR)  \
+        return false;               \
+    } while (false)
+    // Note:       ^ No trailing ';'
+
+#### Preprocessor
+
+    // This macro makes available a variable D, the passed-in decl.
+    #define DEF_TRAVERSE_DECL(DECL, CODE)                              \
+      template <typename Derived>                                      \
+      bool RecursiveASTVisitor<Derived>::Traverse##DECL(DECL *D) {     \
+        bool ShouldVisitChildren = true;                               \
+        bool ReturnValue = true;                                       \
+        if (!getDerived().shouldTraversePostOrder())                   \
+          TRY_TO(WalkUpFrom##DECL(D));                                 \
+        { CODE; }                                                      \
+        if (ReturnValue && ShouldVisitChildren)                        \
+          TRY_TO(TraverseDeclContextHelper(dyn_cast<DeclContext>(D))); \
+        if (ReturnValue && getDerived().shouldTraversePostOrder())     \
+          TRY_TO(WalkUpFrom##DECL(D));                                 \
+        return ReturnValue;                                            \
+      }
+
+    DEF_TRAVERSE_DECL(EmptyDecl, {})
+    DEF_TRAVERSE_DECL(AnotherEmptyDecl, { /* No code here. */ })
+
+    DEF_TRAVERSE_DECL(LabelDecl, {// There is no code in a LabelDecl.
+                                 })
+
+    DEF_TRAVERSE_DECL(StaticAssertDecl, {
+      TRY_TO(TraverseStmt(D->getAssertExpr()));
+      TRY_TO(TraverseStmt(D->getMessage()));
+    })
+
+    DEF_TRAVERSE_DECL(
+        TranslationUnitDecl,
+        {// Code in an unnamed namespace shows up automatically in
+         // decls_begin()/decls_end().  Thus we don't need to recurse on
+         // D->getAnonymousNamespace().
+        })
+
+
+
+
 #### Elements of taste and style
 
 * Popular coding styles out there : Google, LLVM, LLDB, etc.

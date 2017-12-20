@@ -16,10 +16,12 @@ title: Home
   </div>
 </section>
 
-{% if false %}
+{% assign should_show_debug_pages = (site.url | slice: -9, 9) == "fabic.net" %}
+{% if should_show_debug_pages %}
 <section class="pages">
-  {% assign pages_list = site.pages | sort:"url" %}
-    <table>
+  <div class="center"><tt>{{ site.url }}</tt></div>
+  {% assign pages_list = site.pages | sort:"date" | reverse %}
+    <table class="pages-list">
       <thead>
         <tr>
           <th>#</th>
@@ -35,7 +37,7 @@ title: Home
           <th>
           {{ forloop.index }}
         </th>
-        <td>
+        <td class="page-title">
           <a href="{{ node.url }}"
              title="{{ node.url }}">
             {% if node.title != null %}
@@ -45,6 +47,11 @@ title: Home
             {% endif %}
           </a>
           <div style="font-size: .8em; color: #555;">{{ node.title }}</div>
+          <div class="date">
+            {% if node.date != nil %}
+              {{ node.date | date_to_string }}
+            {% endif %}
+          </div>
         </td>
         <td>
           <tt>{{ node.layout }}</tt>
