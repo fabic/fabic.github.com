@@ -118,6 +118,16 @@ footer#site-footer {
   color: #e0e0e0;
 }
 
+// DEBUG: pages list at top of index.html
+section.pages {
+  background-color: white;
+  font-size: .75em;
+}
+section.pages ul {
+  margin: 0;
+  padding: .5em;
+}
+
 .posts article.note,
 .posts article.post-link {
   position: relative;

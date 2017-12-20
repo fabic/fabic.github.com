@@ -4,8 +4,23 @@ title: "Draft - CMake notes"
 tagline: "CMake... oh my!"
 category : notes
 published: false
-tags : [draft, C++, cmake]
+tags : [C++, cmake]
 ---
+
+## IDEA(s)
+
+#### Class Dummy {...} :
+
+Have a small CMake-based project with dummy "example" codes of interest, like connecting to databases, setting things up, etc.
+
+* Focus on both 1) how to configure the CMake (sub)project/s, and 2) the examples, which should be _practical_ (no "school case" foo/bar stuff).
+
+The idea is that it builds what it can, wits. what was found, like for ex. if `libpqxx` was found then build the PostgreSql database examples, likewise for MySql, etc.
+
+* Boost.log
+* PostgreSql libpqxx
+* MySql: mysql-connector-c++
+
 
 ### Dump all CMake variables
 
@@ -20,6 +35,50 @@ tags : [draft, C++, cmake]
     endfunction()
 
 Found that at [SO](http://stackoverflow.com/questions/9298278/cmake-print-out-all-accessible-variables-in-a-script).
+
+#### Dump all variables that match a regular expression
+
+    function(dump_cmake_variables_matching regex)
+      get_cmake_property(varnames VARIABLES)
+      foreach (vname ${varnames})
+        if ("${vname}" MATCHES "${regex}")
+          message(STATUS "${vname} = ${${vname}}")
+        endif()
+      endforeach()
+    endfunction()
+
+##### Example: finding out variables of interest produced by pkg_check_modules().
+
+    ## CMakeLists.txt
+
+    # Postgresql libpqxx
+    find_package( PkgConfig )
+    pkg_check_modules( LIBPQXX libpqxx )
+    if (NOT LIBPQXX_FOUND)
+      message( WARNING "Dude: Couldn't Postgresql libpqxx." )
+    endif()
+
+    dump_cmake_variables_matching(".*PQXX.*")
+
+Would dump those variables that were set by `pkg_check_modules(...)`, of which :
+
+    LIBPQXX_CFLAGS =
+    LIBPQXX_FOUND = 1
+    LIBPQXX_INCLUDE_DIRS =
+    LIBPQXX_LDFLAGS = -lpqxx
+    LIBPQXX_LIBDIR = /usr/lib
+    LIBPQXX_LIBRARIES = pqxx
+
+And configuring a CMake target :
+
+    if (NOT LIBPQXX_FOUND)
+      message( WARNING "Dude: Couldn't find Postgresql libpqxx." )
+    else()
+      message( STATUS "Dude: Found Postgresql libpqxx." )
+      target_compile_options(     pimplio PUBLIC ${LIBPQXX_CFLAGS} )
+      target_include_directories( pimplio PUBLIC ${LIBPQXX_INCLUDE_DIRS} )
+      target_link_libraries(      pimplio        ${LIBPQXX_LIBRARIES} )
+    endif()
 
 ### add_executable()
 
@@ -185,5 +244,8 @@ Hence we end up doing tests like `if (LibSociCore MATCHES "-NOTFOUND$")` :
 * <https://github.com/cginternals/cmake-init>
   – “Template for reliable, cross-platform C++ project setup using cmake.”
 
+* <http://foonathan.net/blog/2016/03/03/cmake-install.html>
+* <https://cmake.org/Wiki/CMake/Tutorials/How_to_create_a_ProjectConfig.cmake_file>
+* <https://cmake.org/Wiki/CMake:How_To_Write_Platform_Checks>
 
 __EOF__

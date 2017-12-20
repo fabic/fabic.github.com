@@ -12,6 +12,7 @@ Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
 
 * [Liquid for Designers (Github)](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 * [Jekyll & Liquid cheat sheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/)
+* <https://gist.github.com/smutnyleszek/9803727>
 
 ## Installation
 

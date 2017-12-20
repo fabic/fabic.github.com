@@ -16,17 +16,92 @@ title: Home
   </div>
 </section>
 
+{% if false %}
+<section class="pages">
+  {% assign pages_list = site.pages | sort:"url" %}
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Page</th>
+          <th>layout</th>
+          <th>&mdash;</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for node in pages_list %}
+        {% unless node.layout == 'default' or node.layout == null %}
+        <tr>
+          <th>
+          {{ forloop.index }}
+        </th>
+        <td>
+          <a href="{{ node.url }}"
+             title="{{ node.url }}">
+            {% if node.title != null %}
+              {{ node.title }}
+            {% else %}
+              <tt>{{ node.url }}</tt>
+            {% endif %}
+          </a>
+          <div style="font-size: .8em; color: #555;">{{ node.title }}</div>
+        </td>
+        <td>
+          <tt>{{ node.layout }}</tt>
+        </td>
+        <td>
+          {% if node.published == false %}
+            <tt> <b style="color: black;">[unpublished]</b> </tt>
+          {% else %}
+            <tt> <b style="color: darkgreen;">[published]</b> </tt>
+          {% endif %}
+
+          {% if node.title == null %}
+            <tt> <b style="color: darkred;">[untitled]</b> </tt>
+          {% endif %}
+
+          {% if node.tags contains 'draft' %}
+            <tt> <b style="color: darksalmon;">[draft]</b></tt>
+          {% endif %}
+
+          {% if node.tags contains 'dark' %}
+            <tt> <b style="color: #999; background-color: #222;">[dark]</b></tt>
+          {% endif %}
+          </td>
+        </tr>
+        {% endunless %}
+      {% endfor %}
+      </tbody>
+    </table>
+</section>
+{% endif %}
+
 <section class="posts">
   {% for post in site.posts %}
-    {% if post.published == false %}
-    {% elsif post.tags contains 'old' %}
+    {% if post.tags contains 'old' %}
+      <!-- Loop iter. #{{ forloop.index }} : Not displaying post tagged as 'old', url: {{ post.url }} -->
     {% elsif post.tags contains 'note' %}
+      <!-- NOTE -->
       <article class="note {% if post.tags contains 'dark' %}dark{% endif %}">
         {{ post.content | markdownify }}
         <small class="note-meta">
           {{ post.date | date_to_string }}
           &ndash;
           <a href="{{ post.url }}">{{ post.title }}</a>
+          {% if true %}
+            {% if post.published == false %}
+              <tt> <b style="color: darkred;">[unpublished]</b> </tt>
+              {% if post.title == null %}
+                <tt> <b style="color: red;">[untitled]</b> </tt>
+              {% endif %}
+              {% if post.tags contains 'draft' %}
+                <tt> <b style="color: darksalmon;">[draft]</b></tt>
+              {% endif %}
+              {% if post.tags contains 'dark' %}
+                <tt> <b style="color: #999; background-color: #222;">[dark]</b></tt>
+              {% endif %}
+            {% endif %}
+          {% endif %}
         </small>
       </article>
     {% else %}
@@ -34,6 +109,20 @@ title: Home
         {{ post.date | date_to_string }}
         &ndash;
         <a href="{{ post.url }}">{{ post.title }}</a>
+        {% if true %}
+          {% if post.published == false %}
+            <tt> <b style="color: darkred;">[unpublished]</b> </tt>
+            {% if post.title == null %}
+              <tt> <b style="color: red;">[untitled]</b> </tt>
+            {% endif %}
+            {% if post.tags contains 'draft' %}
+              <tt> <b style="color: darksalmon;">[draft]</b></tt>
+            {% endif %}
+            {% if post.tags contains 'dark' %}
+              <tt> <b style="color: #999; background-color: #222;">[dark]</b></tt>
+            {% endif %}
+          {% endif %}
+        {% endif %}
         {% if post.tagline %}
           <p class="post-tagline">{{ post.tagline }}</p>
         {% endif %}

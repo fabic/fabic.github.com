@@ -20,7 +20,11 @@ if ! bundle exec jekyll clean ; then
     exit 127
 fi
 
-jekyll_serve_cmd=( nice bundle exec jekyll serve --incremental --trace --watch --drafts --unpublished --host 0.0.0.0 --port "${listen_port}" )
+jekyll_serve_cmd=(
+  nice bundle exec jekyll serve --host 0.0.0.0 --port "${listen_port}"
+    --trace --incremental --watch
+    --drafts --unpublished --future
+  )
 
 echo
 echo "### Jekyll serve ###"

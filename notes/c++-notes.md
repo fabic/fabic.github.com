@@ -40,4 +40,45 @@ Is not a trivial task at all, many have tried.
 
 * [Parsing C++ (March 2001, Andrew Birkett)](http://www.nobugs.org/developer/parsingcpp/)
 
+### Idioms, tips'n'tricks
+
+#### Assertions
+
+    assert(1 == 2 && "Dude, this ain't no good, like not at all.");
+
+##### static_assert()
+
+* `decltype()` & `std::is_same<X, Y>`
+    - Defensive programming in presence of `auto ...`, for ex. :
+
+          for(const auto& row : rset) {
+            static_assert( std::is_same<decltype(row), pqxx::row const&>::value,
+              "PQXX: (!!) we're expecting pqxx::row& from result sets.");
+              ...
+              ...
+          }
+
+#### Compile-time polymorphism
+
+LLVM/Clang has a nice example of compile-time polymorphism whereby no dynamic dispatch occurs at runtime.  The wiring is achieved upon compilation.
+
+    class PimplIOVisitor :
+            public RecursiveASTVisitor< PimplIOVisitor > {
+
+      Derived &getDerived() { return *static_cast<Derived *>(this); }
+
+      ...
+      ...
+    };
+
+#### Elements of taste and style
+
+* Popular coding styles out there : Google, LLVM, LLDB, etc.
+    - Clang-format ?
+
+* Constness :
+    - `pqxx::row const &` vs `const pqxx::row &` ?
+    - `try {...} catch (const std::exception &e) { ... }`
+    vs `try {...} catch (std::exception const &e) { ... }` ?
+
 __EOF__
