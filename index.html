@@ -17,10 +17,13 @@ title: Home
 </section>
 
 {% assign site_url_wo_scheme = site.url | slice: -9, 9 %}
-{% assign should_show_debug_pages = site_url_wo_scheme != "fabic.net" %}
-{% if should_show_debug_pages == true %}
+{% if site_url_wo_scheme != "fabic.net" %}
 <section class="pages">
-  <div class="center"><tt>{{ site.url }} | {{ site_url_wo_scheme }} (Oups!)</tt></div>
+  <div class="center">
+    <tt>{{ site.url }}</tt>
+    &mdash;
+    <a href="http://fabic.net">go to <b>fabic.net</b></a>
+  </div>
   {% assign pages_list = site.pages | sort:"date" | reverse %}
     <table class="pages-list">
       <thead>
