@@ -18,7 +18,7 @@ title: Home
 
 {% assign site_url_wo_scheme = site.url | slice: -9, 9 %}
 {% assign should_show_debug_pages = site_url_wo_scheme != "fabic.net" %}
-{% if should_show_debug_pages %}
+{% if should_show_debug_pages == true %}
 <section class="pages">
   <div class="center"><tt>{{ site.url }} | {{ site_url_wo_scheme }} (Oups!)</tt></div>
   {% assign pages_list = site.pages | sort:"date" | reverse %}
