@@ -16,7 +16,8 @@ title: Home
   </div>
 </section>
 
-{% assign should_show_debug_pages = (site.url | slice: -9, 9) == "fabic.net" %}
+{% assign site_url_wo_scheme = site.url | slice: -9, 9 %}
+{% assign should_show_debug_pages = site_url_wo_scheme != "fabic.net" %}
 {% if should_show_debug_pages %}
 <section class="pages">
   <div class="center"><tt>{{ site.url }}</tt></div>
