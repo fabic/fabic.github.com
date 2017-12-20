@@ -20,7 +20,7 @@ title: Home
 {% assign should_show_debug_pages = site_url_wo_scheme != "fabic.net" %}
 {% if should_show_debug_pages %}
 <section class="pages">
-  <div class="center"><tt>{{ site.url }}</tt></div>
+  <div class="center"><tt>{{ site.url }} | {{ site_url_wo_scheme }} (Oups!)</tt></div>
   {% assign pages_list = site.pages | sort:"date" | reverse %}
     <table class="pages-list">
       <thead>
