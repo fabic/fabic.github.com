@@ -5,6 +5,10 @@ description: "Scattered side-notes as I'm wandering through Clang internals."
 published: false
 ---
 
+* __[clang.llvm.org/doxygen/](http://clang.llvm.org/doxygen/index.html)
+  &ndash; API doc.__
+* [clang.llvm.org/docs/ClangPlugins.html](https://clang.llvm.org/docs/ClangPlugins.html)
+* [clang.llvm.org/docs/IntroductionToTheClangAST.html](https://clang.llvm.org/docs/IntroductionToTheClangAST.html)
 * <https://github.com/fabic/llvm-clang>
 * <https://railsware.com/blog/2014/02/28/creation-and-using-clang-plugin-with-xcode/>
 
