@@ -13,6 +13,7 @@ published: false
 * <https://railsware.com/blog/2014/02/28/creation-and-using-clang-plugin-with-xcode/>
 
 * 2017-02-11 ...
+* 2017-12-21 : `TypePrinter.cpp` has no `.h`, for the `TypePrinter` class I needed.
 
 - - -
 

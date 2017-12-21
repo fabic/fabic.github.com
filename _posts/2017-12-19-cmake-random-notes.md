@@ -231,7 +231,45 @@ Hence we end up doing tests like `if (LibSociCore MATCHES "-NOTFOUND$")` :
       endif()
     endif()
 
+### "Importing" / linking against objects (\*.o)
 
+It is possible to define targets that produce `.o` object files, and later on reference these from other targets definitions (e.g. libraries, executables) with `$<TARGET_OBJECTS:foo>`.
+
+(__That is to say:__ your intent is to <u>not</u> have _“yet another small library target just for sharing binary code”_ ; and at the same time be able to speed up build-time by avoiding that several targets depend on the same __.cpp__ implementations).
+
+The following would have `src/util/foo.cpp` be built twice, one for target __buzz__, the other for target __booz__ :
+
+    add_library(buzz src/buzz_main.cpp src/util/foo.cpp)
+    add_library(booz src/booz.cpp      src/util/foo.cpp)
+
+One possible solution (_out of (?)_) is then to have __foo.cpp__ produce only one __foo.o__ object file during the whole build in this way &ndash; __(1) first__ define the __OBJECT__ targets :
+
+    add_library( foo  OBJECT src/util/foo.cpp )
+    add_library( bar  OBJECT src/other/bar.cpp )
+
+__(2) Then__ one may have for ex. a library target named __buzz__ (that would produce a `libbuzz.so` shared library) import (depend up on) objects of our target `foo`, by resorting to the obscur idiom `$<TARGET_OBJECTS:foo>` :
+
+    add_library( buzz
+      SHARED
+        src/buzz_main.cpp
+        src/buzz_extra.cpp
+        src/buzz_util.cpp
+
+        $<TARGET_OBJECTS:foo>
+
+        ${LIBXXX_LIBRARIES}
+        ...
+        ...
+      )
+
+Likewise for an executable `another-exec` which would depend upon objects from target `bar` :
+
+    add_executable( another-exec
+        buzz
+        $<TARGET_OBJECTS:bar>
+      )
+
+## Pointers
 
 * [CMAKE_INCLUDE_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_INCLUDE_PATH.html)
 * [CMAKE_LIBRARY_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_LIBRARY_PATH.html#variable:CMAKE_LIBRARY_PATH)
