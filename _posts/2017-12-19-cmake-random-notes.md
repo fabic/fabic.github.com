@@ -269,6 +269,45 @@ Likewise for an executable `another-exec` which would depend upon objects from t
         $<TARGET_OBJECTS:bar>
       )
 
+### set_source_files_properties()
+
+Or, for ex. "how does one have specific compiler flags for a given source code file ?"
+
+Say we want a given source `yeah.cpp` that require some bleeding edge feature from C++1z :
+
+    set_source_files_properties( yeah.cpp
+      PROPERTIES
+        COMPILE_FLAGS -std=c++1z -Wall -Weverything -pedantic )
+
+### Setting the default build type (CMAKE_BUILD_TYPE)
+
+The build type/variant is generally left for the user to specify, typically through the command line argument `-DCMAKE_BUILD_TYPE=Release`.  It is possible though to have a different default for this.
+
+Via [cmake.org/Wiki/CMake_FAQ](https://cmake.org/Wiki/CMake_FAQ#How_can_I_change_the_default_build_mode_and_see_it_reflected_in_the_GUI.3F) :
+
+    IF(NOT CMAKE_BUILD_TYPE)
+      #SET(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING
+      SET(CMAKE_BUILD_TYPE MinSizeDeb CACHE STRING
+        "Choose the type of build, options are: None Debug Release RelWithDebInfo MinSizeRel MinSizeDeb."
+          FORCE)
+    ENDIF(NOT CMAKE_BUILD_TYPE)
+
+
+### CCACHE
+
+Found this solution :
+[crascit.com/2016/04/09/using-ccache-with-cmake/](https://crascit.com/2016/04/09/using-ccache-with-cmake/)
+
+    find_program(CCACHE_PROGRAM ccache)
+
+    if (true)
+      if (CCACHE_PROGRAM)
+        set_property( GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}" )
+        message(STATUS "Dude! Found ccache, so we're setting CMake global property RULE_LAUNCH_COMPILE to '${CCACHE_PROGRAM}'.")
+      endif()
+    endif()
+
+
 ## Pointers
 
 * [CMAKE_INCLUDE_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_INCLUDE_PATH.html)

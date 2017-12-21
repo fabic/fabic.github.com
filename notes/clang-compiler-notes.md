@@ -19,6 +19,79 @@ published: false
 
 _**2014-09-23:**_ /me investigating _how things happen_ so as to obtain an AST.
 
+### Some compile options
+
+    add_compile_options(
+      -std=c++1z
+      -stdlib=libc++
+
+      -Os
+      -Oz # Clang "better" than -Os (?)
+
+      -Wall
+      -pedantic
+
+      # -Weverything
+      #   ^ http://clang.llvm.org/docs/UsersManual.html#enabling-all-diagnostics
+      #   ^ too verbose: others code...
+
+      -Wcovered-switch-default
+      # ^ we get too many warnings from external headers.
+
+      -Wmissing-field-initializers
+      -Wnon-virtual-dtor
+      -Wdelete-non-virtual-dtor
+      -Woverloaded-virtual
+      -Wno-nested-anon-types
+
+      # -Wwrite-strings
+      # -Wcast-qual
+
+      # -fvisibility-inlines-hidden
+
+      -fcolor-diagnostics
+      -fdiagnostics-show-category=name
+      -fdiagnostics-show-template-tree
+      # ^ http://clang.llvm.org/docs/UsersManual.html#formatting-of-diagnostics
+
+      # -fwhole-program-vtables
+      #   ^ http://clang.llvm.org/docs/UsersManual.html#cmdoption-fwhole-program-vtables
+
+      # So as to get better/meaninful stack traces in error messages :
+      -fno-omit-frame-pointer
+
+      # and disable tail call elimination
+      -fno-optimize-sibling-calls
+
+      Wl,-allow-shlib-undefined
+
+      -nostdinc -nostdinc++
+
+      #-Wdocumentation
+      #-fparse-all-comments
+      #-Wno-documentation-unknown-command
+      # ^ http://clang.llvm.org/docs/UsersManual.html#comment-parsing-options
+      )
+
+Sanitizers :
+
+    add_compile_options(
+      # -fsanitize=address     # http://clang.llvm.org/docs/AddressSanitizer.html
+      # ^ -fsanitize=memory
+      # ^ -fsanitize=thread
+      #   “ It is not possible to combine more than one of the
+      #     -fsanitize=address, -fsanitize=thread, and -fsanitize=memory
+      #     checkers in the same program. ”
+      #     http://clang.llvm.org/docs/UsersManual.html#controlling-code-generation
+      # -fsanitize=undefined   # http://clang.llvm.org/docs/UndefinedBehaviorSanitizer.html
+      # -fsanitize=dataflow    # http://clang.llvm.org/docs/DataFlowSanitizer.html
+      # -fsanitize=cfi -flto   # http://clang.llvm.org/docs/ControlFlowIntegrity.html (requries -flto)
+      # -fsanitize=safe-stack  # http://clang.llvm.org/docs/SafeStack.html
+      )
+
+Linker :
+
+      -Wl,--warn-unresolved-symbols
 
 ### clang/include/clang/Sema/Sema.h
 
