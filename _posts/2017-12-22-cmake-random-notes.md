@@ -36,6 +36,10 @@ Big one-liner where we also wipe out the `build/` sub-directory :
 
 ### Those few ones you'll be using all the time
 
+* [cmake-properties](https://cmake.org/cmake/help/latest/manual/cmake-properties.7.html)
+
+A list of variables and properties we often have to use :
+
   <table class="phi phi-custom">
     <thead>
       <tr>
@@ -72,6 +76,25 @@ Big one-liner where we also wipe out the `build/` sub-directory :
       <tr>
         <th>ARCHIVE_OUTPUT_DIRECTORY</th>
         <td></td>
+      </tr>
+      <tr> <td colspan="2" class="separator"></td> </tr>
+      <tr>
+        <th colspan="2">
+          Target properties<br>
+          <tt>get_property(_outvar TARGET &lt;target&gt; PROPERTY &lt;property&gt;)</tt>
+        </th>
+      </tr>
+      <tr>
+        <th>property</th>
+        <th>&nbsp;</th>
+      </tr>
+      <tr>
+        <th>TYPE</th>
+        <td>
+          <code>get_property(_outvar TARGET &lt;some-target&gt; PROPERTY &lt;TYPE&gt;</code><br>
+          <tt>_outvar</tt> would then be one of:
+          <tt>STATIC_LIBRARY, MODULE_LIBRARY, SHARED_LIBRARY, EXECUTABLE</tt>
+        </td>
       </tr>
       <!--
       <tr>
@@ -157,10 +180,83 @@ And configuring a CMake target :
       PROPERTY RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
 
     set_property(TARGET util
-      PROPERTY LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
+      PROPERTY LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
 
     set(TARGET static-stuff
       PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
+
+##### Globally (for the whole CMake project)
+
+[via](http://bytefreaks.net/programming-2/manually-set-the-cmake-output-folder)
+
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+##### Searching for targets in a subdirectory, changing output directory :
+
+__A/__ Fetch the __list of sub-directories__.  The property `SUBDIRECTORIES` does just that, though it returns absolute path names (which is ok and concise (unless for printing out on screen)) :
+
+    get_property(subdirs_list
+      DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+      PROPERTY SUBDIRECTORIES)
+
+Another possiblity is to manual list all files :
+
+    FILE(GLOB files_list
+      RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/*)
+
+__A”/__ And filter out anything that is not a directory :
+
+    set(subdirs_list "")
+
+    foreach(subdir ${files_list})
+      if (IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${subdir})
+        list(APPEND subdirs_list "${subdir}")
+      endif()
+    endforeach()
+
+__B/__ Finally we can obtain targets by means of the `BUILDSYSTEM_TARGETS` property :
+
+
+    foreach(subdir ${subdirs_list})
+      get_property(_targets_list
+        DIRECTORY "${subdir}"
+        PROPERTY BUILDSYSTEM_TARGETS )
+
+      if (NOT _targets_list)
+        message(STATUS "FYI: ${subdir}: Provided no build target.")
+
+      else()
+
+__B”/__ And loop over these, doing our cryptic stuff : Finding out the `TYPE` property for each target, and setting the appropriate value for prop. `xxx_OUTPUT_DIRECTORY` :
+
+        foreach(_target ${_targets_list})
+          get_property(_target_type
+            TARGET ${_target}
+            PROPERTY TYPE)
+
+          if (${_target_type} MATCHES "_LIBRARY$")
+            set_property(
+              TARGET ${_target}
+              PROPERTY LIBRARY_OUTPUT_DIRECTORY
+                ${CMAKE_BINARY_DIR}/lib )
+
+          elseif (${_target_type} STREQUAL "EXECUTABLE")
+            set_property(
+              TARGET ${_target}
+              PROPERTY RUNTIME_OUTPUT_DIRECTORY
+                ${CMAKE_BINARY_DIR}/bin )
+
+          else()
+            message(STATUS "FYI: ${subdir}: Target '${_target}' is-a '${_target_type}'.")
+          endif()
+        endforeach()
+
+      endif()
+    endforeach()
+
 
 ##### “Globally”
 
