@@ -10,7 +10,9 @@ listen_port=${1:-3838}
 
 # Restrict the amount of virtual memory, so as to prevent infinite recursion
 # when I'm fiddling with Jekyll "coding". ulimit accepts kilobytes here.
-ulimit -v $((768*1024))
+#ulimit -v $((768*1024))
+# ^ crashed too often by exhausting memory.
+ulimit -v $((1024*1024))
 
 #ulimit -a ; exit
 

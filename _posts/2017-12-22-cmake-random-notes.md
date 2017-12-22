@@ -11,7 +11,7 @@ _Some notes about how to setup CMake projects._
 
 * **2017-12 :** I'm rediscovering all this, again; please consider the information here with skepticism.
 
-### Running CMake
+## Running CMake
 
 The simplest usage would be something like :
 
@@ -30,6 +30,57 @@ Big one-liner where we also wipe out the `build/` sub-directory :
               -DCMAKE_INSTALL_PREFIX=~/local ../
         ) &&
              cmake --build build --target simplest-example
+
+
+## CMake variables
+
+### Those few ones you'll be using all the time
+
+  <table class="phi phi-custom">
+    <thead>
+      <tr>
+        <th>CMake variable</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>CMAKE_SOURCE_DIR</th>
+        <td>The source directory (i.e. the directory of the top level CMakeLists.txt file)</td>
+      </tr>
+      <tr>
+        <th>CMAKE_BINARY_DIR</th>
+        <td>The (top level) build directory</td>
+      </tr>
+      <tr>
+        <th>CMAKE_CURRENT_SOURCE_DIR</th>
+        <td>The current source directory, i.e. location of the currently processed CMakeLists.txt file (top level or included via ADD_SUBDIRECTORY)</td>
+      </tr>
+      <tr>
+        <th>CMAKE_CURRENT_BINARY_DIR</th>
+        <td>The build (sub)directory corresponding to CMAKE_CURRENT_SOURCE_DIR</td>
+      </tr>
+      <tr> <td colspan="2" class="separator"></td> </tr>
+      <tr>
+        <th>RUNTIME_OUTPUT_DIRECTORY</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>LIBRARY_OUTPUT_DIRECTORY</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>ARCHIVE_OUTPUT_DIRECTORY</th>
+        <td></td>
+      </tr>
+      <!--
+      <tr>
+        <th></th>
+        <td></td>
+      </tr>
+      -->
+    </tbody>
+  </table>
 
 
 ### Dump all CMake variables
@@ -90,10 +141,30 @@ And configuring a CMake target :
       target_link_libraries(      pimplio        ${LIBPQXX_LIBRARIES} )
     endif()
 
-### add_executable()
+### add_executable() & add_library()
 
-    add_executable(soci-mysql-example-01 soci-mysql-example-01.cpp)
+    add_executable( brand-new-program
+      src/main.cpp
+      src/impl1.cpp
+      src/impl2.cpp
+      )
 
+#### Changing the output directory to for ex. 'bin/' or 'lib/'
+
+##### Per specific target :
+
+    set_property(TARGET brand-new-program
+      PROPERTY RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
+
+    set_property(TARGET util
+      PROPERTY LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
+
+    set(TARGET static-stuff
+      PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib )
+
+##### “Globally”
+
+__TODO__
 
 ### Test if a file or directory exists
 
@@ -419,5 +490,7 @@ This may be useful at least in situations were one has several of those options 
 * <http://foonathan.net/blog/2016/03/03/cmake-install.html>
 * <https://cmake.org/Wiki/CMake/Tutorials/How_to_create_a_ProjectConfig.cmake_file>
 * <https://cmake.org/Wiki/CMake:How_To_Write_Platform_Checks>
+
+* <http://www.kaizou.org/2014/11/typical-cmake-project/>
 
 __EOF__
