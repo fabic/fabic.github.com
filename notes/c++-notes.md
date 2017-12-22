@@ -5,10 +5,25 @@ description: "Scattered notes about C/C++ stuff."
 published: false
 ---
 
+
 ## Articles out there
 
 * [2012: Why should I have written ZeroMQ in C, not C++ (part I) – Martin Sústrik](http://250bpm.com/blog:4)
 
+
+## IDEA(s)
+
+### Class Dummy {...} :
+
+Have a small CMake-based project with dummy "example" codes of interest, like connecting to databases, setting things up, etc.
+
+* Focus on both 1) how to configure the CMake (sub)project/s, and 2) the examples, which should be _practical_ (no "school case" foo/bar stuff).
+
+The idea is that it builds what it can, wits. what was found, like for ex. if `libpqxx` was found then build the PostgreSql database examples, likewise for MySql, etc.
+
+* Boost.log
+* PostgreSql libpqxx
+* MySql: mysql-connector-c++
 
 ## FYI
 

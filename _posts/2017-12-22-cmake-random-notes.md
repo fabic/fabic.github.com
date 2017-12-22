@@ -1,25 +1,35 @@
 ---
 layout: post
-title: "Draft - CMake notes"
+title: "CMake: Some notes as I discover how to deal with it."
 tagline: "CMake... oh my!"
 category : notes
-published: false
-tags : [C++, cmake]
+published: true
+tags : [C++, CMake, howto]
 ---
 
-## IDEA(s)
+_Some notes about how to setup CMake projects._
 
-#### Class Dummy {...} :
+* **2017-12 :** I'm rediscovering all this, again; please consider the information here with skepticism.
 
-Have a small CMake-based project with dummy "example" codes of interest, like connecting to databases, setting things up, etc.
+### Running CMake
 
-* Focus on both 1) how to configure the CMake (sub)project/s, and 2) the examples, which should be _practical_ (no "school case" foo/bar stuff).
+The simplest usage would be something like :
 
-The idea is that it builds what it can, wits. what was found, like for ex. if `libpqxx` was found then build the PostgreSql database examples, likewise for MySql, etc.
+    $ mkdir build/ &&
+      cd build/ &&
+      cmake ../ &&
+      cmake --build build/ --target simplest-example
 
-* Boost.log
-* PostgreSql libpqxx
-* MySql: mysql-connector-c++
+Big one-liner where we also wipe out the `build/` sub-directory :
+
+    $ ( [ -d build ] && rm -r build || true ) &&
+        ( mkdir build && cd build &&
+          CC=clang CXX=clang++ \
+            cmake -G Ninja \
+              -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+              -DCMAKE_INSTALL_PREFIX=~/local ../
+        ) &&
+             cmake --build build --target simplest-example
 
 
 ### Dump all CMake variables
@@ -103,7 +113,7 @@ __In short,__ just create the subdirectory and :
 * __either__ append a `add_subdirectory( src/new-subdir )` to the top-level project's `CMakeLists.txt` ;
 * __or__, if applicable, edit the "_parent"_ `CMakeLists.txt` file one directory up,
 for ex. `src/`.
-* _Done:__ that's all it takes.
+* __Done:__ that's all it takes.
 * Then you may proceed with the usual directives :
     - __add_executable()__
     - etc...
@@ -154,6 +164,47 @@ Copy-paste "one-liner" (remove the trailing blankees `_`):
     # EOF message.
     message(STATUS "Dude: This is a communication from ${CMAKE_CURRENT_LIST_FILE}")
   EOF
+
+### List sub-directories (loop over these and do stuff)
+
+__Or:__ how to list "direct" sub-directories for automated addition to CMake project ([via](https://stackoverflow.com/a/7788165/643087)).
+
+Basically we have `file(GLOB files_list ... RELATIVE ... )` which output value (here `files_list`) we'll filter out files from dirs
+([file()](https://cmake.org/cmake/help/latest/command/file.html)])
+
+    file(GLOB files_list
+      RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
+               ${CMAKE_CURRENT_SOURCE_DIR}/*)
+
+We may want to collect sub-directory names in a variable `subdirs_list` :
+
+    set(subdirs_list "")
+
+Loop over the `files_list`, acting upon directories which contain a `CMakeLists.txt` file :
+
+    foreach(subdir ${files_list})
+      if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/${subdir}/CMakeLists.txt)
+
+        add_subdirectory( ${subdir} )
+        message(STATUS "Dude: Added experiment ${subdir}")
+        list(APPEND subdirs_list "${subdir}")
+
+      elseif(IS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/${subdir})
+
+        message(STATUS "Dude: Skipping ${subdir}/ as it contains no CMakeLists.txt (FYI)")
+
+      endif()
+    endforeach()
+
+The `subdirs_list` was indeed set :
+
+    message(STATUS "Dude: Experiments list: ${subdirs_list}")
+
+Futile :
+
+    unset(files_list)
+    unset(subdirs_list)
+
 
 #### Adding a CMake-based third-party code as a sub-project
 
@@ -306,6 +357,50 @@ Found this solution :
         message(STATUS "Dude! Found ccache, so we're setting CMake global property RULE_LAUNCH_COMPILE to '${CCACHE_PROGRAM}'.")
       endif()
     endif()
+
+### Custom targets for running arbitrary commands
+
+Here's an example using [__add_custom_target()__](https://cmake.org/cmake/help/latest/command/add_custom_target.html) for listing executable files in the build directory :
+
+    add_custom_target( list-binaries
+      ALL
+      DEPENDS our-final-program
+        COMMAND find ${CMAKE_CURRENT_BINARY_DIR} -type d -name CMakeFiles -prune -o -type f -perm -a+x -ls
+      WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+      COMMENT "-- List os executable files (+x) that were built : --"
+      VERBATIM USES_TERMINAL
+      )
+
+The trick here is to have it __depend__ upon some final target (here `our-final-program`) that would end up built last.  Option __ALL__ would have that command be run at each build (else one would have to explicitely ask for it, for ex. `cmake --build build/ --target list-binaries`).
+
+Note that it is possible to have several commands be run for a custom target :
+
+    COMMAND echo -e "\\e[32;1;7m  Here's your static stuff :  \\e[0m"
+    COMMAND find ${CMAKE_BINARY_DIR} -type f -name '*.a' -ls
+    COMMAND echo -e "\\e[2m  PS: have a break away from computer at times!  \\e[0m"
+    COMMAND echo -e "\\e[32;1;7m  DONE  \\e[0m"
+
+* [Colors and formatting (ANSI/VT100 Control sequences) @ misc.flogisoft.com](https://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
+#### Custom targets for having two pre-configured Debug / Release builds
+
+One example usage I've seen for [__add_custom_target()__](https://cmake.org/cmake/help/latest/command/add_custom_target.html) is having two custom `debug` and `release` targets that are “maintainer pre-configured” with some intent of having common defaults by turning some options ON/OFF.
+
+This may be useful at least in situations were one has several of those options that configure fragments of code, and you can't always easily tell which combinations of options would, in the best case, break the build ; or worse: not break the build and introduce some pesky bugs &ndash; hence this idea of having pre-configured, say “maintainer likes” builds, for chasing bugs.
+
+    # Run with: `cmake --build build --target debug`
+    add_custom_target( debug
+      COMMAND ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE=Debug ${CMAKE_SOURCE_DIR}
+      COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target all
+      COMMENT "Run CMake for a Debug build."
+      )
+
+    # Run with: `cmake --build build --target release`
+    add_custom_target(release
+      COMMAND ${CMAKE_COMMAND} -DCMAKE_BUILD_TYPE=Release ${CMAKE_SOURCE_DIR}
+      COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target all
+      COMMENT "Run CMake for a Release build."
+      )
 
 
 ## Pointers
