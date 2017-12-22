@@ -23,7 +23,9 @@ published: false
 
   <img src="http://clang.llvm.org/doxygen/classclang_1_1Type__inherit__graph.png" />
 
-### [Decl](http://clang.llvm.org/doxygen/classclang_1_1Decl.html)
+See also [TypeSourceInfo][TSI] that we typically obtain from __[Decl/s][Decl]__
+
+### [Decl][Decl]
 
   <img src="http://clang.llvm.org/doxygen/classclang_1_1Decl__inherit__graph.png" />
 
@@ -33,5 +35,12 @@ published: false
 
 ##### [FunctionDecl](http://clang.llvm.org/doxygen/classclang_1_1FunctionDecl.html)
 
+
   <img src="http://clang.llvm.org/doxygen/classclang_1_1FunctionDecl__inherit__graph.png" />
 
+* <tt>[QualType](http://clang.llvm.org/doxygen/classclang_1_1QualType.html) [getReturnType()](http://clang.llvm.org/doxygen/classclang_1_1FunctionDecl.html#a2935d37297596c57aa383de101a55030)</tt>
+* `SourceRange  getReturnTypeSourceRange () const`
+
+
+[TSI]: http://clang.llvm.org/doxygen/classclang_1_1TypeSourceInfo.html "clang::TypeSourceInfo [Decl.h]"
+[Decl]: http://clang.llvm.org/doxygen/classclang_1_1Decl.html "clang::Decl"
