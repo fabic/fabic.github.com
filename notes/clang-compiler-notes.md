@@ -19,6 +19,8 @@ published: false
 
 _**2014-09-23:**_ /me investigating _how things happen_ so as to obtain an AST.
 
+## Pointers, dia
+
 ### Some compile options
 
     add_compile_options(

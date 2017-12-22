@@ -6,6 +6,7 @@ published: false
 ---
 
 
+
 ## Articles out there
 
 * [2012: Why should I have written ZeroMQ in C, not C++ (part I) – Martin Sústrik](http://250bpm.com/blog:4)

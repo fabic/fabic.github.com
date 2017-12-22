@@ -1,4 +1,4 @@
-{% if site.comments %}
+{% if site.comments and jekyll.environment != "development" %}
     <aside id="comments" class="disqus">
         <div class="container">
             <h3 class="alignable pull-left"></h3>

@@ -33,6 +33,23 @@ body {
   border-radius: 7px;
 }
 
+// fabic/2017: Wide page container (Laynon/Poole didn't provide one).
+.container-wide {
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+// 2017-12-22 : Wide-page for displaying big images
+//              (API doc. for Clang notes).
+.container.content-wide {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  background-color: #303030;
+  border-radius: 7px;
+}
+
 #sidebar {
   border-right: 1px solid white;
 }

@@ -31,6 +31,9 @@ Big one-liner where we also wipe out the `build/` sub-directory :
         ) &&
              cmake --build build --target simplest-example
 
+## CMake language, syntax, commands
+
+* [list()](https://cmake.org/cmake/help/latest/command/list.html)
 
 ## CMake variables
 
@@ -588,5 +591,9 @@ This may be useful at least in situations were one has several of those options 
 * <https://cmake.org/Wiki/CMake:How_To_Write_Platform_Checks>
 
 * <http://www.kaizou.org/2014/11/typical-cmake-project/>
+
+### Q&A
+
+* [SO: Difference between IMPORTED and INTERFACE libraries](https://stackoverflow.com/a/36649194/643087)
 
 __EOF__

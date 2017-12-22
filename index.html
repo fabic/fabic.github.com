@@ -16,8 +16,7 @@ title: Home
   </div>
 </section>
 
-{% assign site_url_wo_scheme = site.url | slice: -9, 9 %}
-{% if site_url_wo_scheme != "fabic.net" %}
+{% if jekyll.environment == "development" %}
 <section class="pages">
   <div class="center">
     <tt>{{ site.url }}</tt>
