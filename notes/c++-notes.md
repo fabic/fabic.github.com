@@ -26,6 +26,16 @@ The idea is that it builds what it can, wits. what was found, like for ex. if `l
 * PostgreSql libpqxx
 * MySql: mysql-connector-c++
 
+### Auto-rebuild upon file change (from a shell)
+
+Have a command line tool that would monitor source code changes in the current
+project dir., and :
+
+* would run syntax checking on the updated sources ;
+* re-build the affected targets.
+* or rebuild the whole project ?
+* or just rebuild the target that was specified on the command line.
+
 ## FYI
 
 * [Removing Deprecated Exception Specifications from C++17 (2015-09-28)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0003r0.html#1.0)
@@ -34,6 +44,13 @@ The idea is that it builds what it can, wits. what was found, like for ex. if `l
   – <http://stackoverflow.com/a/13841791/643087>
   – <http://en.cppreference.com/w/cpp/language/except_spec>
 
+## Questions one asks oneself
+
+* Now I have to find a stack impl. -> which? For ex. `std::vector` vs `llvm::SmallVector`?
+
+### About concepts
+
+* Placement ::new idiom.
 
 ## References
 
@@ -50,6 +67,7 @@ The idea is that it builds what it can, wits. what was found, like for ex. if `l
 ### Misc.
 
 * <https://conan.io/> sort of a C/C++ package manager, free for open source.
+
 #### Parsing C++
 
 Is not a trivial task at all, many have tried.
@@ -57,6 +75,13 @@ Is not a trivial task at all, many have tried.
 * [Parsing C++ (March 2001, Andrew Birkett)](http://www.nobugs.org/developer/parsingcpp/)
 
 ### Idioms, tips'n'tricks
+
+### Class inheritance, true polymorphic classes, compile-time polymorphism, ...
+
+* A pure virtual class method, ex. `virtual doWork() =0;` _may_ provide (have) a
+  definition.  Client code still have to implement the interface, but may rely on
+  some sort of "default implementation" provided by its base class(es).
+
 
 #### Assertions
 
@@ -77,6 +102,22 @@ assert(1 == 2 && "Dude, this ain't no good, like not at all.");
           ...
       }
       ```
+
+#### explicit vs. implicit constructors
+
+Mark implicit "converting" constructors with a comment like `/* implicit */` so as to assert intention.
+
+```cpp
+class StringRef {
+public:
+  ...
+
+  /// Construct an empty string ref.
+  /* implicit * / StringRef() = default;
+
+  ...
+};
+```
 
 #### Compile-time polymorphism
 
@@ -114,6 +155,22 @@ do {                            \
     return false;               \
 } while (false)
 // Note:       ^ No trailing ';'
+```
+
+### initializer lists `{...}`
+
+#### wrt. STL containers
+
+Before :
+
+```bash
+auto pair = Artifacts_.insert( std::make_pair(K, Artifact(D)) );
+```
+
+After :
+
+```bash
+auto pair = Artifacts_.insert( {K, Artifact(D)} );
 ```
 
 #### Preprocessor
@@ -167,5 +224,9 @@ DEF_TRAVERSE_DECL(
     - `pqxx::row const &` vs `const pqxx::row &` ?
     - `try {...} catch (const std::exception &e) { ... }`
     vs `try {...} catch (std::exception const &e) { ... }` ?
+
+## Pointers
+
+* <https://wiki.gentoo.org/wiki/GCC_optimization>
 
 __EOF__

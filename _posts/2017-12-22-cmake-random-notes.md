@@ -181,7 +181,7 @@ else()
 endif()
 ```
 
-### add_executable() & add_library()
+### add\_executable() & add\_library()
 
 ```cmake
 add_executable( brand-new-program
@@ -189,6 +189,12 @@ add_executable( brand-new-program
   src/impl1.cpp
   src/impl2.cpp
   )
+```
+
+### Include current directory
+
+```cmake
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
 ```
 
 #### Changing the output directory to for ex. 'bin/' or 'lib/'
@@ -226,15 +232,15 @@ get_property(subdirs_list
   PROPERTY SUBDIRECTORIES)
 ```
 
-Another possiblity is to manual list all files :
+__A”/__Another possiblity is to manual list all files :
 
 ```cmake
-FILE(GLOB files_list
+file(GLOB files_list
   RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/*)
 ```
 
-__A”/__ And filter out anything that is not a directory :
+__A””/__ And filter out anything that is not a directory :
 
 ```cmake
 set(subdirs_list "")
@@ -290,31 +296,44 @@ __B”/__ And loop over these, doing our cryptic stuff : Finding out the `TYPE` 
 endforeach()
 ```
 
-
-##### “Globally”
-
-__TODO__
-
 ### Test if a file or directory exists
 
 ```cmake
 if (NOT EXISTS ...)
 endif()
+```
 
+```cmake
 if (NOT IS_DIRECTORY ${SOCI_SOURCES_DIR}/src)
   message( WARNING "Dude: Could not find SOCI sources at ${SOCI_SOURCES_DIR}" )
 endif()
 ```
 
+### Find out the name of the "current directory"
+
+```cmake
+get_filename_component(ThisModuleName "${CMAKE_CURRENT_SOURCE_DIR}" NAME)
+set(ThisModuleName "dude-${ThisModuleName}")
+message(STATUS "Dude! I'm ${ThisModuleName}.")
+```
+
+```cmake
+add_library(${ThisModuleName} library-entry-point.cpp other-stuff.cpp )
+target_compile_options( ${ThisModuleName} PUBLIC ${LIBxxxx_CFLAGS} )
+target_include_directories( ${ThisModuleName} PUBLIC ${LIBxxxx_INCLUDE_DIRS} )
+```
+
+```cmake
+add_executable(${ThisModuleName} main.cpp)
+```
 
 ### How to add a new sub-directory ?
 
 __In short,__ just create the subdirectory and :
 
 * drop an empty `CMakeLists.txt` file in it ;
-* __either__ append a `add_subdirectory( src/new-subdir )` to the top-level project's `CMakeLists.txt` ;
-* __or__, if applicable, edit the "_parent"_ `CMakeLists.txt` file one directory up,
-for ex. `src/`.
+* __either__ append `add_subdirectory( src/new-subdir )` to the top-level project's `CMakeLists.txt` ;
+* __or__, if applicable, edit the "_parent"_ `CMakeLists.txt` file one directory up, for ex. `src/`.
 * __Done:__ that's all it takes.
 * Then you may proceed with the usual directives :
 - __add_executable()__
@@ -434,10 +453,10 @@ Then if the sub-project is "properly" configured, a simple
 __But (!)__ ... stating dependencies ? (TODO)
 
 
-### find_library() & find_file() : Manual library search & setup
+### find\_library() & find\_file() : Manual library search & setup
 
-* `CMAKE_INCLUDE_PATH` is searched by __[find_file()]()__ ;
-* `CMAKE_LIBRARY_PATH` is searched by __[find_library()]()__ ;
+* `CMAKE_INCLUDE_PATH` is searched by [find\_file()](https://cmake.org/cmake/help/latest/command/find_file.html) ;
+* `CMAKE_LIBRARY_PATH` is searched by [find\_library()](https://cmake.org/cmake/help/latest/command/find_library.html) ;
 
 Given we install stuff into a `./local/` sub-directory (for ex. `./configure --prefix=$PWD/local` or `cmake -DCMAKE_INSTALL_PREFIX=$PWD/local`),
 then we end up with an [FHS](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)-like sub-directory structure where we are interested
@@ -551,7 +570,7 @@ add_executable( another-exec
   )
 ```
 
-### set_source_files_properties()
+### set\_source\_files\_properties()
 
 Or, for ex. "how does one have specific compiler flags for a given source code file ?"
 
@@ -563,11 +582,28 @@ set_source_files_properties( yeah.cpp
     COMPILE_FLAGS -std=c++1z -Wall -Weverything -pedantic )
 ```
 
-### Setting the default build type (CMAKE_BUILD_TYPE)
+### EXCLUDE\_FROM\_ALL property :
+
+This :
+
+```cmake
+set(EXCLUDE_FROM_ALL ON)
+```
+
+Or :
+
+```cmake
+set_property(DIRECTORY PROPERTY EXCLUDE_FROM_ALL ON)
+```
+
+Will have targets defined within the current subtree be excluded from the
+list of targets to built per default.
+
+### Setting the default build type (CMAKE\_BUILD\_TYPE)
 
 The build type/variant is generally left for the user to specify, typically through the command line argument `-DCMAKE_BUILD_TYPE=Release`.  It is possible though to have a different default for this.
 
-Via [cmake.org/Wiki/CMake_FAQ](https://cmake.org/Wiki/CMake_FAQ#How_can_I_change_the_default_build_mode_and_see_it_reflected_in_the_GUI.3F) :
+Via [cmake.org/Wiki/CMake\_FAQ](https://cmake.org/Wiki/CMake_FAQ#How_can_I_change_the_default_build_mode_and_see_it_reflected_in_the_GUI.3F) :
 
 ```cmake
 IF(NOT CMAKE_BUILD_TYPE)
@@ -647,25 +683,32 @@ add_custom_target(release
   )
 ```
 
+## CMake functions
+
+* [CMake - functions](https://cmake.org/cmake/help/latest/command/function.html)
+* [SO: Usage of CMakeParseArguments standard module](https://stackoverflow.com/a/23336987/643087)
 
 ## Pointers
 
-* [CMAKE_INCLUDE_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_INCLUDE_PATH.html)
-* [CMAKE_LIBRARY_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_LIBRARY_PATH.html#variable:CMAKE_LIBRARY_PATH)
+* [CMAKE\_INCLUDE\_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_INCLUDE_PATH.html)
+* [CMAKE\_LIBRARY\_PATH](https://cmake.org/cmake/help/latest/variable/CMAKE_LIBRARY_PATH.html#variable:CMAKE_LIBRARY_PATH)
 * [if, elseif, else, endif](https://cmake.org/cmake/help/latest/command/if.html)
 * [CMake regular expressions (`string()`)](https://cmake.org/cmake/help/latest/command/string.html#regex-specification)
-* [get_filename_component()](https://cmake.org/cmake/help/latest/command/get_filename_component.html)
-
-* [CMAKE_BUILD_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
+* [get\_filename\_component()](https://cmake.org/cmake/help/latest/command/get_filename_component.html)
+* [CMAKE\_BUILD\_TYPE](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html)
+* [Imported targets](https://cmake.org/cmake/help/latest/manual/cmake-buildsystem.7.html#imported-targets)
+* [add\_library](https://cmake.org/cmake/help/latest/command/add_library.html)
 
 * <https://github.com/cginternals/cmake-init>
   – “Template for reliable, cross-platform C++ project setup using cmake.”
-
+* [LLVM's CMake Primer (*must read*)](https://llvm.org/docs/CMakePrimer.html)
 * <http://foonathan.net/blog/2016/03/03/cmake-install.html>
 * <https://cmake.org/Wiki/CMake/Tutorials/How_to_create_a_ProjectConfig.cmake_file>
 * <https://cmake.org/Wiki/CMake:How_To_Write_Platform_Checks>
-
+* <https://cmake.org/Wiki/CMake/Language_Syntax>
 * <http://www.kaizou.org/2014/11/typical-cmake-project/>
+* <https://www.vtk.org/Wiki/CMake/Examples>
+* [2016: CMake Dependencies Done Right](http://floooh.github.io/2016/01/12/cmake-dependency-juggling.html)
 
 ### Q&A
 

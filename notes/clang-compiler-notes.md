@@ -19,6 +19,12 @@ published: false
 
 _**2014-09-23:**_ /me investigating _how things happen_ so as to obtain an AST.
 
+## Gems
+
+* `/usr/include/llvm/Support/SaveAndRestore.h` RAII thing that saves the value
+  of some variable (non-const reference taken), and restores the value upon
+  going out of scope.
+
 ## Pointers, dia
 
 ### Some compile options
@@ -94,6 +100,47 @@ Sanitizers :
 Linker :
 
       -Wl,--warn-unresolved-symbols
+
+Other :
+
+-Werror=date-time -std=c++1y -Wall -W -Wno-unused-parameter -Wwrite-strings
+-Wcast-qual -Wmissing-field-initializers -pedantic -Wno-long-long
+-Wcovered-switch-default -Wnon-virtual-dtor -Wdelete-non-virtual-dtor
+-Wstring-conversion -fcolor-diagnostics -ffunction-sections -fdata-sections
+-flto -O2 -g  -Wl,-z,defs -flto
+-Wl,-rpath-link,/home/fabi/dev/llvm-clang/llvm-clang/build/./lib  -Wl,-O3
+-Wl,--gc-sections -shared -Wl,-soname,libLLVMBitReader.so.5
+
+## Plugins
+
+### Loading a plugin
+
+With `-fplugin=...` :
+
+```bash
+clang++ -fplugin=lib/clong-010.so \
+  -std=c++1z -fsyntax-only -O0    \
+  -c tutu/test-007.cpp
+```
+
+Passing arguments through to a plugin named `clong` is achieved with
+`-Xclang -plugin-arg-clong -Xclang Hola` :
+
+```bash
+clang++ -fplugin=lib/clong-010.so        \
+  -Xclang -plugin-arg-clong -Xclang Hola \
+  -std=c++1z -fsyntax-only -O0           \
+  -c tutu/test-007.cpp
+```
+
+Another way to load a plugin is with `-Xclang -load ...` :
+
+```bash
+clang++ -Xclang -load -Xclang lib/clong-010.so \
+        -Xclang -plugin-arg-clong \
+        -Xclang Hola \
+        -std=c++1z -fsyntax-only -O0 -c tutu/test-007.cpp
+```
 
 ### clang/include/clang/Sema/Sema.h
 

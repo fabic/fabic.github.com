@@ -22,6 +22,26 @@ Yeah...
 * <http://pubs.opengroup.org/onlinepubs/9699919799/idx/headers.html>
 OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)
 
+## Shared libraries
+
+* [SO: shared lib. initialization](https://stackoverflow.com/a/9759936/643087) :
+    - Linker flags : `-Wl,-init,<function>` & `-Wl,-fini,<function>`
+    - `__attribute__((constructor)) void foo(void) { printf("library loaded!\n"); }`
+    - The constructor attr. may have a priority specification : `void before_main(void) __attribute__((constructor (101)))` ([SO](https://stackoverflow.com/a/32701238/643087))
+    - Or ([via](https://stackoverflow.com/a/1681655/643087)):
+
+          namespace {
+            struct initializer {
+              initializer() {
+                std::cout << "Loading the library" << std::endl;
+              }
+
+              ~initializer() {
+                std::cout << "Unloading the library" << std::endl;
+              }
+            };
+            static initializer i;
+          }
 
 ## Memory allocation
 
@@ -111,7 +131,8 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 * [How initialization functions are handled – §17.20](https://gcc.gnu.org/onlinedocs/gccint/Initialization.html) from [Target description macros and functions – §17](https://gcc.gnu.org/onlinedocs/gccint/Target-Macros.html) of [the GNU compilers internals manual](https://gcc.gnu.org/onlinedocs/gccint/index.html).
 * [Old paper (1999) about the ELF file format: ELF.txt – “Portable Formats Specification, version 1.1 – Tool Interface Standard (TIS)”](http://www.muppetlabs.com/~breadbox/software/ELF.txt)
 * [The Cerberus ELF Interface (by mayhem@devhell.org) – phrack.org – Volume 0x0b, Issue 0x3d, Phile #0x08 of 0x0f](http://phrack.org/issues/61/8.html)
-
+* [2011: Load-time relocation of shared libraries (Eli Bendersky's)](https://eli.thegreenplace.net/2011/08/25/load-time-relocation-of-shared-libraries/)
+* [2016: Shared Libraries: Understanding Dynamic Loading - http://amir.rachum.com](http://amir.rachum.com/blog/2016/09/17/shared-libraries/#direct-dependencies)
 
 ## TODO :
 

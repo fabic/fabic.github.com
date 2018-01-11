@@ -74,6 +74,8 @@ The `_plugins/` directory may contain plugins.
 
 __Note__ that Github won't process these though.
 
+* [Githug/Linguist](https://github.com/github/linguist) does the syntaxt highlighting. See [](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) for supported languages.  See [Github “basic writing and formatting”](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
+
 ## Lanyon
 
     Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
