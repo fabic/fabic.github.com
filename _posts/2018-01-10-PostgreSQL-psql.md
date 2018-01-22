@@ -12,6 +12,7 @@ tags : [PostgreSQL]
     - [Constraints &ndash; postgresql.org/docs/current/static/ddl-constraints.html](https://www.postgresql.org/docs/current/static/ddl-constraints.html)
 * [postgresql.org/docs/current/static/sql-comment.html](https://www.postgresql.org/docs/current/static/sql-comment.html)
 
+
 ## List all databases
 
 ```bash
@@ -34,6 +35,7 @@ $ createdb --owner=fabi clong
 
 ## Pointers
 
+* <http://www.sqlines.com/postgresql/datatypes/serial>
 * [Postgres-cheatsheet by Kartones (Gist)](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
 
 __EOF__

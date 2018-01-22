@@ -6,6 +6,7 @@ published: false
 ---
 
 
+* [SFINAE "Substitution Failure Is Not An Error (SFINAE)" idiom](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/SFINAE)
 
 ## Articles out there
 

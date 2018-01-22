@@ -9,7 +9,12 @@ tags : [C++, CMake, howto]
 
 _Some notes about how to setup CMake projects._
 
-* **2017-12 :** I'm rediscovering all this, again; please consider the information here with skepticism.
+* **2017-12 :** I'm rediscovering all this, again; please consider the
+  information here with skepticism.
+* __TODO:__ Have a look at [GYP](https://gyp.gsrc.io) &ndash; “meta-build
+  system” used for building Chrome/Chromium.
+* [github.com/ttroy50/cmake-examples](https://github.com/ttroy50/cmake-examples)
+  : good tutorial.
 
 ## Running CMake
 
@@ -311,6 +316,8 @@ endif()
 
 ### Find out the name of the "current directory"
 
+TODO: some blah blah
+
 ```cmake
 get_filename_component(ThisModuleName "${CMAKE_CURRENT_SOURCE_DIR}" NAME)
 set(ThisModuleName "dude-${ThisModuleName}")
@@ -598,6 +605,22 @@ set_property(DIRECTORY PROPERTY EXCLUDE_FROM_ALL ON)
 
 Will have targets defined within the current subtree be excluded from the
 list of targets to built per default.
+
+### Set (append) custom target link flags (TODO)
+
+This won't work (?) :
+
+    set_property(TARGET myDLL APPEND PROPERTY LINK_FLAGS /INCLUDE:\_InitLibrary)
+
+Trying this way :
+
+    get_property(link_flags TARGET myDLL PROPERTY LINK_FLAGS)
+    set(link_flags "${link_flags} /INCLUDE:\_InitLibrary")
+    set_target_properties(myDLL PROPERTIES LINK_FLAGS ${link_flags})
+
+There's an `APPEND_STRING` possibility for `set_property()` ??
+
+[via](http://cmake.3232098.n2.nabble.com/Appending-to-the-LINK-FLAGS-target-property-td6520731.html)
 
 ### Setting the default build type (CMAKE\_BUILD\_TYPE)
 
