@@ -7,6 +7,7 @@ Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
 ## TODO
 
 * <http://www.davidverhasselt.com/about/> inspiration
+* <http://raghibm.com/blog/> inspiration
 
 ## Jekyll - Liquid
 

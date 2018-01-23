@@ -3,11 +3,12 @@
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink: pretty
 
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  # Font Awesome GEM // UNUSED // see _includes/head.html
-  #- font-awesome-sass
+# See Gemfile.
+#gems:
+#  - jekyll-paginate
+#  - jekyll-sitemap
+#  # Font Awesome GEM // UNUSED // see _includes/head.html
+#  #- font-awesome-sass
 
 # Setup
 title: fabic
@@ -32,7 +33,7 @@ description: |
 
 url:                 http://fabic.net
 baseurl:             ""
-paginate:            5
+paginate: #5
 
 # Comments are powered by disqus
 comments: true

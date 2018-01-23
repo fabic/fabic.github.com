@@ -7,13 +7,17 @@ tags : [draft, algorithms]
 published: false
 ---
 
-## ...
 
+* <http://raghibm.com/blog/checklist-for-a-softwareEng-interview/>
 
 ### Lists
 
 * One-way linear list “is a sequence of cells each of which (except the last)
   points to its successor.”
+
+### Heap, priority queues
+
+<https://en.wikipedia.org/wiki/Heap_(data_structure)>
 
 ### Trees
 
