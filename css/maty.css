@@ -8,18 +8,6 @@
   vertical-align: sub;
 }
 
-/*
-   See default.html & _config.yml
- */
-.github-edit-link {
-  position: fixed;
-  right: 1em;
-  top: 2px;
-  font-size: .75em;
-  margin: .2em;
-  z-index: 10;
-}
-
 .cv-when-where {
   color: #555;
 }
