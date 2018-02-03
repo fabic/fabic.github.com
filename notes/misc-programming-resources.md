@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Programming resources out there"
 tagline: "Collected pointers to programming reference materials out there."
 #category : notes
@@ -19,5 +19,10 @@ published: false
 * [Syntactic Noise (M. Fowler)](https://martinfowler.com/bliki/SyntacticNoise.html)
 
 * [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
+
+## Metrics
+
+* [SLOCs : Source Lines Of Code](https://en.wikipedia.org/wiki/Source_lines_of_code)
+    - See also [Cost estimation in software engineering](https://en.wikipedia.org/wiki/Cost_estimation_in_software_engineering)
 
 __EOF__

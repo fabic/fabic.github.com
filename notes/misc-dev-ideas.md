@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Miscellaneous notes & dev. ideas"
 tagline: "Big ideas, don't get any..."
 #category : notes

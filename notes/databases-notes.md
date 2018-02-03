@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: "Databases - notes"
 tagline: "playground"
 #category : notes

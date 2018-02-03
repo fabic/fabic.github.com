@@ -1,9 +1,9 @@
 ---
-layout: default
-title: "JavaScript desktop - notes"
+layout: page
+title: "JavaScript - notes"
 tagline: "About Electron, NW.js"
 category : notes
-tags : [draft]
+tags : [draft, wide]
 published: false
 ---
 
@@ -14,12 +14,18 @@ published: false
         - [Arch (AUR)](https://aur.archlinux.org/packages/gitter/)
 
 * [Practical Node.js (online book)](https://github.com/azat-co/practicalnode)
-* [What the f\*ck JavaScript? (denysdovhan/wtfjs)](https://github.com/denysdovhan/wtfjs>
+* [What the f\*ck JavaScript? (denysdovhan/wtfjs)](https://github.com/denysdovhan/wtfjs)
 * <https://github.com/ragmha/practical-js>
+
+## Node.js
+
+* <https://nodejs.org/api/modules.html>
+* <https://github.com/babel/example-node-server> (must-read)
 
 ## ExpressJS
 
 * [expressjs.com](https://expressjs.com)
+* <http://forbeslindesay.github.io/express-route-tester/>
 
 ### Project setup
 
@@ -75,6 +81,12 @@ todo...
 * <https://madewithvuejs.com/express-vue>
     - <https://madewithvuejs.com/go/express-vue>
 * <https://medium.com/@krunallathiya/vuejs-nodejs-tutorial-example-from-scratch-5a8ba947fa22>
+* <https://github.com/vuejs/vue-devtools> [Chrome ext.](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
+* <https://github.com/vuejs/vuex/tree/dev/examples>
+
+* [vue-cli](https://github.com/vuejs/vue-cli)
+* [webpack template](https://vuejs-templates.github.io/webpack/)
+* [Demistifying Vue's Webpack Config](https://alligator.io/vuejs/demistifying-vue-webpack/) (__must read__).
 
 ```bash
 $ npm install -g vue-cli
@@ -95,6 +107,12 @@ $ vue init webpack vuejs-01
 ? Set up unit tests Yes
 ```
 
+* __TODO:__ <https://github.com/vuejs/vue-cli#customizing-webpack-config>
+
+[Lifecycle diagram
+![](https://vuejs.org/images/lifecycle.png "COPY: /assets/vuejs-instance-lifecycle.png")
+](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
+
 
 ### Compilers & static types.
 
@@ -105,8 +123,51 @@ $ vue init webpack vuejs-01
 * <https://flow.org> (facebook's)
 * <https://www.typescriptlang.org/> (microsoft)
 
+### Webpack
+
+* [2017: Setting Up Webpack for Bootstrap 4 and Font Awesome](https://medium.com/@estherfalayi/setting-up-webpack-for-bootstrap-4-and-font-awesome-eb276e04aaeb)
+
+#### Setup
+
+* <https://github.com/postcss/autoprefixer>
+
 ### Other (todo)
 
 * webpack, browserify
+* <https://github.com/chimurai/http-proxy-middleware>
+
+## Node.js packages
+
+* <https://www.npmjs.com/package/bin-wrapper>
+
+### Other
+
+* <https://github.com/devongovett/node-wkhtmltopdf>
+
+## Deployment
+
+* [Process managers for Express apps @ Expressjs.com](https://expressjs.com/en/advanced/pm.html)
+
+[install-nodejs-latest.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/setup/install-nodejs-latest.sh)
+
+todo: setup paths
+
+Install GCC/G++ so that NPM can build stuff :
+
+```bash
+sudo apt-get install g++
+```
+
+Using [StrongLoop's Process Manager](http://strong-pm.io/) :
+
+```bash
+npm install -g strongloop
+```
+
+* todo: [trust proxy ?](https://expressjs.com/en/guide/behind-proxies.html)
+
+## Articles
+
+* <https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/>
 
 __EOF__
