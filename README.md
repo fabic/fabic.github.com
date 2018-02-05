@@ -1,5 +1,7 @@
 # fabic.net personal weblog
 
+[![Join the chat at https://gitter.im/fabic-github-com/Lobby](https://badges.gitter.im/fabic-github-com/Lobby.svg)](https://gitter.im/fabic-github-com/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Dude, this is your Github Pages / Jekyll-based weblog for <http://fabic.net>.
 
 Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
