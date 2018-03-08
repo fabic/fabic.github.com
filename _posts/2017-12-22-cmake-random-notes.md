@@ -186,6 +186,16 @@ else()
 endif()
 ```
 
+## Environment variables
+
+Test if environment variable is defined :
+
+```cmake
+if (NOT DEFINED ENV{BOOSTROOT})
+  message(STATUS "FYI: Environment variable $BOOTROOT is set to: ${ENV{BOOSTROOT}}")
+endif()
+```
+
 ### add\_executable() & add\_library()
 
 ```cmake

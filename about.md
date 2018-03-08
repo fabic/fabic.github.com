@@ -8,8 +8,9 @@ published: true
   <strong>EDIT / 2017 :</strong> Salut, je suis actuellement disponible à l'embauche (!)
   &ndash; uniquement sur l'<b>Île de la Réunion</b>
   &ndash; ok pour du télé-travail et/ou du <em>freelancing</em>
-  &ndash; ok pour des contrats courts ou moyen termes quoique sous conditions, en particulier de
-  faisabilité “sans compromis”.
+  &ndash; ok pour des activités de développement d'au moins 6 mois à temps plein ou partiel
+  &ndash; contrats “à l'objectif” possibles (sous réserve)
+  &ndash; tarif journalier entre 205 € et 230 €.
   <br>
   <center>
     <a href="/assets/Mr_Cadet_Fabien_-_Curriculum_Vitae_-_Light_Ver._1_-_Octobre_2017_-_Reunion.pdf">
@@ -74,7 +75,7 @@ __He :__
 * Types on a [TypeMatrix](http://typematrix.com/) keyboard.
 * Uses a QWERTY layout, and also Colemak (much less these days).
 * Writes shell scripts, e.g. [my ~/bin/ dir.](https://github.com/fabic/bash-it/tree/master/fabic/bin)
-* and write/collects shell gems [bash-it/custom/](https://github.com/fabic/bash-it/tree/master/custom)
+* and writes/collects shell gems [bash-it/custom/](https://github.com/fabic/bash-it/tree/master/custom)
 * My current [~/.bash.rc](https://github.com/fabic/bash-it/blob/master/dot_bashrc)
 * My [Bash aliases around Git](https://github.com/fabic/bash-it/blob/master/aliases/available/git_fabic.aliases.bash).
 * Used to code under __Vim__ _only_, for like 5 years or so
