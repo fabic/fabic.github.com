@@ -17,6 +17,44 @@ published: false
 * [What the f\*ck JavaScript? (denysdovhan/wtfjs)](https://github.com/denysdovhan/wtfjs)
 * <https://github.com/ragmha/practical-js>
 
+## Language notes
+
+* `Array.prototype.push.apply(dest, [1,2,3])...` : For appending elements to an
+existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...src)`
+
+* `Array.from(iterator, (x) => x+1))`
+
+* `new Map( Array.from(iter, (e) => [ e.foo, e.bar ]) )`. It's not "easy" though
+  to obtain an object from a map, have to to sthg like :
+
+    ```javascript
+    const obj = {}
+    map.forEach((v,k) => { obj[k] = v })
+    ```
+
+### Promises
+
+##### async-await lambda IIFE
+
+
+```javascript
+(async () => {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://example.com');
+  await page.screenshot({path: 'example.png'});
+  await browser.close();
+})();
+```
+
+#### Promise.all([])
+
+...
+
+## Client-side
+
+* `document.querySelectorAll("a.nav[rel=next][href^='http://example.com/abc/']")`
+
 ## Node.js
 
 * <https://nodejs.org/api/modules.html>
