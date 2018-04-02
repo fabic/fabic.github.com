@@ -66,7 +66,7 @@ echo ${RANDOM:0:2} # random number between 1 and 99
 With _Coreutils'_ __shuf__ :
 
 ```bash
-shuf -i 1-100000 -n 1
+shuf -i 1-100 -n 1
 ```
 
 From `/dev/urandom` or `/dev/random` (note that __/dev/random__ might stall
@@ -107,6 +107,12 @@ And another nice solution (__fixme:__ it overwrites some `tmp` file which may ex
 ( x=$(head -c 1 /dev/urandom > tmp &&
         hexdump -d tmp | head -n 1 | cut -c13-15) &&
     echo $(( 10#$x & 127 )) )
+```
+
+[And](https://stackoverflow.com/a/8990953) :
+
+```bash
+grep -m1 -ao '[0-9]' /dev/urandom | sed s/0/10/ | head -n1
 ```
 
 Or [Perl](https://stackoverflow.com/a/23539217) :
