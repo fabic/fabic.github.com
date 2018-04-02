@@ -208,4 +208,172 @@ npm install -g strongloop
 
 * <https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/>
 
+## MongoDB
+
+* [ArchLinux: MongoDB](https://wiki.archlinux.org/index.php/MongoDB)
+* [MongoDB documentation](https://docs.mongodb.com/)
+    - [Security & Access Control @ MongoDB manual](https://docs.mongodb.com/manual/security/)
+
+    ```bash
+    $ sudo pacman -S mongodb{,-tools}
+    $ sudo systemctl start mongodb.service
+    $ sudo systemctl enable mongodb.service
+    ```
+
+    And the [MongoDB shell](https://docs.mongodb.com/manual/mongo/) is
+    immediately available, warning us that no access control is set up :
+
+    ```bash
+    $ mongo
+
+    > use Scrapper
+    switched to db Scrapper
+
+    > db.Pages.insertOne({url:'http://fabic.net', label: 'fabicNet'})
+    { "acknowledged" : true,
+      "insertedId" : ObjectId("5ab9cf8a261bbd2cce0c71ea") }
+    ```
+
+### Setup auth/nz
+
+» [Enable authentication (manual)](https://docs.mongodb.com/manual/tutorial/enable-authentication/)
+
+```bash
+> use admin
+switched to db admin
+
+> db.createUser({ user: 'root', pwd: 'XXXXXX', roles: [ { role: "userAdminAnyDatabase", db: "admin" } ] })
+
+Successfully added user: {
+  "user" : "root",
+  "roles" : [
+    {
+      "role" : "userAdminAnyDatabase",
+        "db" : "admin"
+    }
+  ]
+}
+```
+
+But that is not enough, we'll need to _enable authentication_ :
+
+```bash
+$ mongo -u root -p admin
+
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.6.3
+2018-03-27T09:14:12.528+0400 E QUERY    [thread1] Error: Authentication failed. :
+DB.prototype._authOrThrow@src/mongo/shell/db.js:1608:20
+@(auth):6:1
+@(auth):1:2
+exception: login failed
+```
+
+```bash
+> db.auth('root', 'mathinfo')
+
+Error: Authentication failed.
+```
+
+[MongoDB configuration options](https://docs.mongodb.com/manual/reference/configuration-options/)
+
+```bash
+$ sudo journalctl -b -f
+$ tail -f /var/log/mongodb/mongod.log
+
+$ sudo systemctl stop mongodb.service
+
+$ sudo vim /etc/mongodb.conf
+
+## EDIT:  ##
+cat >> /etc/mongodb.conf <<EOF
+# /etc/mongodb.conf
+# Created on $(date), by $(whoami)
+
+systemLog:
+   quiet: false
+   #destination: file
+   #path: "/var/log/mongodb/mongod.log"
+   #logAppend: true
+   destination: syslog
+
+storage:
+   dbPath: /var/lib/mongodb
+   journal:
+      enabled: true
+
+net:
+   bindIp: 127.0.0.1
+   port: 27017
+
+setParameter:
+   enableLocalhostAuthBypass: false
+
+security:
+   authorization: enabled
+EOF
+
+$ sudo systemctl start mongodb.service
+```
+
+So, strangely, `mongo -u root -p` won't authenticate users _unless_ the
+`--authenticationDatabase admin` argument is passed from the command line :
+
+```bash
+$ mongo -u root -p --authenticationDatabase admin
+```
+
+Or using `db.auth()` :
+
+```
+$ mongo
+
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.6.3
+
+> use admin
+switched to db admin
+
+> db.auth('root', 'mathinfo')
+1
+```
+
+#### Create first normal user
+
+[Security > Auth/N > Users > __Add Users__](https://docs.mongodb.com/manual/tutorial/create-users/)
+
+```
+> use fabi
+switched to db fabi
+
+> db.createUser({ user: 'fabi', pwd: 'haiku', roles: [ {role: 'dbOwner', db: 'fabi'} ] })
+Successfully added user: {
+  "user" : "fabi",
+  "roles" : [ { "role" : "dbOwner", "db" : "fabi" } ]
+}
+```
+
+```
+$ mongo
+> use fabi
+switched to db fabi
+
+> db.auth('fabi', 'haiku')
+1
+```
+
+### Node.js
+
+```bash
+$ npm install mongodb bson-ext
+```
+
+### Pointers
+
+* [db.collection.insertOne()](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/#db.collection.insertOne)
+* [db.collection.createIndex()](https://docs.mongodb.com/manual/reference/method/db.collection.createIndex/#db.collection.createIndex)
+* [db.createCollection()](https://docs.mongodb.com/manual/reference/method/db.createCollection/#db.createCollection)
+
 __EOF__

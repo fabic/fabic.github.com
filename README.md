@@ -10,6 +10,9 @@ Using Jekyll theme [Laynon (by poole)](https://github.com/poole/lanyon/).
 
 * <http://www.davidverhasselt.com/about/> inspiration
 * <http://raghibm.com/blog/> inspiration
+* Integrate [Pocket feed](https://getpocket.com/privacy_controls) ?
+  'tis password protected, so you'd have to write some server-side JS somewhere...
+* Integrate w/ Diigo somehow ? if their seemingly old RESTful API is still functional.
 
 ## Jekyll - Liquid
 
