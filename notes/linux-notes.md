@@ -12,6 +12,20 @@ published: false
 * [man7.org online man pages](http://man7.org/linux/man-pages/index.html) (by Micael Kerrisk)
 * [Gentoo wiki “Man page”](https://wiki.gentoo.org/wiki/Man_page/Navigate)
 
+## Packages
+
+Packages you often install :
+
+```bash
+$ sudo pacman -S cmake ninja doxygen graphviz
+```
+
+And some other dependencies :
+
+```bash
+$ sudo pacman -S xmlto
+```
+
 ## Bash
 
 * This [__jez__](https://github.com/jez/dotfiles) dude has loads of configuration files.

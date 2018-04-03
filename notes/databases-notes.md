@@ -9,7 +9,11 @@ published: false
 
 SchemaSpy : how to & your repo remember ?
 
-Postgresql
+## Postgresql
+
+```bash
+$ sudo pacman -S postgresql{,-docs} php-pgsql phppgadmin
+```
 
 
 ## Algorithms
