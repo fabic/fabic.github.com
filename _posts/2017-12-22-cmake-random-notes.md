@@ -44,6 +44,14 @@ $ ( [ -d build ] && rm -r build || true ) &&
 
 * [list()](https://cmake.org/cmake/help/latest/command/list.html)
 
+Test empty string variable :
+
+```cmake
+if (NOT LIBUNW_LDFLAGS)
+  ...
+endif()
+```
+
 ## CMake variables
 
 ### Those few ones you'll be using all the time

@@ -22,6 +22,10 @@ Yeah...
 * <http://pubs.opengroup.org/onlinepubs/9699919799/idx/headers.html>
 OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)
 
+![](https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg#/media/File:Simplified_Structure_of_the_Linux_Kernel.svg)
+
+<p><a href="https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg#/media/File:Simplified_Structure_of_the_Linux_Kernel.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/1200px-Simplified_Structure_of_the_Linux_Kernel.svg.png" alt="Simplified Structure of the Linux Kernel.svg"></a><br>By <a href="//commons.wikimedia.org/wiki/User:ScotXW" title="User:ScotXW">ScotXW</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=47075153">Link</a></p>
+
 ## Shared libraries
 
 * [SO: shared lib. initialization](https://stackoverflow.com/a/9759936/643087) :

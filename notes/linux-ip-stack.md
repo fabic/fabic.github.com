@@ -21,6 +21,48 @@ Query the RIPE database with `whois <ip>`
 $ ip rule list
 ```
 
+## Monitoring
+
+### VnStat
+
+* [VnStat @ Arch Linux Wiki](https://wiki.archlinux.org/index.php/VnStat)
+* [humdi.net/vnstat/](http://humdi.net/vnstat/) (official web page).
+
+```bash
+# pacman -S vnstat
+```
+
+Edit `/etc/vnstat.conf` and set the default interface (_optional_) :
+
+```bash
+# vim /etc/vnstat.conf  # EDIT: `Interface = eth0`
+```
+
+Start the service :
+
+```bash
+# systemctl start vnstat
+```
+
+Create the databases, one for each NIC :
+
+```bash
+# vnstat -u -i wlp4s0
+# vnstat -u -i enp0s25
+```
+
+Query details ab
+```
+# vnstat -q  [-i wlp4s0]
+```
+
+Monitor live traffic :
+
+```bash
+# vnstat -l -i wlp4s0
+```
+
+
 ## Multi-IPs hosts
 
 ### Source routing

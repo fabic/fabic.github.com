@@ -226,6 +226,14 @@ DEF_TRAVERSE_DECL(
     - `try {...} catch (const std::exception &e) { ... }`
     vs `try {...} catch (std::exception const &e) { ... }` ?
 
+## Other
+
+List __pkg-config__ packages :
+
+```bash
+ $ pkg-config --list-all | sort -k1,1 | less
+```
+
 ## Pointers
 
 * <https://wiki.gentoo.org/wiki/GCC_optimization>

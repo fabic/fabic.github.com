@@ -7,6 +7,8 @@ category : notes
 tags : [note, network, wifi, cli, authnz]
 ---
 
+* __TODO:__ see [fabic/bin/woof-up.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/woof-up.sh)
+
 cat <<EOF
 ctrl_interface=/run/wpa_supplicant
 ctrl_interface_group=wheel

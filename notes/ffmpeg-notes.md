@@ -9,6 +9,7 @@ published: false
 
 * [transcode-x265.fabic.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/transcode-x265.fabic.sh)
 * [transcode.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/transcode.sh)
+* [resub.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/resub.sh)
 
 * __TODO:__ VP9/webm encoding notes.
 * __TODO:__ x264 encoding notes.
