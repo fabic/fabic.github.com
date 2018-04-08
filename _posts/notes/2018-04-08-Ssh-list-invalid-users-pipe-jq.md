@@ -4,7 +4,7 @@ title: "SSH: List failed password-based connections attempts (using jq)"
 tagline: ""
 category : notes
 published: true
-tags : [notes, cli, security]
+tags : [note, cli, security]
 ---
 
 Basically one may extract the syslog message using __jq__ in this way :
