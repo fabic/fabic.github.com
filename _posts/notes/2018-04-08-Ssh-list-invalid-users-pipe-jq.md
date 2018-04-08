@@ -13,7 +13,7 @@ Basically one may extract the syslog message using __jq__ in this way :
 $ journalctl -u ssh -o json-pretty -b | jq '.MESSAGE'
 ```
 
-And one may list “failed password authentication” of valid users :
+And we may list “failed password authentication” of valid users in this way :
 
 ```bash
 $ journalctl -u ssh -o json -b \
