@@ -31,6 +31,22 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
     const obj = {}
     map.forEach((v,k) => { obj[k] = v })
     ```
+## Frameworks
+
+* [2018: Reddit thread “Best Node.js web server frameworks in 2018?”](https://www.reddit.com/r/node/comments/8ajg6z/best_nodejs_web_server_frameworks_in_2018/)
+  Hapi, Koa, Express, Sails, Feathers, ...?
+
+
+## PWAs
+
+* [Web App Manifest Generator @ app-manifest.firebaseapp.com/](https://app-manifest.firebaseapp.com/)
+
+### PWAs : Pointers
+
+* [Web App Install Banners @ Google's Web Fundamentals](https://developers.google.com/web/fundamentals/app-install-banners/) __must-read__
+* [Vue.js PWA template @ Github](https://github.com/vuejs-templates/pwa) [doc.](http://vuejs-templates.github.io/webpack/)
+* [2017-01: We built a PWA from scratch - This is what we learned @ 14islands.com](https://14islands.com/blog/2017/01/19/progressive-web-app-from-scratch/)
+
 
 ### Promises
 
