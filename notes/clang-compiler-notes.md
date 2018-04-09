@@ -2,7 +2,8 @@
 layout: page
 title: "LLVM/Clang playground"
 description: "Scattered side-notes as I'm wandering through Clang internals."
-published: false
+category : notes
+published: true
 ---
 
 * __[clang.llvm.org/doxygen/](http://clang.llvm.org/doxygen/index.html)

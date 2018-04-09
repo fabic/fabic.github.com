@@ -2,7 +2,7 @@
 layout: page
 title: "Miscellaneous notes & dev. ideas"
 tagline: "Big ideas, don't get any..."
-#category : notes
+category : notes
 tags : [draft, wide]
 published: false
 ---

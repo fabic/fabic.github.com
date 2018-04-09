@@ -2,9 +2,9 @@
 layout: page
 title: "Computers, security (notes)"
 tagline: "Personal notes about computers, IT & security."
-category : security
+category : notes
 tags : [draft, security]
-published: false
+published: true
 ---
 
 

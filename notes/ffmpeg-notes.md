@@ -2,9 +2,9 @@
 layout: page
 title: "FFmpeg audio/video trans/coding"
 tagline: "Personal notes about using FFmpeg for transcoding audio & video"
-#category : notes
+category : notes
 tags : [draft, wide]
-published: false
+published: true
 ---
 
 * [transcode-x265.fabic.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/transcode-x265.fabic.sh)

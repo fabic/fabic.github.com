@@ -3,9 +3,9 @@
 layout: page
 title: "Networks: Linux IP stack, routing, iptables firewall, etc (notes)"
 tagline: "Personal notes about Linux networking."
-category : networking
+category : notes
 tags : [draft, network, wide]
-published: false
+published: true
 ---
 
 ???

@@ -2,9 +2,9 @@
 layout: page
 title: "Databases - notes"
 tagline: "playground"
-#category : notes
+category : notes
 tags : [draft, wide]
-published: false
+published: true
 ---
 
 SchemaSpy : how to & your repo remember ?

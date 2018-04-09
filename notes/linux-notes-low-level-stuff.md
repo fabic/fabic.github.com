@@ -3,13 +3,13 @@ layout: page
 title: "Linux – notes – low-level stuff"
 tagline: "Personal notes and pointers while crawling in the deepest."
 category : notes
-tags : [draft, Linux, syscalls]
-published: false
+tags : [draft, Linux, syscalls, wide]
+published: true
 ---
 
 ## TL;DR
 
-Yeah...
+&hellip; personal notes and pointers about the low-level internals of Linux/kernel/Glibc/etc &hellip;
 
 ## Links
 
@@ -34,18 +34,20 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
     - The constructor attr. may have a priority specification : `void before_main(void) __attribute__((constructor (101)))` ([SO](https://stackoverflow.com/a/32701238/643087))
     - Or ([via](https://stackoverflow.com/a/1681655/643087)):
 
-          namespace {
-            struct initializer {
-              initializer() {
-                std::cout << "Loading the library" << std::endl;
-              }
+        ```cpp
+        namespace {
+          struct initializer {
+            initializer() {
+              std::cout << "Loading the library" << std::endl;
+            }
 
-              ~initializer() {
-                std::cout << "Unloading the library" << std::endl;
-              }
-            };
-            static initializer i;
-          }
+            ~initializer() {
+              std::cout << "Unloading the library" << std::endl;
+            }
+          };
+          static initializer i;
+        }
+        ```
 
 ## Memory allocation
 
@@ -110,6 +112,7 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 ## Linux kernel
 
 * [0xax.gitbooks.io/linux-insides/](https://0xax.gitbooks.io/linux-insides/content/index.html)
+  __must-read__
 
 
 ## Graphics
@@ -142,5 +145,12 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 
 * Have an online viewer for the Linux man pages _versus_ the BSD man pages,
   and eventually the related POSIX specifications (+wikipedia etc).
+
+## Other pointers
+
+* [“I Contribute to the **Windows Kernel**. We Are Slower Than Other Operating Systems. Here Is Why.” (by __Marc Bevand__, 10 May 2013)](http://blog.zorinaq.com/i-contribute-to-the-windows-kernel-we-are-slower-than-other-oper/)
+
+
+
 
 __EOF__

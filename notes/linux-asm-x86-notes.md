@@ -4,7 +4,7 @@ title: "Linux x86 assembly notes"
 tagline: ""
 category : notes
 tags : [draft]
-published: false
+published: true
 ---
 
 _Personal notes about low-level x86 assembly language programming._

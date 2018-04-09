@@ -2,8 +2,9 @@
 layout: page
 title: "LLVM/Clang API pointers"
 description: "API documentation pointers, diagrams, notes."
+category : notes
 tags: [wide, draft, C++, Clang]
-published: false
+published: true
 ---
 
 * __[clang.llvm.org/doxygen/](http://clang.llvm.org/doxygen/index.html)

@@ -3,9 +3,9 @@
 layout: page
 title: "Shell(s): notes"
 tagline: "Things one does from a shell"
-#category : notes
+category : notes
 tags : [draft, wide, bash]
-published: false
+published: true
 ---
 
 * Your [~/.bash-it/](https://github.com/fabic/bash-it) Bash shell configuration.

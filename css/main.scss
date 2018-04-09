@@ -159,6 +159,10 @@ section.pages ul {
   font-size: .8em;
 }
 
+.page-tagline {
+  font-size: .8em;
+}
+
 /* https://stackoverflow.com/a/7324826 */
 .posts article.note:before {
     content: '';
@@ -251,6 +255,11 @@ a.widget.next-post {
 .fs-x-small { font-size: .33em; }
 .pre { white-space: pre; }
 .pre-wrap { white-space: pre-wrap; }
+
+ul.no-bullets {
+  list-style: none;
+  padding-left: 0;
+}
 
 /*
     Embeded videos

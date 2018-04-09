@@ -2,9 +2,9 @@
 layout: page
 title: "Programming resources out there"
 tagline: "Collected pointers to programming reference materials out there."
-#category : notes
+category : notes
 tags : [draft]
-published: false
+published: true
 ---
 
 * <https://github.com/timoxley/best-practices>

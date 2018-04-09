@@ -4,7 +4,7 @@ title: "JavaScript - notes"
 tagline: "About Electron, NW.js"
 category : notes
 tags : [draft, wide]
-published: false
+published: true
 ---
 
 * [Electron - electronjs.org](https://electronjs.org/)

@@ -2,7 +2,8 @@
 layout: page
 title: "Linux: Computer Graphics (X11/XCB, Wayland, OpenGL, Vulkan, etc)"
 description: "Notes about drawing stuff on screen under Linux."
-published: false
+category : notes
+published: true
 ---
 
 ## OpenGL / OpenGL ES

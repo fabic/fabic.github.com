@@ -4,7 +4,7 @@ title: "Concurrency, memory management"
 tagline: ""
 category : notes
 tags : [drafts, memory allocation, concurrency]
-published: false
+published: true
 ---
 
 ## Misc.

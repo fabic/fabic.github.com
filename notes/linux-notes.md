@@ -4,7 +4,7 @@ title: "Miscellaneous Linux notes"
 tagline: "Personal notes about Linux."
 category : notes
 tags : [draft, Linux]
-published: false
+published: true
 ---
 
 * [The man-page project &ndash; kernel.org/doc/man-pages/](https://www.kernel.org/doc/man-pages/)
