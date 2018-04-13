@@ -1,15 +1,16 @@
 ---
 layout: page
 title: "Linux – notes – low-level stuff"
-tagline: "Personal notes and pointers while crawling in the deepest."
+tagline: "Personal notes and pointers while crawling in the deepest..."
 category : notes
-tags : [draft, Linux, syscalls, wide]
+tags : [draft, Linux, low-level, wide]
 published: true
 ---
 
 ## TL;DR
 
 &hellip; personal notes and pointers about the low-level internals of Linux/kernel/Glibc/etc &hellip;
+
 
 ## Links
 
@@ -22,9 +23,24 @@ published: true
 * <http://pubs.opengroup.org/onlinepubs/9699919799/idx/headers.html>
 OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/contents.html)
 
-![](https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg#/media/File:Simplified_Structure_of_the_Linux_Kernel.svg)
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg#/media/File:Simplified_Structure_of_the_Linux_Kernel.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/1200px-Simplified_Structure_of_the_Linux_Kernel.svg.png" alt="Simplified Structure of the Linux Kernel.svg"></a><br>By <a href="//commons.wikimedia.org/wiki/User:ScotXW" title="User:ScotXW">ScotXW</a> - <span class="int-own-work" lang="en">Own work</span>, <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=47075153">Link</a></p>
+## The Linux Kernel
+
+* [LWN.net](https://lwn.net/)
+* [Linux kernel documentation @ kernel.org](https://www.kernel.org/doc/html/latest/)
+* [linux-stable source tree (repository)](https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git/)
+    - [github.com/**torvalds/linux** : The Linux kernel source tree, mirror repository @ Github](https://github.com/torvalds/linux)
+
+<p>
+  <a href="https://commons.wikimedia.org/wiki/File:Simplified_Structure_of_the_Linux_Kernel.svg#/media/File:Simplified_Structure_of_the_Linux_Kernel.svg">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Simplified_Structure_of_the_Linux_Kernel.svg/1200px-Simplified_Structure_of_the_Linux_Kernel.svg.png" alt="Simplified Structure of the Linux Kernel.svg"></a>
+    <br>By <a href="//commons.wikimedia.org/wiki/User:ScotXW" title="User:ScotXW">ScotXW</a>
+      - <span class="int-own-work" lang="en">Own work</span>,
+      <a href="https://creativecommons.org/licenses/by-sa/4.0"
+         title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>,
+      <a href="https://commons.wikimedia.org/w/index.php?curid=47075153">Link</a>
+</p>
+
 
 ## Shared libraries
 
@@ -49,6 +65,7 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
         }
         ```
 
+
 ## Memory allocation
 
 * <https://en.wikipedia.org/wiki/Memory_management>
@@ -70,6 +87,7 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
 * <http://www.memorymanagement.org/> and specifically their huge
   [bibliography](http://www.memorymanagement.org/bib.html#bibliography).
 * [CSc 553 — Principles of Compilation – Christian Collberg – 2011 (cs.arizona.edu)](https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/)
+
 
 ### Implementations
 
@@ -100,14 +118,17 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 * [memory-mgr.sourceforge.net](http://memory-mgr.sourceforge.net/),
   old thing ~2012, sort of custom memory manager for C++.
 
+
 ## Signals
 
 * [§24. Signal Handling – GNU libc library doc.](https://www.gnu.org/software/libc/manual/html_node/Signal-Handling.html)
 * <http://www.enderunix.org/simsek/articles/signals.pdf>
 
+
 ## Binaries
 
 * <https://en.wikipedia.org/wiki/Executable_and_Linkable_Format>
+
 
 ## Linux kernel
 
@@ -141,10 +162,12 @@ instead it provides a libc wrapper [brk.c](https://opensource.apple.com/source/L
 * [2011: Load-time relocation of shared libraries (Eli Bendersky's)](https://eli.thegreenplace.net/2011/08/25/load-time-relocation-of-shared-libraries/)
 * [2016: Shared Libraries: Understanding Dynamic Loading - http://amir.rachum.com](http://amir.rachum.com/blog/2016/09/17/shared-libraries/#direct-dependencies)
 
+
 ## TODO :
 
 * Have an online viewer for the Linux man pages _versus_ the BSD man pages,
   and eventually the related POSIX specifications (+wikipedia etc).
+
 
 ## Other pointers
 
