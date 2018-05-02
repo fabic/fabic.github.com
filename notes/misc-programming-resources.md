@@ -13,12 +13,15 @@ published: true
 * <https://github.com/P1xt/p1xt-guides>
 * <https://github.com/passy/awesome-recursion-schemes>
 * [Martin Fowler's PoEAA](https://martinfowler.com/eaaCatalog/) ~ 2003.
+* [jefdigital/awesome](https://github.com/jefdigital/awesome) : Many pointers...
 
 ## Concepts
 
 * [Syntactic Noise (M. Fowler)](https://martinfowler.com/bliki/SyntacticNoise.html)
 
 * [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
+
+* [Long polling (push technologies)](https://en.wikipedia.org/wiki/Push_technology#Long_polling)
 
 ## Metrics
 

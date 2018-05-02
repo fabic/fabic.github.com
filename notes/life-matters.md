@@ -15,12 +15,12 @@ maths: true
 
 Soit :
 
-* m : mensualité
+* __m__ : mensualité
 * K : capital emprunté
 * t : taux annuel proportionnel
 * n : nombre de mensualités
 
-On a :
+Le montant des mensualités peut être obtenu au moyen de l'équation suivante :
 
     m = [(K*t)/12] / [1-(1+(t/12))^-n]
 
@@ -71,5 +71,11 @@ k=300000; t=4.3/100; n=12*30; m=(k*t/12)/(1-(1+t/12)^-n); cout_total=m*n; cout_c
 ```
 
 Trouvé équation @ [droit-finances.commentcamarche.com](http://droit-finances.commentcamarche.com/forum/affich-4149900-comment-calculer-mensualites-d-un-pret-immobilier#1).
+
+Cf simulateur [linternaute.com/pratique/argent/immobilier/calculatrice/vos-mensualites/](http://www.linternaute.com/pratique/argent/immobilier/calculatrice/vos-mensualites/)
+
+__TODO:__ Prendre en compte les frais de notaire, le coût de l'assurance, le coût
+d'une éventuelle revente puis rachat d'un autre bien; taxes?.
+__TODO:__ Lien vers cette vidéo Youtube là...
 
 __EOF__

@@ -15,6 +15,55 @@ SchemaSpy : how to & your repo remember ?
 $ sudo pacman -S postgresql{,-docs} php-pgsql phppgadmin
 ```
 
+## MySQL / MariaDB
+
+### Users, security, access control
+
+#### List all users with remote access
+
+```
+MariaDB [(none)]> SELECT User, Host FROM mysql.user WHERE Host <> 'localhost';
++------+-----------+
+| User | Host      |
++------+-----------+
+| root | 127.0.0.1 |
+| root | ::1       |
+|      | wall      |
+| root | wall      |
++------+-----------+
+4 rows in set (0.00 sec)
+```
+
+#### List all users that do not have remote access
+
+This would list users that _have_ localhost access _but no_ remote access:
+
+```sql
+SELECT u.User, u.Host, u.Password
+FROM mysql.user u
+WHERE NOT EXISTS (
+    SELECT * FROM mysql.user uu
+    WHERE uu.User = u.User
+      AND uu.Host NOT IN ('localhost', '127.0.0.1', '::1')
+  ) ;
+```
+
+```
++------+-----------+-------------------------------------------+
+| User | Host      | Password                                  |
++------+-----------+-------------------------------------------+
+| fabi | localhost | *12344E8CABCDEFA5812346BABCDFE90FEDCBA123 |
++------+-----------+-------------------------------------------+
+1 row in set (0.00 sec)
+```
+
+Then one may add a corresponding user with remote access _using the same password_ :
+
+```sql
+CREATE USER fabi@'%'
+  IDENTIFIED BY PASSWORD '*12344E8CABCDEFA5812346BABCDFE90FEDCBA123' ;
+```
+
 
 ## Algorithms
 

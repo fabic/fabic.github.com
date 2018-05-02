@@ -386,6 +386,11 @@ switched to db fabi
 $ npm install mongodb bson-ext
 ```
 
+### Random
+
+* About __npm__'s __npx__ ?
+* `$(npm bin)` typically evaluates to `./node_modules/.bin`, ex.: `$(npm bin)/cypress open`
+
 ### Pointers
 
 * [db.collection.insertOne()](https://docs.mongodb.com/manual/reference/method/db.collection.insertOne/#db.collection.insertOne)
