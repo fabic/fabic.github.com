@@ -64,6 +64,97 @@ CREATE USER fabi@'%'
   IDENTIFIED BY PASSWORD '*12344E8CABCDEFA5812346BABCDFE90FEDCBA123' ;
 ```
 
+## Elastic Search
+
+From <http://sundog-education.com/elasticsearch/>
+(Udemy course [udemy.com/elasticsearch-6-and-elastic-stack-in-depth-and-hands-on](https://www.udemy.com/elasticsearch-6-and-elastic-stack-in-depth-and-hands-on/) by Frank Kane;
+[slides](http://media.sundog-soft.com/es6/ElasticStack.pdf "es6/ElasticStack.pdf")).
+
+Setup the schema for `/shakespeare` :
+
+```bash
+$ curl http://media.sundog-soft.com/es6/shakes-mapping.json |
+    curl -H 'Content-Type: application/json' \
+      -XPUT 127.0.0.1:9200/shakespeare       \
+      --data-binary @-
+```
+
+Where `shakes-mapping.json` is :
+
+```json
+{
+        "mappings" : {
+                "doc" : {
+                        "properties" : {
+                                "speaker" : {"type": "keyword" },
+                                "play_name" : {"type": "keyword" },
+                                "line_id" : { "type" : "integer" },
+                                "speech_number" : { "type" : "integer" }
+                        }
+                }
+        }
+}
+```
+
+He then proceeds with loading the actual data :
+
+```bash
+$ curl -H 'Content-Type: application/json' -X POST \
+    'localhost:9200/shakespeare/doc/_bulk?pretty'  \
+    --data-binary  @shakespeare_6.0.json
+```
+
+And one simple query :
+
+```bash
+$ cat <<EOF | curl -H 'Content-Type: application/json' \
+                -XGET '127.0.0.1:9200/shakespeare/_search?pretty' \
+                --data-binary @-
+{
+  "query" : {
+    "match_phrase" : {
+    "text_entry" : "to be or not to be"
+    }
+  }
+}
+EOF
+```
+
+Query result :
+
+```json
+{
+  "took" : 88,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 1,
+    "max_score" : 13.874454,
+    "hits" : [
+      {
+        "_index" : "shakespeare",
+        "_type" : "doc",
+        "_id" : "34229",
+        "_score" : 13.874454,
+        "_source" : {
+          "type" : "line",
+          "line_id" : 34230,
+          "play_name" : "Hamlet",
+          "speech_number" : 19,
+          "line_number" : "3.1.64",
+          "speaker" : "HAMLET",
+          "text_entry" : "To be, or not to be: that is the question:"
+        }
+      }
+    ]
+  }
+}
+```
 
 ## Algorithms
 

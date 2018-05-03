@@ -23,6 +23,23 @@ published: true
 
 * [Long polling (push technologies)](https://en.wikipedia.org/wiki/Push_technology#Long_polling)
 
+* On [horizontal _versus_ vertical scaling](https://stackoverflow.com/a/11715598):
+
+    > Horizontal scaling means that you scale by adding more machines into your
+    > pool of resources whereas Vertical scaling means that you scale by adding
+    > more power (CPU, RAM) to an existing machine.
+    > ![horizontal-versus-vertical-scaling--On3tO.png](/assets/horizontal-versus-vertical-scaling--On3tO.png)
+
+    - Horizontal scaling :
+        * often based on partitioning the data where each node holds part of it.
+        * scaling is achieved by adding more machines to the pool;
+    - Vertical scaling :
+        * all data reside on a single node;
+        * scaling is achieved by adding more CPUs/cores and RAM;
+        * => and will generally entail server downtime.
+        * scaling is limited to the capacities of the machine (e.g. at most 2
+          CPUs and some bounded amount of RAM).
+
 ## Metrics
 
 * [SLOCs : Source Lines Of Code](https://en.wikipedia.org/wiki/Source_lines_of_code)
