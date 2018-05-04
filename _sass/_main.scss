@@ -117,3 +117,47 @@ img.diigo-icon, img.disqus-icon {
   z-index: 10;
   cursor: pointer;
 }
+
+//==- Bullets before headings for .page contents ---------------------------==//
+@media(min-width: 768px) {
+  article.page {
+    h2:before {
+      content: "¶";
+      position: absolute;
+      left: -1em;
+      color: white;
+    }
+
+    h3:before {
+      content: "▪";
+      position: absolute;
+      left: -1.1em;
+      color: white;
+    }
+
+    h4:before {
+      content: "▪•";
+      position: absolute;
+      left: -1.42em;
+      color: white;
+    }
+
+    h5:before {
+      content: "▪•◦";
+      position: absolute;
+      left: -1.42em;
+      color: white;
+    }
+  }
+
+  // We need to adjust here for non-wide "normal pages" content
+  // where we have a dark-grey thick border around the page.
+  .container.content {
+    article.page {
+      h2:before { left: -.6em; }
+      h3:before { left: -.63em; }
+      h4:before { left: -.9em; }
+      h5:before { left: -1.1em; }
+    }
+  }
+}
