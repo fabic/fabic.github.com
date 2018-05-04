@@ -5,6 +5,7 @@ tagline: "playground"
 category : notes
 tags : [draft, wide]
 published: true
+maths: true
 ---
 
 SchemaSpy : how to & your repo remember ?
@@ -151,6 +152,222 @@ Query result :
           "text_entry" : "To be, or not to be: that is the question:"
         }
       }
+    ]
+  }
+}
+```
+
+### Concepts
+
+  * __TF-IDF__ : Relevance = Term Frequency x Inverse Document Frequency.
+
+    - Assessing the __relevance of term__ in a given document ;
+    - __Term Frequency :__ How often a term occurs in a document ;
+    - __Document Frequency :__ How often it appears in _all_ documents.
+
+  {% raw %}
+  $$
+  \begin{align*}
+  Relevance = Term Frequency \times \frac{1}{Inverse Document Frequency}
+  \end{align*}
+  $$
+  {% endraw %}
+
+  * huh
+
+### Examples
+
+#### Importing MovieLens' movies data
+
+* Several datasets (CSV) are available at [grouplens.org/datasets/movielens/](https://grouplens.org/datasets/movielens/)
+
+```bash
+$ cat mappings-movies.json |
+    curl -H 'Content-Type: application/json' \
+      -XPUT '127.0.0.1:9200/movies'          \
+      --data-binary @-
+```
+
+With `mappings-movies.json` :
+
+```bash
+$ cat << EOF > mappings-movies.json
+{
+  "mappings": {
+    "movie": {
+      "properties": {
+        "year": { "type": "date" }
+      }
+    }
+  }
+}
+EOF
+```
+
+##### Query the mapping :
+
+```bash
+$ curl -H 'Content-Type: application/json' \
+    -XGET '127.0.0.1:9200/movies/_mapping/?pretty'
+```
+which yields :
+
+```json
+{
+  "movies" : {
+    "mappings" : {
+      "movie" : {
+        "properties" : {
+          "year" : {
+            "type" : "date"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+__NOTE:__ We can request the mapping for a specific type, here `movie` for ex. :
+
+```bash
+$ curl -H 'Content-Type: application/json' \
+    -XGET '127.0.0.1:9200/movies/_mapping/movie?pretty'
+```
+
+
+##### Bulk insertion of all the movies
+
+###### Using any-json + jq to transform the CSV data to the JSON we want :
+
+* [any-json](https://www.npmjs.com/package/any-json)
+* [jq](https://stedolan.github.io/jq/manual/)
+* Note: One may also write a __jq__ [script](https://stackoverflow.com/a/32002086)
+  for parsing CSV.
+
+```bash
+$ head ml-latest/movies.csv |
+    any-json convert /dev/stdin --input-format=csv |
+      jq '[.[] | {id: .movieId, title: .title, genres: .genres|split("|"), year: (.title|capture("\\((?<y>[0-9]+)\\s*\\)$")|.y|tonumber)}]'
+```
+
+will transform :
+
+```bash
+$ head ml-latest/movies.csv
+movieId,title,genres
+1,Toy Story (1995),Adventure|Animation|Children|Comedy|Fantasy
+2,Jumanji (1995),Adventure|Children|Fantasy
+3,Grumpier Old Men (1995),Comedy|Romance
+4,Waiting to Exhale (1995),Comedy|Drama|Romance
+```
+
+to
+
+```json
+[
+  {
+    "id": "1",
+    "title": "Toy Story (1995)",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Children",
+      "Comedy",
+      "Fantasy"
+    ],
+    "year": 1995
+  },
+  {
+    "id": "2",
+    ...
+    ...
+  },
+  ...
+]
+```
+
+###### Preparing for \_bulk data insertion
+
+ElasticSearch expects a strange format where a single record to be inserted
+needs two JSON objects :
+
+```json
+{ "create": { "_index": "movies", "_type": "movie", "_id": "1" } }
+{ "id": "1",
+  "title": "Toy Story (1995)",
+  "genres": [ "Adventure", "Animation" ],
+  "year": 1995
+}
+```
+
+Using __jq__ again so as to produce the expected format :
+
+```bash
+$ head ml-latest/movies.csv |
+    any-json convert /dev/stdin --input-format=csv |
+      jq '[.[] | {id: .movieId, title: .title, genres: .genres|split("|"), year: (.title|capture("\\((?<y>[0-9]+)\\s*\\)$")|.y|tonumber)}]' |
+        jq '.[] | {create:{_index:"movies", _type:"movie", _id: .id}},.'
+```
+
+Applying this to the `movies.csv` revealed a few unescaped or malformed UTF-8
+characters; had to fix things by hand.
+
+```bash
+$ any-json convert ml-latest/movies.csv > movies1.json
+```
+
+And finally :
+
+```bash
+$ time (
+    cat movies1.json \
+    | jq '[.[] | {id: .movieId, title: .title, genres: .genres|split("|"), year: (.title|capture("\\((?<y>[0-9]+)\\s*\\)$")|.y|tonumber)}]' \
+    | jq -c '.[] | {create:{_index:"movies", _type:"movie", _id: .id}},.' \
+    | curl -H 'Content-Type: application/json' \
+        -XPUT '127.0.0.1:9200/_bulk?pretty'    \
+        --data-binary @-
+  )
+```
+
+###### Check what's in there with a `_search` query :
+
+```bash
+$ curl -H 'Content-Type: application/json' \
+    -XGET '127.0.0.1:9200/movies/_search?pretty'
+```
+
+which yields :
+
+```json
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 5,
+    "successful" : 5,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : 45445,
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "movies",
+        "_type" : "movie",
+        "_id" : "14",
+        "_score" : 1.0,
+        "_source" : {
+          "id" : "14",
+          "title" : "Nixon (1995)",
+          "genres" : [
+            "Drama"
+          ],
+          "year" : 1995
+        }
+      },
+      ...
     ]
   }
 }
