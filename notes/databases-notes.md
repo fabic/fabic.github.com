@@ -373,6 +373,97 @@ which yields :
 }
 ```
 
+### Querying ElasticSearch
+
+#### GET
+
+```bash
+$ curl -H 'Content-Type: application/json' \
+    -XGET '127.0.0.1:9200/movies/movie/44?pretty'
+```
+Yields :
+
+```json
+{
+  "_index" : "movies",
+  "_type" : "movie",
+  "_id" : "44",
+  "_version" : 1,
+  "found" : true,
+  "_source" : {
+    "id" : "44",
+    "title" : "Mortal Kombat (1995)",
+    "genres" : [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "year" : 1995
+  }
+}
+```
+
+* NOTE: `_version` here is `1`.
+
+#### POST (update data)
+
+```bash
+$ curl -H 'Content-Type: application/json' \
+    -XPOST '127.0.0.1:9200/movies/movie/44/_update?pretty' \
+    -d '{ "doc": { "title": "Mortal Kombat" } }'
+```
+
+Yields :
+
+```json
+{
+  "_index" : "movies",
+  "_type" : "movie",
+  "_id" : "44",
+  "_version" : 2,
+  "result" : "updated",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 9034,
+  "_primary_term" : 1
+}
+```
+
+* NOTE: `_version` bumped to `2`.
+* NOTE: We had to wrap the actual data as value of a `"doc"` key.
+
+#### PUT (add duplicate record)
+
+```bash
+$ curl -H 'Content-Type: application/json' \
+    -XPUT '127.0.0.1:9200/movies/movie/44?pretty' \
+    -d '{"title" : "Mortal Kombat", "genres" : ["Action"], "year" : 1995}'
+```
+Yields :
+
+```json
+{
+  "_index" : "movies",
+  "_type" : "movie",
+  "_id" : "44",
+  "_version" : 3,
+  "result" : "updated",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 9035,
+  "_primary_term" : 1
+}
+```
+
+__NOTE:__ Trying to add a duplicate record will be handled seamlessly by having
+a new version of it be inserted, here `_version` = `3`.
+
 ## Algorithms
 
 ### B-trees, B+ trees
