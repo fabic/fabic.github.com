@@ -8,7 +8,9 @@ published: true
 maths: true
 ---
 
-SchemaSpy : how to & your repo remember ?
+* [SchemaSpy](git@github.com:fabic/SchemaSpy-ng.git) : how to & your repo remember ?
+
+![NoSQL: Not Only SQL](/assets/nosql--not-only-sql.png "NoSQL: Not Only SQL.")
 
 ## Postgresql
 

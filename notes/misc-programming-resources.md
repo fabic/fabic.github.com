@@ -29,6 +29,7 @@ published: true
     > pool of resources whereas Vertical scaling means that you scale by adding
     > more power (CPU, RAM) to an existing machine.
     > ![horizontal-versus-vertical-scaling--On3tO.png](/assets/horizontal-versus-vertical-scaling--On3tO.png)
+    > ![Scale Up versus Scale Out](/assets/scale-up--versus--scale-out--nati-shalom.png "Scale Up versus Scale Out (Nati Shalom)")
 
     - Horizontal scaling :
         * often based on partitioning the data where each node holds part of it.
@@ -39,6 +40,9 @@ published: true
         * => and will generally entail server downtime.
         * scaling is limited to the capacities of the machine (e.g. at most 2
           CPUs and some bounded amount of RAM).
+    - Must read :
+        * [Scale-out vs Scale-up (2010, Nati Shalom)](http://ht.ly/cAhPe)
+        * [The Common Principles Behind the NOSQL Alternatives (2009, Nati Shalom)](http://ht.ly/cAhY6)
 
 ## Metrics
 
