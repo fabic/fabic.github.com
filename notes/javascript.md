@@ -50,6 +50,8 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
 
 ### Promises
 
+* 2012: <https://blog.domenic.me/youre-missing-the-point-of-promises/>
+
 ##### async-await lambda IIFE
 
 

@@ -44,6 +44,18 @@ published: true
         * [Scale-out vs Scale-up (2010, Nati Shalom)](http://ht.ly/cAhPe)
         * [The Common Principles Behind the NOSQL Alternatives (2009, Nati Shalom)](http://ht.ly/cAhY6)
 
+* RESTful
+    - HATEOAS :: “Hypermedia As The Engine Of Application State” :
+        > A hypermedia-driven site provides information to navigate the site's REST
+        > interfaces dynamically __by including hypermedia links with the responses__.
+        > This capability differs from that of SOA-based systems and WSDL-driven
+        > interfaces. With SOA, servers and clients usually must access a __fixed
+        > specification__ that might be staged somewhere else on the website, on
+        > another website, or perhaps distributed by email.
+        > <br>__via:__ <https://spring.io/understanding/HATEOAS>
+
+        See also <https://en.wikipedia.org/wiki/HATEOAS>
+
 ## Metrics
 
 * [SLOCs : Source Lines Of Code](https://en.wikipedia.org/wiki/Source_lines_of_code)
