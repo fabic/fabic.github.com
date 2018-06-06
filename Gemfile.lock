@@ -6,9 +6,9 @@ GEM
     charlock_holmes (0.7.6)
     colorator (1.1.0)
     escape_utils (1.2.1)
-    ffi (1.9.23)
+    ffi (1.9.25)
     forwardable-extended (2.6.0)
-    github-linguist (6.1.0)
+    github-linguist (6.2.0)
       charlock_holmes (~> 0.7.6)
       escape_utils (~> 1.2.0)
       mime-types (>= 1.19)
@@ -34,7 +34,7 @@ GEM
       jekyll (~> 3.3)
     jekyll-watch (1.5.1)
       listen (~> 3.0)
-    kramdown (1.16.2)
+    kramdown (1.17.0)
     liquid (3.0.6)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -67,7 +67,7 @@ GEM
     redcarpet (3.4.0)
     rouge (1.11.1)
     ruby_dep (1.5.0)
-    rugged (0.27.0)
+    rugged (0.27.1)
     safe_yaml (1.0.4)
     sass (3.5.6)
       sass-listen (>= 4.0.0)
@@ -88,4 +88,4 @@ DEPENDENCIES
   octopress
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
