@@ -18,6 +18,33 @@ maths: true
 $ sudo pacman -S postgresql{,-docs} php-pgsql phppgadmin
 ```
 
+### Postgres :: dump database
+
+This one command is what you actually want :
+
+```bash
+$ pg_dump my_database | bzip2 -c > tmp/my_database.db.dump.sql.bz2
+```
+
+There's also the `-F tar` argument to `pg_dump` which will produce a tarball:
+
+```bash
+$ pg_dump -F tar my_database > `date -Is`--my_database.db-dump.sql.tar
+```
+
+But note that it contains several files, probably one per table:
+
+```bash
+$ tar -tf my_database.db-dump.sql.tar
+toc.dat
+2660.dat
+2662.dat
+...
+...
+2733.dat
+restore.sql
+```
+
 ## MySQL / MariaDB
 
 ### Users, security, access control

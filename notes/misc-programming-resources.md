@@ -17,6 +17,24 @@ published: true
 
 ## Concepts
 
+* __YAGNI :__ “You Aren't Gonna Need It”
+    - <https://martinfowler.com/bliki/Yagni.html>
+    - <https://en.wikipedia.org/wiki/You_aren%27t_gonna_need_it>
+
+* __KISS :__ “Keep It Simple, Stupid”
+    - <https://en.wikipedia.org/wiki/KISS_principle>
+
+* And __DTSTTCPW :__ “do the simplest thing that could possibly work”
+
+* __Other:__
+    - <https://en.wikipedia.org/wiki/If_it_ain%27t_broke,_don%27t_fix_it>
+    - <https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>
+    - <https://en.wikipedia.org/wiki/Feature_creep>
+    - <https://en.wikipedia.org/wiki/Overengineering>
+    - _Other, more or less [un]related :_
+        * <https://en.wikipedia.org/wiki/Minimum_viable_product>
+        * <https://en.wikipedia.org/wiki/List_of_software_development_philosophies>
+
 * [Syntactic Noise (M. Fowler)](https://martinfowler.com/bliki/SyntacticNoise.html)
 
 * [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
@@ -56,9 +74,78 @@ published: true
 
         See also <https://en.wikipedia.org/wiki/HATEOAS>
 
+## Semantic Versioning
+
+* [__semver.org__](http://semver.org/)
+* [node-semver](https://github.com/npm/node-semver) : That which NPM uses for
+  parsing version contraints.
+* [2014: "npm install --save" No Longer Using Tildes \| fredkschott.com](http://fredkschott.com/post/2014/02/npm-no-longer-defaults-to-tildes/)
+    > - In the simplest terms, the tilde matches the __most recent minor version__
+    > (the middle number). ~1.2.3 will match all 1.2.x versions but will miss 1.3.0.
+    > - The caret, on the other hand, is more relaxed. It will update you to the
+    > __most recent major version__ (the first number). ^1.2.3 will match any 1.x.x
+    > release including 1.3.0, but will hold off on 2.0.0.
+    > <br>__&mdash; fredkschott.com__
+
+From [semver.org](http://semver.org/) :
+> Given a version number MAJOR.MINOR.PATCH, increment the:
+> - MAJOR version when you make __incompatible__ API changes,
+> - MINOR version when you __add functionality__ in a __backwards-compatible__ manner, and
+> - PATCH version when you make __backwards-compatible bug fixes__.
+> <br>**― semver.org**
+
+### Pre-release versioning 0.x.y
+
+> Major version zero (0.y.z) is for initial development. Anything may change at
+> any time. The public API should not be considered stable.
+> **― semver.org**
+
+* __0.x__ => Anything can change at anytime => BC breaks are to be expected,
+  however the common practice is to to reserve __patches for fixes and internal
+  changes__ that _try_ to __maintain BC__; while the minor updates may be anything else.
+* __Hence__ NPM (maybe PHP's Composer too?) will have the caret `^` behave like
+  tilde `~` for __0.x.y__ “pre-release” version constraints; where for ex.
+  `~0.1.2` <=> `^0.1.2` => upgrade to the most recent `0.1` minor but restrict
+  to be `<0.2`.
+
+### Examples
+
+__~1.2.3__ | >=1.2.3-0 <1.3.0-0 | _“Reasonably close to 1.2.3”_.
+__^1.2.3__ | >=1.2.3-0 <2.0.0-0 | _“Compatible with 1.2.3”_.
+__~0.1.2__<br>__^0.1.2__ | >=0.1.2 < 0.2.0 | _pre-release_
+
+
+### OOP's S.O.L.I.D.
+
+<https://en.wikipedia.org/wiki/SOLID> :
+
+* __SRP:__ Single Responsibility principle ;
+* __Open/Closed__ principle ;
+* __Liskov substitution__ principle ;
+* __Interface Segregation__ principle ;
+* __Dependency Inversion__ principle.
+
+__to/read/?:__ [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_design))
+
 ## Metrics
 
 * [SLOCs : Source Lines Of Code](https://en.wikipedia.org/wiki/Source_lines_of_code)
     - See also [Cost estimation in software engineering](https://en.wikipedia.org/wiki/Cost_estimation_in_software_engineering)
+
+Joke found at [Why are software development task estimations regularly off by a factor of 2-3?](http://qr.ae/TUp81w)
+> Typical developer’s day:
+> <br>&ndash; Listen man, you are a developer. Tell me why do you estimate tasks incorrectly so often?
+> <br>&mdash; Imagine that you have to unload a truck. How long does it take?
+> <br>&ndash; A couple of hours.
+> <br>&mdash; It’s a Kamaz.
+> <br>&ndash; 8 hours.
+> <br>&mdash; It’s a Kamaz loaded with sand.
+> <br>&ndash; 12 hours.
+> <br>&mdash; You don’t have any shovel or tools, just your bare hands.
+> <br>&ndash; 2 days.
+> <br>&mdash; It is -40℃ outside.
+> <br>&ndash; 4 days.
+> <br>&mdash; The Kamaz is underwater.
+> <br>&ndash; It doesn’t make any sense, you are changing the conditions! What’s the point? You developers are constantly telling some nonsense instead of simply estimating your work time…
 
 __EOF__

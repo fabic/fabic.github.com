@@ -8,9 +8,9 @@ published: true
   <strong>EDIT / 2017 :</strong> Salut, je suis actuellement disponible à l'embauche (!)
   &ndash; uniquement sur l'<b>Île de la Réunion</b>
   &ndash; ok pour du télé-travail et/ou du <em>freelancing</em>
-  &ndash; ok pour des activités de développement d'au moins 6 mois à temps plein ou partiel
+  &ndash; ok pour des activités de développement d'au moins 1 mois à temps plein ou partiel
   &ndash; contrats “à l'objectif” possibles (sous réserve)
-  &ndash; tarif journalier entre 205 € et 230 €.
+  &ndash; tarif journalier entre 200 € et 230 €.
   <br>
   <center>
     <a href="/assets/Mr_Cadet_Fabien_-_Curriculum_Vitae_-_Light_Ver._1_-_Octobre_2017_-_Reunion.pdf">

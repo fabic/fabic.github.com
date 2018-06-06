@@ -16,6 +16,7 @@ published: true
 * [Practical Node.js (online book)](https://github.com/azat-co/practicalnode)
 * [What the f\*ck JavaScript? (denysdovhan/wtfjs)](https://github.com/denysdovhan/wtfjs)
 * <https://github.com/ragmha/practical-js>
+* <https://github.com/npm/node-semver> “The semver parser for node (the one npm uses)”
 
 ## Language notes
 
