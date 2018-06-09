@@ -41,6 +41,9 @@ published: true
 
 * [Long polling (push technologies)](https://en.wikipedia.org/wiki/Push_technology#Long_polling)
 
+* “The Twelve-factor App” deployment thing (about the (ideology) of a strict
+  separation of concerns btw. code and configuration) <https://12factor.net/config>
+
 * On [horizontal _versus_ vertical scaling](https://stackoverflow.com/a/11715598):
 
     > Horizontal scaling means that you scale by adding more machines into your
@@ -93,6 +96,11 @@ From [semver.org](http://semver.org/) :
 > - MINOR version when you __add functionality__ in a __backwards-compatible__ manner, and
 > - PATCH version when you make __backwards-compatible bug fixes__.
 > <br>**― semver.org**
+
+From <https://stackoverflow.com/a/31733623> :
+
+[![Semantic Versioning Cheatsheet; bytearcher.com](https://bytearcher.com/articles/semver-explained-why-theres-a-caret-in-my-package-json/promopics/1-table-semver-plain.png)](https://stackoverflow.com/a/31733623)
+[![Semantic Versioning Cheatsheet; bytearcher.com](https://bytearcher.com/goodies/semantic-versioning-cheatsheet/wheelbarrel-with-tilde-caret-white-bg-w1000.jpg "Semantic Versioning Cheatsheet; bytearcher.com")](http://bytearcher.com/goodies/semantic-versioning-cheatsheet/)
 
 ### Pre-release versioning 0.x.y
 
@@ -147,5 +155,12 @@ Joke found at [Why are software development task estimations regularly off by a 
 > <br>&ndash; 4 days.
 > <br>&mdash; The Kamaz is underwater.
 > <br>&ndash; It doesn’t make any sense, you are changing the conditions! What’s the point? You developers are constantly telling some nonsense instead of simply estimating your work time…
+
+## Parsing, parsers, top-down / recursive descent, etc
+
+* <http://www.craftinginterpreters.com/parsing-expressions.html> “Crafting Interpreters” online book, __must read__.
+* <https://en.wikipedia.org/wiki/Parsing_expression_grammar> (PEGs)
+* <https://en.wikipedia.org/wiki/Operator-precedence_parser>
+* [1999: Parsing Expressions by Recursive Descent &ndash; Theodore Norvell](https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm)
 
 __EOF__

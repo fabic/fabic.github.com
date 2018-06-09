@@ -32,6 +32,9 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
     const obj = {}
     map.forEach((v,k) => { obj[k] = v })
     ```
+
+* <https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f>
+
 ## Frameworks
 
 * [2018: Reddit thread “Best Node.js web server frameworks in 2018?”](https://www.reddit.com/r/node/comments/8ajg6z/best_nodejs_web_server_frameworks_in_2018/)
@@ -41,6 +44,10 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
 ## PWAs
 
 * [Web App Manifest Generator @ app-manifest.firebaseapp.com/](https://app-manifest.firebaseapp.com/)
+* <https://vue-starter.herokuapp.com/>
+* <https://vuejsdevelopers.com/2018/04/23/vue-boilerplate-template-scaffold/>
+* <https://medium.com/js-dojo/advanced-server-side-rendering-with-laravel-vue-multi-page-app-486b706e654>
+
 
 ### PWAs : Pointers
 
@@ -183,6 +190,7 @@ $ vue init webpack vuejs-01
 ### Webpack
 
 * [2017: Setting Up Webpack for Bootstrap 4 and Font Awesome](https://medium.com/@estherfalayi/setting-up-webpack-for-bootstrap-4-and-font-awesome-eb276e04aaeb)
+* <https://webpack.js.org/guides/shimming/>
 
 #### Setup
 
