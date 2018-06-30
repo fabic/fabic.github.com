@@ -8,7 +8,7 @@ tags : [draft]
 published: true
 ---
 
-### Packages and stuff of general interest
+## Packages and stuff of general interest
 
 * [symfony/property-access](https://packagist.org/packages/symfony/property-access)
   [doc](https://symfony.com/doc/current/components/property_access.html)
@@ -40,5 +40,10 @@ published: true
   > - It’s always better to have a ‘Changelog’.
   > - Do never ever have duplicated code.
   > __Mahmoud Zalt__
+
+## Laravel
+
+* __DI:__
+    - [Gist/notes: Laravel's Dependency Injection Container in Depth (by davejamesmiller)](https://gist.github.com/davejamesmiller/bd857d9b0ac895df7604dd2e63b23afe)
 
 __EOF__

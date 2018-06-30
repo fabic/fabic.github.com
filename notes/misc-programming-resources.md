@@ -163,4 +163,13 @@ Joke found at [Why are software development task estimations regularly off by a 
 * <https://en.wikipedia.org/wiki/Operator-precedence_parser>
 * [1999: Parsing Expressions by Recursive Descent &ndash; Theodore Norvell](https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm)
 
+## CORS
+
+* <https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/>
+* <https://stackoverflow.com/a/13006338/643087>
+* <http://promincproductions.com/blog/cross-domain-ajax-request-cookies-cors/>
+* <https://stackoverflow.com/a/1850482>
+* <https://stackoverflow.com/a/22533680/643087>
+* __todo/read:__ [CSRF Mitigation for AJAX Requests (2017, markitzeroday.com)](https://markitzeroday.com/x-requested-with/cors/2017/06/29/csrf-mitigation-for-ajax-requests.html)
+
 __EOF__

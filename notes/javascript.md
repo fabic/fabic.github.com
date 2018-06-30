@@ -40,6 +40,15 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
 * [2018: Reddit thread “Best Node.js web server frameworks in 2018?”](https://www.reddit.com/r/node/comments/8ajg6z/best_nodejs_web_server_frameworks_in_2018/)
   Hapi, Koa, Express, Sails, Feathers, ...?
 
+### You don't need jQuery (anymore)
+
+* __<http://youmightnotneedjquery.com/>__
+* <https://github.com/AllThingsSmitty/javascript-without-jquery>
+* <https://blog.garstasio.com/you-dont-need-jquery/events/>
+* <https://blog.wearecolony.com/a-year-without-jquery/>
+* <https://css-tricks.com/now-ever-might-not-need-jquery/>
+* <https://www.evermade.fi/replacing-jquery-native-javascript-projects/>
+* [cash-dom](https://www.npmjs.com/package/cash-dom) : very lightweight jQuery replacement.
 
 ## PWAs
 
@@ -151,6 +160,7 @@ todo...
 * [vue-cli](https://github.com/vuejs/vue-cli)
 * [webpack template](https://vuejs-templates.github.io/webpack/)
 * [Demistifying Vue's Webpack Config](https://alligator.io/vuejs/demistifying-vue-webpack/) (__must read__).
+* __Course:__ [egghead.io/courses/create-a-news-app-with-vue-js-and-nuxt](https://egghead.io/courses/create-a-news-app-with-vue-js-and-nuxt)
 
 ```bash
 $ npm install -g vue-cli

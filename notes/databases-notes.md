@@ -17,6 +17,30 @@ maths: true
 ```bash
 $ sudo pacman -S postgresql{,-docs} php-pgsql phppgadmin
 ```
+### Postgresql : pointers, Q&A
+
+* [Manual: Aggregate Functions (PostgreSQL)](https://www.postgresql.org/docs/current/static/functions-aggregate.html)
+* [SO: about `string_agg()`](https://stackoverflow.com/a/43944/643087)
+  also gives a couple of related custom functions.
+* `SELECT array_to_string( array_agg(distinct ...) ) ...`
+
+  ```sql
+  select u.id, u.email, u.name, u.surname,
+    -- string_agg(r.name, ', ') as user_roles,
+    array_to_string(array_agg(distinct r.name), ', ') as user_roles,
+    count(p.id) as nof_products,
+    u.country_id, c.iso_code, c.name
+  from users u
+    left join countries c on u.country_id = c.id
+    left join model_has_roles ur
+      on ur.model_type = 'App\User' and ur.model_id = u.id
+    left join roles r on r.id = ur.role_id
+    left join products p on p.user_id = u.id
+  group by u.id, u.email, u.name, u.surname, c.iso_code, c.name
+  having count(p.id) > 0
+  order by nof_products desc, u.surname ;
+  ```
+* __todo/read:__ [The many faces of DISTINCT in PostgreSQL (2017, by Haki Benita @ Medium)](https://medium.com/statuscode/the-many-faces-of-distinct-in-postgresql-c52490de5954)
 
 ### Postgres :: dump database
 
