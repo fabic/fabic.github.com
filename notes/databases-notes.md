@@ -42,6 +42,56 @@ $ sudo pacman -S postgresql{,-docs} php-pgsql phppgadmin
   ```
 * __todo/read:__ [The many faces of DISTINCT in PostgreSQL (2017, by Haki Benita @ Medium)](https://medium.com/statuscode/the-many-faces-of-distinct-in-postgresql-c52490de5954)
 
+
+#### Partial/transformed indexes
+
+Fount [at](https://hackernoon.com/javascript-experience-of-migrating-from-mongodb-to-postgresql-21f8bf140c05);
+have a unique index that lowercases user names, and allows reuse of a user name
+if all others are marked as removed.
+
+```sql
+CREATE UNIQUE INDEX “magical_idx”
+  ON “users” (LOWER(“name”), NULLIF(“removed”, true));
+```
+
+Non-guessable string indentifier column, with some randomness:
+
+```sql
+“id” varchar PRIMARY KEY
+               NOT NULL
+               DEFAULT ( ‘us’
+                         || nextval(‘users_id_seq’)::text
+                         || (LPAD(floor(random()*1000)::text, 3, ‘0’)) ),
+```
+
+[Base62 encoder func. `ls_crypt_convert_base()`](https://www.postgresql.org/message-id/482B7FAF.7000902%40lorenso.com) :
+
+```PLpgSQL
+CREATE OR REPLACE FUNCTION "public"."ls_crypt_convert_base"
+  (in_value TEXT, in_base INTEGER)
+  RETURNS text AS
+$body$
+   my ($value, $base) = @_;
+   $base = ($base > 62) ? 62 : (($base < 2) ? 2 : $base);
+   my @nums = (0..9,'a'..'z','A'..'Z')[0..$base-1];
+   my $index = 0;
+   my %nums = map {$_, $index++} @nums;
+
+   # short circuit if no value
+   $value =~ s/\D//g;
+   return if ($value == 0);
+
+   # this will be the end value.
+   my $rep = '';
+   while ($value > 0) {
+       $rep = $nums[$value % $base] . $rep;
+       $value = int($value / $base);
+   }
+   return $rep;
+$body$
+LANGUAGE 'plperl' IMMUTABLE RETURNS NULL ON NULL INPUT SECURITY INVOKER;
+```
+
 ### Postgres :: dump database
 
 This one command is what you actually want :
@@ -127,3 +177,8 @@ __[Wikipedia : B+ tree](https://en.wikipedia.org/wiki/B%2B_tree)__
 * [2014: Oracle B-Tree Index: From the concept to Internals](http://www.toadworld.com/platforms/oracle/w/wiki/11001.oracle-b-tree-index-from-the-concept-to-internals)
 via [SO: How to lay out B-Tree data on disk?](https://stackoverflow.com/a/40740893)
 * [2014: B+Trees – How SQL Server Indexes are Stored on Disk](http://sqlity.net/en/2445/b-plus-tree/)
+
+## Other, pointers, articles
+
+* <https://hackernoon.com/javascript-experience-of-migrating-from-mongodb-to-postgresql-21f8bf140c05>
+

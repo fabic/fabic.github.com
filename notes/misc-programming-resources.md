@@ -138,23 +138,55 @@ __to/read/?:__ [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_desi
 ## Metrics
 
 * [SLOCs : Source Lines Of Code](https://en.wikipedia.org/wiki/Source_lines_of_code)
-    - See also [Cost estimation in software engineering](https://en.wikipedia.org/wiki/Cost_estimation_in_software_engineering)
+    - See also [cost estimation in software engineering](https://en.wikipedia.org/wiki/Cost_estimation_in_software_engineering)
+    - Joke found at [why are software development task estimations regularly off by a factor of 2-3?](http://qr.ae/TUp81w)
+    > Typical developer’s day:
+    > <br>&ndash; Listen man, you are a developer. Tell me why do you estimate tasks incorrectly so often?
+    > <br>&mdash; Imagine that you have to unload a truck. How long does it take?
+    > <br>&ndash; A couple of hours.
+    > <br>&mdash; It’s a Kamaz.
+    > <br>&ndash; 8 hours.
+    > <br>&mdash; It’s a Kamaz loaded with sand.
+    > <br>&ndash; 12 hours.
+    > <br>&mdash; You don’t have any shovel or tools, just your bare hands.
+    > <br>&ndash; 2 days.
+    > <br>&mdash; It is -40℃ outside.
+    > <br>&ndash; 4 days.
+    > <br>&mdash; The Kamaz is underwater.
+    > <br>&ndash; It doesn’t make any sense, you are changing the conditions! What’s the point? You developers are constantly telling some nonsense instead of simply estimating your work time…
 
-Joke found at [Why are software development task estimations regularly off by a factor of 2-3?](http://qr.ae/TUp81w)
-> Typical developer’s day:
-> <br>&ndash; Listen man, you are a developer. Tell me why do you estimate tasks incorrectly so often?
-> <br>&mdash; Imagine that you have to unload a truck. How long does it take?
-> <br>&ndash; A couple of hours.
-> <br>&mdash; It’s a Kamaz.
-> <br>&ndash; 8 hours.
-> <br>&mdash; It’s a Kamaz loaded with sand.
-> <br>&ndash; 12 hours.
-> <br>&mdash; You don’t have any shovel or tools, just your bare hands.
-> <br>&ndash; 2 days.
-> <br>&mdash; It is -40℃ outside.
-> <br>&ndash; 4 days.
-> <br>&mdash; The Kamaz is underwater.
-> <br>&ndash; It doesn’t make any sense, you are changing the conditions! What’s the point? You developers are constantly telling some nonsense instead of simply estimating your work time…
+* __tool:__ [AlDanial´s cloc](https://github.com/AlDanial/cloc)
+  &ndash; “Count lines of code” &ndash; written in Perl; does a good job &ndash;
+  ability to give it a commit hash, or `HEAD` and it will consider just those files
+  that are under Git control, ex.:
+
+    ```
+    $ cloc HEAD
+        1821 text files.
+        1785 unique files.
+         598 files ignored.
+
+    github.com/AlDanial/cloc v 1.76  T=3.02 s (410.4 files/s, 106625.6 lines/s)
+    -------------------------------------------------------------------------------
+    Language                     files          blank        comment           code
+    -------------------------------------------------------------------------------
+    CSS                            166          13764           4230         122450
+    JavaScript                     323          13314          18795          75322
+    PHP                            487           6480           9048          25284
+    Blade                          211           1854            882          11649
+    JSON                             8              3              0          10534
+    Sass                             9            795            101           4699
+    Markdown                         8            309              0            764
+    HTML                            15            163              3            662
+    Vuejs Component                  7             29              2            390
+    Bourne Shell                     1             16              9             38
+    XML                              1              1              0             30
+    Cucumber                         1              1              0              8
+    YAML                             1              1              1              6
+    -------------------------------------------------------------------------------
+    SUM:                          1238          36730          33071         251836
+    -------------------------------------------------------------------------------
+    ```
 
 ## Parsing, parsers, top-down / recursive descent, etc
 
