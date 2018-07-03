@@ -84,9 +84,11 @@
     {% endif %}
 
     {% if page.maths %}
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
-    </script>
+      <script type="text/javascript" async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+    {% endif %}
+
+    {% if page.mermaidjs %}
+      <script type="text/javascript" async src="//unpkg.com/mermaid/dist/mermaid.min.js"></script>
     {% endif %}
 
     <script>

@@ -67,7 +67,7 @@ GEM
     redcarpet (3.4.0)
     rouge (1.11.1)
     ruby_dep (1.5.0)
-    rugged (0.27.1)
+    rugged (0.27.2)
     safe_yaml (1.0.4)
     sass (3.5.6)
       sass-listen (>= 4.0.0)
