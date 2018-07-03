@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+youtube_tv: false
 ---
 
 <section class="frontpage-disclaimer">
@@ -156,7 +157,7 @@ title: Home
 </section>
 {% endif %}
 
-{% if true %}
+{% if page.youtube_tv %}
 <!-- Youtube-TV: See init. script at bottom of page. -->
 <section id="youtube-tv-wrapper">
   <h3>
@@ -230,7 +231,7 @@ title: Home
 </div>
 {% endif %}
 
-{% if true %}
+{% if page.youtube_tv %}
   <script> <!-- 'https://github.com/Giorgio003/Youtube-TV' -->
     (function(document) {
       document.addEventListener("DOMContentLoaded", function(event) {

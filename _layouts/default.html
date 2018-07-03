@@ -79,7 +79,9 @@
         {% include analytics.html %}
     {% endif %}
 
-    <script src="/vendor/ytv/ytv.js" type="text/javascript"></script>
+    {% if page.youtube_tv %}
+      <script src="/vendor/ytv/ytv.js" type="text/javascript"></script>
+    {% endif %}
 
     {% if page.maths %}
     <script type="text/javascript" async
