@@ -66,4 +66,12 @@ published: true
 * [OpenDHT](https://github.com/savoirfairelinux/opendht)
   – A C++11 Distributed Hash Table implementation.
 
+### Text editors
+
+* [GTK+ GtkSourceView](https://wiki.gnome.org/Projects/GtkSourceView)
+    [gitlab](https://gitlab.gnome.org/GNOME/gtksourceview)
+* [GTK+ GtkTextView - text_widget_internals.txt](https://gitlab.gnome.org/GNOME/gtk/blob/master/docs/text_widget_internals.txt)
+* [GTK+ GtkTextView - Conceptual Overview](https://developer.gnome.org/gtk3/stable/TextWidget.html)
+* [GTK+ gtktextview.h](https://gitlab.gnome.org/GNOME/gtk/blob/master/gtk/gtktextview.h)
+
 __EOF__
