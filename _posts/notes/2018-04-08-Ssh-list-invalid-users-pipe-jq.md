@@ -17,10 +17,13 @@ And we may list “failed password authentication” of valid users in this way 
 
 ```bash
 $ journalctl -u ssh -o json -b \
-    | jq '.MESSAGE | capture("^Failed password for (?<invalid>invalid user )?(?<user>\\w+)") | [.user, .invalid] | @sh' \
-    | sed -e 's/"\(.*\)"/\1/' -e "s/'//g" \
-    | sort -u -k1,1
+    | jq -rC '.MESSAGE | capture("^Failed password for (?<invalid>invalid user )?(?<user>\\w+)") | [.user, .invalid] | @sh' \
+    | sed -e "s/'\(.*\)'/\1/" -e "s/'//g" \
+    | sort -u -k1,1 \
     | grep -v 'invalid user *$'
 ```
+
+* `journalctl -t su` : list `su` attempts;
+* `journalctl -t sudo` : list `sudo` invocations.
 
 __EOF__
