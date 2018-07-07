@@ -239,4 +239,11 @@ List __pkg-config__ packages :
 
 * <https://wiki.gentoo.org/wiki/GCC_optimization>
 
+### Tools
+
+* [SourceTrail](https://www.sourcetrail.com)
+* [SourceGraph](https://sourcegraph.com/search)
+* [include-what-you-use.org](https://include-what-you-use.org/)
+    [code](https://github.com/include-what-you-use/include-what-you-use)
+
 __EOF__

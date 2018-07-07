@@ -16,3 +16,5 @@ published: true
 
 * __Free online course:__ [fast.ai](http://www.fast.ai/) ~ _Making neural nets uncool again._
 
+* [Stop saying DeepCoder steals code from StackOverflow (2017, Stephen Merity](https://smerity.com/articles/2017/deepcoder_and_ai_hype.html)
+
