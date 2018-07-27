@@ -7,6 +7,7 @@ tags : [draft, wide]
 published: true
 ---
 
+* __<https://caniuse.com/>__
 * [Electron - electronjs.org](https://electronjs.org/)
 * [NW.js - nwjs.io](https://nwjs.io/)
     - [gitter.im](https://gitter.im) has a [Gitter desktop client](https://gitlab.com/gitlab-org/gitter/desktop/)
@@ -17,6 +18,9 @@ published: true
 * [What the f\*ck JavaScript? (denysdovhan/wtfjs)](https://github.com/denysdovhan/wtfjs)
 * <https://github.com/ragmha/practical-js>
 * <https://github.com/npm/node-semver> “The semver parser for node (the one npm uses)”
+* <https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f>
+
+    Nice read, fun ;-
 
 ## Language notes
 

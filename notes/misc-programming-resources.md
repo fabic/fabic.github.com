@@ -77,6 +77,10 @@ published: true
 
         See also <https://en.wikipedia.org/wiki/HATEOAS>
 
+### Design patterns
+
+* [Strategy-pattern @ doctrine-project.org](https://www.doctrine-project.org/projects/doctrine-orm/en/latest/cookbook/strategy-cookbook-introduction.html)
+
 ## Semantic Versioning
 
 * [__semver.org__](http://semver.org/)
@@ -203,5 +207,11 @@ __to/read/?:__ [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_desi
 * <https://stackoverflow.com/a/1850482>
 * <https://stackoverflow.com/a/22533680/643087>
 * __todo/read:__ [CSRF Mitigation for AJAX Requests (2017, markitzeroday.com)](https://markitzeroday.com/x-requested-with/cors/2017/06/29/csrf-mitigation-for-ajax-requests.html)
+
+## Other
+
+* <https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>
+
+    Nice article about common regular expression related to web development.
 
 __EOF__

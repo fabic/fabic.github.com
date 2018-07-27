@@ -12,6 +12,9 @@ published: true
 
 * [symfony/property-access](https://packagist.org/packages/symfony/property-access)
   [doc](https://symfony.com/doc/current/components/property_access.html)
+* <https://fractal.thephpleague.com/> __todo__
+* <https://packagist.org/packages/arrilot/laravel-widgets> __check this__
+* <https://github.com/vlucas/valitron> Standalone _single-php-file_ validation library.
 
 
 ## Composer, packages

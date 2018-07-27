@@ -119,6 +119,28 @@ toc.dat
 restore.sql
 ```
 
+### Postgre :: restore (load) dump
+
+```bash
+$ pg_dump my_funky_db | psql my_funky_db_dup
+```
+
+### Postgres :: one-liner dump/restore "test" database
+
+```bash
+$ dropdb -e --if-exists funkydb &&
+    createdb -O "`whoami`" -e funkydb &&
+      ( pg_dump funkydb | psql funkydb_test )
+```
+
+Or with a bash variable:
+
+```bash
+$ ( dasdb="funkydb"; dropdb -e --if-exists "${dasdb}_test" &&
+      createdb -O "`whoami`" -e "${dasdb}_test" &&
+        ( pg_dump "${dasdb}" | psql "${dasdb}_test" ) )
+```
+
 ## MySQL / MariaDB
 
 ### Users, security, access control
