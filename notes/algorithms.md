@@ -9,6 +9,11 @@ published: true
 
 
 * <http://raghibm.com/blog/checklist-for-a-softwareEng-interview/>
+* <https://www.movable-type.co.uk/scripts/latlong.html>
+
+    Calculate distance, bearing and more between Latitude/Longitude points.
+    Must reat; has code sample; has equations; reference;
+    Haversine algorithm.
 
 ### Lists
 

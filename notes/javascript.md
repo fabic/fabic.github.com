@@ -22,6 +22,19 @@ published: true
 
     Nice read, fun ;-
 
+* <https://developers.google.com/web/fundamentals/performance/optimizing-javascript/tree-shaking/>
+* On function binding <https://javascript.info/bind>
+* <https://github.com/tc39/proposal-object-rest-spread>
+* <https://github.com/paularmstrong/normalizr>
+* <https://hackernoon.com/javascript-promises-and-why-async-await-wins-the-battle-4fc9d15d509f>
+    * [on anonymous functions & lambdas &ndash; “Lambda means "function used as data".”](https://gist.github.com/ericelliott/414be9be82128443f6df)
+
+## ...
+
+* <https://www.npmjs.com/package/dottie>
+
+    dotted notation property path thing.
+
 ## Language notes
 
 * `Array.prototype.push.apply(dest, [1,2,3])...` : For appending elements to an
@@ -38,6 +51,13 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
     ```
 
 * <https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f>
+
+* __Arrow functions, and `this`:__
+    - [Arrow_functions @ MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+    - <https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/>
+    - <https://gist.github.com/ericelliott/414be9be82128443f6df>
+      on the confusion btw. lambda vs anonymous function.
+    - [SO](https://stackoverflow.com/a/46929294/643087), [SO](https://stackoverflow.com/a/35481654/643087)
 
 ## Frameworks
 
@@ -57,6 +77,8 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
 * <https://css-tricks.com/now-ever-might-not-need-jquery/>
 * <https://www.evermade.fi/replacing-jquery-native-javascript-projects/>
 * [cash-dom](https://www.npmjs.com/package/cash-dom) : very lightweight jQuery replacement.
+
+* Test if element is (partially) visible or not [with vanilla JS](https://stackoverflow.com/a/22480938/643087)
 
 ## PWAs
 
@@ -222,6 +244,11 @@ $ vue init webpack vuejs-01
 ## Node.js packages
 
 * <https://www.npmjs.com/package/bin-wrapper>
+* <https://github.com/davidtheclark/cosmiconfig>
+
+    That which load config. searching in ex. key in `package.json`, a `.somethgrc`
+    or `.somethgrc.json` or `.somethgrc.yml` or a `somethg.config.js` that would
+    `module.exports = { ... }`.
 
 ### Other
 

@@ -11,6 +11,10 @@ maths: true
 * __2018-05:__ Following a Udemy course, [udemy.com/elasticsearch-6-and-elastic-stack-in-depth-and-hands-on](https://www.udemy.com/elasticsearch-6-and-elastic-stack-in-depth-and-hands-on/) by Frank Kane;
 * Some course materials at : <http://sundog-education.com/elasticsearch/>
 * [Slides](http://media.sundog-soft.com/es6/ElasticStack.pdf "es6/ElasticStack.pdf").
+* __<http://elasticsearch-cheatsheet.jolicode.com/>__
+* <https://madewithlove.be/basic-understanding-of-text-search/>
+* __<https://opensource.appbase.io/dejavu/>__
+  ([code](https://github.com/appbaseio/dejavu))
 
 ## Concepts
 
@@ -409,5 +413,81 @@ Yields :
 __NOTE:__ Trying to add a duplicate record will be handled seamlessly by having
 a new version of it be inserted, here `_version` = `3`.
 
+## Pointers
+
+* About [dynamic fields mapping](https://www.elastic.co/guide/en/elasticsearch/reference/master/dynamic-field-mapping.html):
+
+    Remember that app. you worked on: with dynamic mapping, `text` inferred fields
+    _also_ got that `keyword` sub-field; which you had to use for performing
+    exact matching:
+
+    Mapping:
+
+    ```
+    "first_question": {
+      "type": "text",
+      "fields": {
+        "keyword": {
+          "type": "keyword",
+          "ignore_above": 256
+        }
+      }
+    },
+    ```
+
+    Exact matching query:
+
+    ```
+    {
+      "query": {
+        "bool": {
+          "filter": [
+            {"term": {"first_question.keyword": "Red"}},
+            {"term": {"second_question.keyword": "Pale"}},
+            {"term": {"third_question.keyword": "Green"}}
+          ]
+        }
+      }
+    }
+    ```
+
+* <https://www.elastic.co/blog/strings-are-dead-long-live-strings>
+
+    About the `string` type split for `text` and `keyword`
+
+* <https://tryolabs.com/blog/2015/02/25/elasticsearch-analyzers-or-how-i-learned-to-stop-worrying-and-love-custom-filters/>
+
+* <https://stackoverflow.com/a/49835997/643087>
+
+    About dynamic fields and the `FIELD.keyword` weirdness (for performing an actual
+    exact match using `term` queries.
+
+* <https://stackoverflow.com/a/40755927/643087>
+
+    > OR is spelled "should"
+    > AND is spelled "must"
+    > NOR is spelled "should_not"
+
+    ```
+    {
+      "query": {
+          "bool": {
+              "must": [
+                  {
+                      "term": {"shape": "round"},
+                      "bool": {
+                          "should": [
+                              {"term": {"color": "red"}},
+                              {"term": {"color": "blue"}}
+                          ]
+                      }
+                  }
+              ]
+          }
+      }
+    }
+    ```
+
+    [other](https://stackoverflow.com/a/36390660/643087)
 
 __EOF__

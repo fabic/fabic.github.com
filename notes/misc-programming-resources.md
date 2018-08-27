@@ -7,6 +7,7 @@ tags : [draft]
 published: true
 ---
 
+* __<https://dev.to/rly>__ ([thepracticaldev/orly-full-res](https://github.com/thepracticaldev/orly-full-res "Full resolution images of the O RLY book covers made by The Practical Dev"))
 * <https://github.com/timoxley/best-practices>
 * <https://github.com/donnemartin/system-design-primer>
 * <https://github.com/mtdvio/every-programmer-should-know>
@@ -16,6 +17,13 @@ published: true
 * [jefdigital/awesome](https://github.com/jefdigital/awesome) : Many pointers...
 
 ## Concepts
+
+* [Linus Torvalds on debuggers](http://lwn.net/2000/0914/a/lt-debugger.php3)
+
+    > And quite frankly, for most of the real problems (as opposed to the stupid
+    > bugs - of which there are many, as the latest crap with "truncate()" has
+    > shown us) a debugger doesn't much help. And the real problems are what I
+    > worry about. The rest is just details. It will get fixed eventually.
 
 * __YAGNI :__ “You Aren't Gonna Need It”
     - <https://martinfowler.com/bliki/Yagni.html>
