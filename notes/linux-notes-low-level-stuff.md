@@ -65,6 +65,11 @@ OpenGroup POSIX.1-2008 [toc](http://pubs.opengroup.org/onlinepubs/9699919799/bas
         }
         ```
 
+* Figure out GNU libc's actual dynamic linker libraries resolution ([SO](https://unix.stackexchange.com/a/103836)):
+
+    ```bash
+    $ LD_DEBUG=bindings ls
+    ```
 
 ## Memory allocation
 

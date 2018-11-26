@@ -15,6 +15,11 @@ published: true
 * <https://github.com/passy/awesome-recursion-schemes>
 * [Martin Fowler's PoEAA](https://martinfowler.com/eaaCatalog/) ~ 2003.
 * [jefdigital/awesome](https://github.com/jefdigital/awesome) : Many pointers...
+* <http://geektyper.com/>
+* <https://geekprank.com/hacker/>
+* <https://www.trapfi.com/> payment through Git service.
+* <https://github.com/felixrieseberg/windows95>
+* __[kamranahmedse/developer-roadmap's “Roadmap to becoming a web developer in 2018”](https://github.com/kamranahmedse/developer-roadmap)__
 
 ## Concepts
 
@@ -221,5 +226,13 @@ __to/read/?:__ [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_desi
 * <https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>
 
     Nice article about common regular expression related to web development.
+
+* [OWASP: Logging cheat sheet](https://www.owasp.org/index.php/Logging_Cheat_Sheet)
+
+* [Slack notification flowchart diagram](https://imgur.com/gallery/0p5bV)
+
+## Misc.
+
+* <https://m.signalvnoise.com/real-work-vs-imaginary-work-8bdb84a7d1da>
 
 __EOF__

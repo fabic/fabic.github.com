@@ -35,6 +35,69 @@ published: false
   <https://stackoverflow.com/a/18200048/643087>
   and <https://vanseodesign.com/css/vertical-centering/>
 
+    ```css
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+    ```
+
+* CSS selectors specificity (priority):
+    - <https://stackoverflow.com/a/4072396>
+    - <https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity>
+    - <https://css-tricks.com/specifics-on-css-specificity/>
+* working around sibling elements “double-borders” [SO](https://stackoverflow.com/a/12693151/643087)
+  (tip: use `outlet: ...` instead).
+* On [how to detect (select) elements with a given children count](https://stackoverflow.com/a/12198561)
+
+    ```css
+    ul {
+      li {
+        min-height: 18px;
+        font-size: 1.2em;
+        margin-top: 4px;
+        background-image: url('/svg/icon.svg');
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 20px;
+        padding-left: 20px;
+
+        &:first-child:nth-last-child(7),
+        &:first-child:nth-last-child(7) ~ li,
+        &:first-child:nth-last-child(8),
+        &:first-child:nth-last-child(8) ~ li {
+          font-size: 1.125em;
+          margin-top: 3px;
+          background-size: 20px;
+        }
+
+        &:first-child:nth-last-child(9),
+        &:first-child:nth-last-child(9) ~ li,
+        &:first-child:nth-last-child(10),
+        &:first-child:nth-last-child(10) ~ li {
+          font-size: 1em;
+          margin-top: 2px;
+          background-size: 17px;
+        }
+      }
+    }
+    ```
+
+* On having that sticky footer stick wtf it should :
+    - [SO](https://stackoverflow.com/a/16245465) `margin-bottom` on the body (or parent container).
+    - __must read__ <https://css-tricks.com/couple-takes-sticky-footer/>
+
 ## Typography
 
 * [practicaltypography.com](https://practicaltypography.com/parentheses-brackets-and-braces.html) __must-read__

@@ -20,6 +20,8 @@ published: true
        from _master bastian_ (Hervé was it?))
     - Your [Git shell aliases](https://github.com/fabic/bash-it/blob/master/aliases/available/git_fabic.aliases.bash)
 
+* <https://github.com/sorin-ionescu/prezto>
+
 ## TMUX
 
 From [SO](https://unix.stackexchange.com/a/373692), about that strange _mouse

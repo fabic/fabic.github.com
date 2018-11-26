@@ -3,7 +3,7 @@ layout: page
 title: "Algorithms – notes"
 tagline: "Random personal notes about algorithms."
 category : notes
-tags : [draft, algorithms]
+tags : [draft, algorithms, wide]
 published: true
 ---
 
@@ -11,9 +11,59 @@ published: true
 * <http://raghibm.com/blog/checklist-for-a-softwareEng-interview/>
 * <https://www.movable-type.co.uk/scripts/latlong.html>
 
-    Calculate distance, bearing and more between Latitude/Longitude points.
-    Must reat; has code sample; has equations; reference;
+    Calculate distance, bearing and more between Latitude/Longitude points;
+    __must read__; has code sample; has equations; reference;
     Haversine algorithm.
+
+* <https://www.plumislandmedia.net/mysql/haversine-mysql-nearest-loc/>
+
+    __must-read;__ dude give this nice SQL construct (MySQL) :
+
+    ```sql
+    SELECT id, zipcode, latitude, longitude, distance_km
+    FROM (
+          SELECT c.id,
+                 a.zip AS zipcode,
+                 a.latitude, a.longitude,
+                 p.radius AS radius_km,
+                 p.distance_unit * DEGREES(ACOS(COS(RADIANS(p.latpoint))
+                                                * COS(RADIANS(a.latitude))
+                                                * COS(RADIANS(p.longpoint) - RADIANS(a.longitude))
+                                                + SIN(RADIANS(p.latpoint))
+                                                * SIN(RADIANS(a.latitude)))) AS distance_km
+          FROM company c
+          INNER JOIN address a ON a.id = c.address_id
+          JOIN ( -- these are the query parameters
+                 SELECT  :latpoint  AS latpoint,
+                         :longpoint AS longpoint,
+                         :radius    AS radius,
+                         :distance_unit AS distance_unit
+               ) AS p ON 1=1
+          WHERE a.latitude IS NOT NULL
+            AND a.longitude IS NOT NULL
+            AND a.latitude BETWEEN p.latpoint  - (p.radius / p.distance_unit)
+                               AND p.latpoint  + (p.radius / p.distance_unit)
+            AND a.longitude BETWEEN p.longpoint - (p.radius / (p.distance_unit * COS(RADIANS(p.latpoint))))
+                                AND p.longpoint + (p.radius / (p.distance_unit * COS(RADIANS(p.latpoint))))
+          ) AS result -- sub-result.
+    WHERE distance_km <= radius_km
+    ORDER BY distance_km
+    ```
+
+    Ex. query with Doctrine :
+
+    ```php
+    $result = $this->getEntityManager()
+                   ->getConnection()
+                   ->fetchAll($sql, [ 'latpoint'  => $latitude,
+                                      'longpoint' => $longitude,
+                                      'radius'    => $maxDistanceRadiusKm,
+                                      'distance_unit' => 111.045 ],
+                                    [ \PDO::PARAM_STR, \PDO::PARAM_STR,
+                                      \PDO::PARAM_STR, \PDO::PARAM_STR ]);
+    $company_ids = array_map(function(array $row) { return $row['id']; }, $result);
+    $companies = $this->findBy(['id' => $company_ids]);
+    ```
 
 ### Lists
 

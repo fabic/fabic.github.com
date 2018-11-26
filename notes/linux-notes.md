@@ -30,6 +30,11 @@ $ sudo pacman -S xmlto
 
 * This [__jez__](https://github.com/jez/dotfiles) dude has loads of configuration files.
 
+## Networking
+
+* <https://p5r.uk/blog/2010/ifconfig-ip-comparison.html>
+* <https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf>
+
 ## Misc.
 
 * [Why autoconf, automake and libtool fail (at ohse.de/uwe/)](https://ohse.de/uwe/articles/aal.html)

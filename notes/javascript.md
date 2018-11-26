@@ -37,6 +37,14 @@ published: true
 
 ## Language notes
 
+Check if variable is a number ([SO](https://stackoverflow.com/a/5778071/643087)):
+
+```javascript
+function isNumeric(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+```
+
 * `Array.prototype.push.apply(dest, [1,2,3])...` : For appending elements to an
 existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...src)`
 
@@ -58,6 +66,15 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
     - <https://gist.github.com/ericelliott/414be9be82128443f6df>
       on the confusion btw. lambda vs anonymous function.
     - [SO](https://stackoverflow.com/a/46929294/643087), [SO](https://stackoverflow.com/a/35481654/643087)
+
+### Date, time
+
+* [SO](https://stackoverflow.com/a/221297)
+
+    ```javascript
+    Math.floor(Date.now() / 1000)
+    Date.now() / 1000 | 0   // clever cast to int (but unreadable).
+    ```
 
 ## Frameworks
 
@@ -231,6 +248,7 @@ $ vue init webpack vuejs-01
 
 * [2017: Setting Up Webpack for Bootstrap 4 and Font Awesome](https://medium.com/@estherfalayi/setting-up-webpack-for-bootstrap-4-and-font-awesome-eb276e04aaeb)
 * <https://webpack.js.org/guides/shimming/>
+* <https://tomasalabes.me/blog/web-development/2017/01/03/Useful-Webpack-Define-Plugin-Usages.html>
 
 #### Setup
 
@@ -446,6 +464,7 @@ $ npm install mongodb bson-ext
 
 * About __npm__'s __npx__ ?
 * `$(npm bin)` typically evaluates to `./node_modules/.bin`, ex.: `$(npm bin)/cypress open`
+* about debounced func. <https://lodash.com/docs/4.17.11#debounce>
 
 ### Pointers
 

@@ -43,6 +43,35 @@ $ sudo pacman -S postgresql{,-docs} php-pgsql phppgadmin
 * __todo/read:__ [The many faces of DISTINCT in PostgreSQL (2017, by Haki Benita @ Medium)](https://medium.com/statuscode/the-many-faces-of-distinct-in-postgresql-c52490de5954)
 
 
+#### anonymous PL/PgSQL proc. for declaring variables.
+
+```sql
+do $$
+declare
+  OrderID int := 159;
+  FromProductID int := 4048;
+  ToProductID int := 2220;
+begin
+
+  update order_items
+  set object_id = ToProductID
+  where order_id = OrderID
+    and object_id = FromProductID ;
+
+  -- Rewire the parcel's supplier_id = the product seller user id
+  -- (we also update the parcel `reference` = "{seller user.id}-{order_item.id}).
+  update parcels p set supplier_id = pr.user_id,
+                       reference = concat(pr.user_id, '-', oi.id)
+  from order_items oi
+  inner join products pr on pr.id = oi.object_id and oi.object = 'product'
+  where oi.order_id = OrderID and oi.object_id = ToProductID
+    and oi.id = p.order_item_id;
+
+end $$ LANGUAGE plpgsql ;
+```
+
+Note: `return query select ...` appears not possible when resorting to anonymous procedures.
+
 #### Partial/transformed indexes
 
 Fount [at](https://hackernoon.com/javascript-experience-of-migrating-from-mongodb-to-postgresql-21f8bf140c05);

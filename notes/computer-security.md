@@ -121,8 +121,25 @@ Or [Perl](https://stackoverflow.com/a/23539217) :
 $ perl -e 'print int rand 10, "\n"; '
 ```
 
+#### Timing leaks
+
+* <https://stackoverflow.com/a/31419246>
+    “The goal is to separate the database query (which is timing-leaky) from the authentication protocol (which should be constant time).”
+* <https://paragonie.com/blog/2015/04/secure-authentication-php-with-long-term-persistence#timing-leaks>
+
 ## Pointers
 
+## Quotes
+
+> As a cryptography and computer security expert, I have never understood the
+> current fuss about the open source software movement. In the cryptography
+> world, we consider open source necessary for good security; we have for
+> decades. Public security is always more secure than proprietary security.
+> It's true for cryptographic algorithms, security protocols, and security
+> source code. For us, open source isn't just a business model; it's smart
+> engineering practice.<br>
+> __Bruce Schneier__, [Crypto-Gram 1999-09-15](https://www.schneier.com/crypto-gram/archives/1999/0915.html#OpenSourceandSecurity)
+> ([source](https://keepass.info/))
 
 ## EOF
 

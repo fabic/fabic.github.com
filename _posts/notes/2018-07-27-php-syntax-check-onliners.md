@@ -1,10 +1,10 @@
 ---
 layout: note
-title: "PHP: find \*.php run `php -l` syntax check"
+title: "PHP: find *.php run php syntax check"
 tagline: "Another Git onliner..."
 published: true
 category : notes
-tags : [note]
+tags : [note, php]
 ---
 
 ```bash

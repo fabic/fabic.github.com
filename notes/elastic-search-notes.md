@@ -15,6 +15,9 @@ maths: true
 * <https://madewithlove.be/basic-understanding-of-text-search/>
 * __<https://opensource.appbase.io/dejavu/>__
   ([code](https://github.com/appbaseio/dejavu))
+* <https://www.elastic.co/products/stack/elasticsearch-sql>
+
+    They did it: elasticsearch querying with SQL-like syntax.
 
 ## Concepts
 
