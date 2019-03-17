@@ -41,7 +41,7 @@ For the Netflix addon, download the most recent .zip build provided at
 [CastagnaIT's plugin.video.netflix](https://github.com/CastagnaIT/plugin.video.netflix)
 repository &ndash; then: Add-ons -> Install from Zip file.
 
-**Note/2019-03:** failed to get it work.
+**Note/2019-03:** failed to get that Netflix addon to work.
 
 * <https://wiki.archlinux.org/index.php/Kodi>
 * [Arch's kodi-addons](https://www.archlinux.org/groups/x86_64/kodi-addons/)
@@ -53,6 +53,12 @@ repository &ndash; then: Add-ons -> Install from Zip file.
 * [/r/Addons4Kodi @ Reddit](https://www.reddit.com/r/Addons4Kodi/)
 * [Koko.wiki](https://kodi.wiki)
 * <http://fusion.tvaddons.co/> : Settings -> File Manager -> Add Source -> enter that URL.
+
+Remote / Keyboard :
+
 * Tablet/smartphone apps:
     - <https://kodi.wiki/view/Smartphone/tablet_remotes>
     - <https://kodi.wiki/view/Official_Kodi_Remote>
+
+* <https://kodi.wiki/view/Keyboard_controls> : Kodi's default keyboard controls (keymap)
+* [Flirc.tv remote controller presets](https://support.flirc.tv/hc/en-us/articles/202923419-Controller-presets-in-Flirc-GUI)
