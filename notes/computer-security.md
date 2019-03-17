@@ -129,6 +129,9 @@ $ perl -e 'print int rand 10, "\n"; '
 
 ## Pointers
 
+* <https://thisdata.com/blog/timing-attacks-against-string-comparison/>
+    - [php: hash_equals()](http://php.net/manual/fr/function.hash-equals.php)
+
 ## Quotes
 
 > As a cryptography and computer security expert, I have never understood the

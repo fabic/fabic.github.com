@@ -205,6 +205,8 @@ __to/read/?:__ [GRASP](https://en.wikipedia.org/wiki/GRASP_(object-oriented_desi
     -------------------------------------------------------------------------------
     ```
 
+* [Evidence Based Scheduling (2007, Joel Spolsky)](https://www.joelonsoftware.com/2007/10/26/evidence-based-scheduling/)
+
 ## Parsing, parsers, top-down / recursive descent, etc
 
 * <http://www.craftinginterpreters.com/parsing-expressions.html> “Crafting Interpreters” online book, __must read__.

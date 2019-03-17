@@ -67,6 +67,21 @@ existing array.  See also `concat()`.  Or use the new spread op. `dest.push(...s
       on the confusion btw. lambda vs anonymous function.
     - [SO](https://stackoverflow.com/a/46929294/643087), [SO](https://stackoverflow.com/a/35481654/643087)
 
+On variables scoping:
+* [spec. chapter 4 scope chain](http://dmitrysoshnikov.com/ecmascript/chapter-4-scope-chain/)
+* <https://stackoverflow.com/a/5740189>
+* <https://stackoverflow.com/a/150185>
+* <https://stackoverflow.com/a/12931785>
+
+* [String characters -to-> array](https://stackoverflow.com/a/34717402)
+
+    ```javascript
+    '𝟘𝟙𝟚𝟛'.split(''); //< DON'T: breaks surrogate pairs and misinterpret “characters.”
+    [...'𝟘𝟙𝟚𝟛'];      //< ES2015 spread operator
+    Array.from('𝟘𝟙𝟚𝟛');
+    '𝟘𝟙𝟚𝟛'.split(/(?=[\s\S])/u) //< RegExp `u` flag
+    ````
+
 ### Date, time
 
 * [SO](https://stackoverflow.com/a/221297)
