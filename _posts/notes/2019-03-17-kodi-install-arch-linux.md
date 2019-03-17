@@ -45,11 +45,14 @@ repository &ndash; then: Add-ons -> Install from Zip file.
 
 * <https://wiki.archlinux.org/index.php/Kodi>
 * [Arch's kodi-addons](https://www.archlinux.org/groups/x86_64/kodi-addons/)
-* [kodi-addon-inputstream-adaptive-git @ ArchLinux|AUR](https://aur.archlinux.org/packages/kodi-addon-inputstream-adaptive-git/)
-* [chromium-widevine @ ArchLinux|AUR](https://aur.archlinux.org/packages/chromium-widevine/)
+* [kodi-addon-inputstream-adaptive-git @ ArchLinux/AUR](https://aur.archlinux.org/packages/kodi-addon-inputstream-adaptive-git/)
+* [chromium-widevine @ ArchLinux/AUR](https://aur.archlinux.org/packages/chromium-widevine/)
 * <https://github.com/asciidisco/plugin.video.netflix> Original (now unmaintained) Git repository for the Kodi Netflix addon.
 * <https://github.com/CastagnaIT/plugin.video.netflix> Maintained fork by CastagnaIT.
 * <https://blog.fastestvpn.com/netflix-on-kodi-addon/>
 * [/r/Addons4Kodi @ Reddit](https://www.reddit.com/r/Addons4Kodi/)
 * [Koko.wiki](https://kodi.wiki)
 * <http://fusion.tvaddons.co/> : Settings -> File Manager -> Add Source -> enter that URL.
+* Tablet/smartphone apps:
+    - <https://kodi.wiki/view/Smartphone/tablet_remotes>
+    - <https://kodi.wiki/view/Official_Kodi_Remote>
