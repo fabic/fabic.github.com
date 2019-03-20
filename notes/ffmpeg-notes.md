@@ -15,6 +15,22 @@ published: true
 * __TODO:__ x264 encoding notes.
 * __TODO:__ x265 encoding notes.
 
+## H265 video encoding
+
+### High quality H265 CRF-24
+
+```bash
+$ time \
+    ffmpeg -loglevel info -stats -i jardin-eden-08.mov \
+      -codec:v libx265 -preset slow -threads 1 -vf format=yuv420p \
+      -crf 24 -bf 2 -flags +cgop -g 60 \
+      -c:a libmp3lame -q:a 0 \
+      -movflags faststart \
+      -y jardin-eden-08.h265.high-profile.crf-24.mov
+```
+
+## Extracting streams
+
 Extract selected streams from a source __video.mkv__, typically the video track
 and one of the audio tracks (use `ffprobe` to display the streams first) :
 
@@ -34,7 +50,7 @@ ffmpeg -i video1.mkv -itsoffset 1.0 -i video2.avi \
   test.mkv
 ```
 
-* Video scaling `-vf scale=-1:720`
+## Video scaling `-vf scale=-1:720`
 
 ```bash
 ffmpeg -i video.mp4 \
@@ -43,6 +59,8 @@ ffmpeg -i video.mp4 \
   -codec:a aac -b:a 128k \
   test.mp4
 ```
+
+## Extract slices of video
 
 Extract a slice of __video.mkv__ without re-encoding the streams (copy) :
 
@@ -113,7 +131,7 @@ ffmpeg -i video.mkv \
   -movflags faststart  test.mp4
 ```
 
-### Add subtitles
+### Adding subtitles
 
 * <https://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo>
 * Using `-sub_charenc latin1` to specify the encoding of the input subtitles `.srt` file.
@@ -131,8 +149,7 @@ ffmpeg -loglevel info \
     output-video.alt.subs.mp4
 ```
 
-
-### Fetching MP2T video streams
+## Fetching MP2T video streams
 
 Used `streamlink` to fetch the MP2T video stream :
 
@@ -144,7 +161,7 @@ streamlink --loglevel info \
 ```
 
 
-### ffprobe
+## Read media metadata with `ffprobe`
 
 ```bash
 ffprobe -v quiet -print_format json -show_streams -show_format video.mkv
@@ -152,7 +169,7 @@ ffprobe -v quiet -print_format json -show_streams -show_format video.mkv
 ffprobe -v info -hide_banner video.mkv
 ```
 
-### Generate thumbnail image
+## Generate thumbnail image
 
 ```bash
 ffmpeg -ss 10 -i video.mp4     \
@@ -163,7 +180,7 @@ ffmpeg -ss 10 -i video.mp4     \
 ```
 
 
-#### Adding thumbnail image to video file using `mp4art`
+### Adding thumbnail image to video file using `mp4art`
 
 ```bash
 mp4art -zv --add thumbnail.jpg video.mp4
@@ -173,6 +190,11 @@ mp4art -zv --add thumbnail.jpg video.mp4
 ## Pointers
 
 * [SO: Re-encoding video library in x265 (HEVC) with no quality loss](https://unix.stackexchange.com/a/248711)
+* [2017: Understanding Rate Control Modes (x264, x265, vpx) by Werner Robitza / slhck.info](https://slhck.info/video/2017/03/01/rate-control.html) __[must read]__
+* [FourCC : four-character code @ wikipedia](https://en.wikipedia.org/wiki/FourCC)
+* FourCC: [about 10-bit and 16-bit YUV Video Formats](https://docs.microsoft.com/en-us/windows/desktop/medfound/10-bit-and-16-bit-yuv-video-formats) @ M$
+  _(must read: very detailed and accurate information)_
+* [2013 forum thread “Lossless (10 Bit RGB 444) and (10 Bit YUV 422) Compression Codec's” (nice discussion with some useful details)](https://forum.videohelp.com/threads/361133-Lossless-%2810-Bit-RGB-444%29-and-%2810-Bit-YUV-422%29-Compression-Codec-s)
 
 
 ## EOF
