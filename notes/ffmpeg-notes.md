@@ -15,7 +15,17 @@ published: true
 * __TODO:__ x264 encoding notes.
 * __TODO:__ x265 encoding notes.
 
+## On video encoding
+
+* [Comparing video codecs and containers for archives, by Peter B., Hermann Lewetz and Marion Jaks (2013-2015)](http://download.das-werkstatt.com/pb/mthk/info/video/comparison_video_codecs_containers.html)
+* [A short guide to choosing a digital format for video archiving masters, by Emanuel Lorrain (2014)](https://www.scart.be/?q=en/content/short-guide-choosing-digital-format-video-archiving-masters)
+* [File formats for archiving @ ethz.ch](https://documentation.library.ethz.ch/display/DD/File+formats+for+archiving)
+* [About GOP (Group Of Pictures)](https://www.researchgate.net/post/What_is_the_difference_between_Group_of_Pictures_GOP_and_video) and [this one](http://www.tiliam.com/Blog/2015/07/06/effective-use-long-gop-video-codecs "Effective use of Long GOP Video Codecs")
+
 ## H265 video encoding
+
+* [x265 command line options](https://x265.readthedocs.io/en/latest/cli.html)
+* **Must read:** [Understanding Rate Control Modes (x264, x265, vpx)](https://slhck.info/video/2017/03/01/rate-control.html)
 
 ### High quality H265 CRF-24
 
