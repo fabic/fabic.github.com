@@ -21,6 +21,7 @@ published: true
 * [A short guide to choosing a digital format for video archiving masters, by Emanuel Lorrain (2014)](https://www.scart.be/?q=en/content/short-guide-choosing-digital-format-video-archiving-masters)
 * [File formats for archiving @ ethz.ch](https://documentation.library.ethz.ch/display/DD/File+formats+for+archiving)
 * [About GOP (Group Of Pictures)](https://www.researchgate.net/post/What_is_the_difference_between_Group_of_Pictures_GOP_and_video) and [this one](http://www.tiliam.com/Blog/2015/07/06/effective-use-long-gop-video-codecs "Effective use of Long GOP Video Codecs")
+* [About video quality metrics](https://superuser.com/a/338734 "Compare two video files to find out which has best quality @ SO")
 
 ## H265 video encoding
 

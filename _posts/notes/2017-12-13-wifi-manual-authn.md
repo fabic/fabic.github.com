@@ -9,7 +9,8 @@ tags : [note, network, wifi, cli, authnz]
 
 * __TODO:__ see [fabic/bin/woof-up.sh](https://github.com/fabic/bash-it/blob/master/fabic/bin/woof-up.sh)
 
-cat <<EOF
+```bash
+$ cat <<EOF >> /etc/wpa_supplicant/wpa_supplicant.conf
 ctrl_interface=/run/wpa_supplicant
 ctrl_interface_group=wheel
 update_config=1
@@ -17,11 +18,13 @@ update_config=1
 ap_scan=1
 fast_reauth=1
 
-$(wpa_passphrase Livebox-9e74 537CE5465654C375E1CA55AC72)
+$(wpa_passphrase Livebox-9e74 my-secret-passphrase)
+
+$(wpa_passphrase Livebux das-secret-passphrase-clear-text)
 
 network={
     ssid="Livebox-9e74_EXT"
-    psk="537CE5465654C375E1CA55AC72"
+    psk="my-secret-passphrase"
 }
 
 # Public wifi with no passphrase.
@@ -31,3 +34,5 @@ network={
 }
 
 EOF
+```
+
