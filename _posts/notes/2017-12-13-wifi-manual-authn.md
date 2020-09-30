@@ -20,7 +20,7 @@ fast_reauth=1
 
 $(wpa_passphrase Livebox-9e74 my-secret-passphrase)
 
-$(wpa_passphrase Livebux das-secret-passphrase-clear-text)
+$(wpa_passphrase livebux das-secret-passphrase-clear-text)
 
 network={
     ssid="Livebox-9e74_EXT"
